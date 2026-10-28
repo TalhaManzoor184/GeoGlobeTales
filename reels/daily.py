@@ -76,12 +76,54 @@ def produce(ep_path: Path, allow_silent: bool = False) -> tuple[dict, Path]:
     return ep, OUT / ep["slug"] / f"{ep['slug']}.mp4"
 
 
+UPLOAD_SECRETS = ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN")
+
+
+def preflight(mode: str):
+    """Fail in seconds, with a readable reason, instead of after a full render."""
+    need = []
+    if mode not in ("test", "no-upload"):
+        need += UPLOAD_SECRETS
+    if mode not in ("test", "upload-test"):
+        need.append("GEMINI_API_KEY")
+    missing = [k for k in need if not os.environ.get(k)]
+    if missing:
+        raise SystemExit(f"Missing GitHub secrets: {', '.join(missing)}. "
+                         "Add them in Settings → Secrets and variables → Actions.")
+    if mode not in ("test", "no-upload"):
+        from .upload import youtube
+        try:
+            ch = youtube().channels().list(part="snippet", mine=True).execute()
+            name = ch["items"][0]["snippet"]["title"] if ch.get("items") else "(no channel)"
+            print(f"YouTube channel: {name}", flush=True)
+        except Exception as e:  # noqa: BLE001
+            msg = str(e)
+            if "invalid_grant" in msg:
+                msg = ("YouTube refresh token is invalid or expired (invalid_grant). Run "
+                       "python -m reels.auth_youtube again and update YOUTUBE_REFRESH_TOKEN.")
+            elif "insufficient" in msg.lower() or "scope" in msg.lower():
+                msg = "Refresh token lacks youtube.readonly scope; re-run reels.auth_youtube. " + msg[:200]
+            raise SystemExit(f"YouTube login failed: {msg[:400]}")
+
+
 def main():
+    try:
+        _main()
+    except BaseException as e:  # surface the reason as an annotation, readable without logs
+        if isinstance(e, SystemExit) and e.code in (0, None):
+            raise
+        msg = str(e) if not isinstance(e, SystemExit) else str(e.code)
+        print(f"::error title=Daily short failed::{type(e).__name__}: {msg[:900]}".replace("\n", " "), flush=True)
+        raise
+
+
+def _main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", default="scheduled",
                     choices=["scheduled", "full", "publish-now", "no-upload", "test", "upload-test"])
     mode = ap.parse_args().mode
     history = load_history()
+    preflight(mode)
 
     if mode in ("test", "upload-test"):
         ep, video = produce(TEST_EPISODE, allow_silent=mode == "test")
