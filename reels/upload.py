@@ -48,8 +48,7 @@ def youtube():
     creds = Credentials(None, refresh_token=secret("YOUTUBE_REFRESH_TOKEN"),
                         client_id=secret("YOUTUBE_CLIENT_ID"),
                         client_secret=secret("YOUTUBE_CLIENT_SECRET"),
-                        token_uri="https://oauth2.googleapis.com/token",
-                        scopes=["https://www.googleapis.com/auth/youtube.upload"])
+                        token_uri="https://oauth2.googleapis.com/token")  # scopes come from the token itself
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
