@@ -62,3 +62,24 @@ blue red orange purple teal white grey` ya koi bhi hex. ISO codes Natural Earth 
 
 **Language:** har scene mein `"vo"` (voice ka text) aur `"caption"` (screen par text) likhein.
 English example: `episodes/wakhan-corridor-en.json`. Finished reels `renders` branch par push hoti hain.
+
+## Daily YouTube upload
+
+`.github/workflows/daily.yml` roz ek Short banata hai aur **9:00 PM PKT** par publish karta hai:
+`topics/queue.json` ka agla topic → Gemini script + map scenes (`reels/generate.py`) →
+validator (`reels/validate.py`) → voice → render → YouTube (`reels/upload.py`).
+Har upload `data/history.json` mein likha jata hai, is liye koi topic dobara nahi aata.
+
+Setup (ek baar):
+1. Repo **Settings → Secrets and variables → Actions → Secrets** mein ye daalein:
+   `GEMINI_API_KEY`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET` (Sunny wale hi chal jayenge),
+   aur `YOUTUBE_REFRESH_TOKEN` (naye channel ka, neeche dekhein).
+2. Naye channel ka token: apne computer par
+   `pip install google-auth-oauthlib google-api-python-client` phir
+   `YOUTUBE_CLIENT_ID=... YOUTUBE_CLIENT_SECRET=... python -m reels.auth_youtube`
+   chalayein, aur geography channel select karein.
+3. **Actions → Daily map short → Run workflow**: pehle `test`, phir `upload-test`
+   (private video, keys check), phir sab theek ho to cron khud chalega.
+
+Variables (optional): `PUBLISH_TIME` (21:00), `VOICE` (en-US-GuyNeural), `BRAND`, `MAP_POV` (PAK),
+`UPLOAD_MODE` (schedule | private | public). Naye topics `topics/queue.json` ke end mein add karein.

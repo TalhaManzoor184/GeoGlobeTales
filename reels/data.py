@@ -38,6 +38,14 @@ def countries_file(pov: str | None) -> Path:
     return fetch(NE_BASE + name, name)
 
 
+OUT = ROOT / "out"
+
+
+def lakes_file() -> Path:
+    name = "ne_10m_lakes.geojson"
+    return fetch(NE_BASE + name, name)
+
+
 def rivers_file() -> Path:
     name = "ne_10m_rivers_lake_centerlines.geojson"
     return fetch(NE_BASE + name, name)

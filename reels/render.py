@@ -18,7 +18,7 @@ import geopandas as gpd
 import numpy as np
 
 from . import FPS, H, W
-from .data import countries_file, rivers_file
+from .data import OUT, countries_file, lakes_file, rivers_file
 from .globe import Globe
 from .mapview import MapView
 from .overlay import Overlay, finish
@@ -33,12 +33,17 @@ class Renderer:
         self.ep = ep
         self.style = {**STYLE, **ep.get("style", {})}
         self.tl = Timeline(ep, timings)
-        m = ep["map"]
+        m = ep.get("map", {})
         world = gpd.read_file(countries_file(m.get("pov")))
+        lakes = gpd.read_file(lakes_file())
+        lakes = lakes[lakes["scalerank"] <= 6]
         self.has_globe = any(s.mode == "globe" for s in self.tl.scenes)
-        self.globe = Globe(world) if self.has_globe else None
+        self.globe = Globe(world, lakes) if self.has_globe else None
         rivers = gpd.read_file(rivers_file()) if m.get("rivers", True) else None
-        self.map = MapView(world, tuple(m["center"]), tuple(m["extent"]), rivers, self.style)
+        center, extent = m.get("center"), m.get("extent")
+        if not center or not extent:
+            center, extent = auto_extent(self.tl)
+        self.map = MapView(world, tuple(center), tuple(extent), rivers, self.style, lakes)
         self.ov = Overlay(self.style)
         # pre-build fill layers and measurements
         self.measures = {}
@@ -132,6 +137,26 @@ class Renderer:
         ov.brand(self.ep.get("brand", ""))
 
 
+def auto_extent(tl: Timeline):
+    """Map centre + data extent covering every map camera (with margin)."""
+    import math
+    boxes = []
+    for s in tl.scenes:
+        if s.mode != "map":
+            continue
+        for cam in (tl._start_cam(s), tl.cam_end(s), tl._target(s)):
+            w = cam["width_km"] * 1.6
+            h = w * H / W
+            dlat = h / 2 / 111.0
+            dlon = w / 2 / (111.0 * max(0.15, math.cos(math.radians(cam["lat"]))))
+            boxes.append((cam["lon"] - dlon, cam["lat"] - dlat, cam["lon"] + dlon, cam["lat"] + dlat))
+    lon0 = max(-180, min(b[0] for b in boxes)); lat0 = max(-85, min(b[1] for b in boxes))
+    lon1 = min(180, max(b[2] for b in boxes)); lat1 = min(85, max(b[3] for b in boxes))
+    first = next(s for s in tl.scenes if s.mode == "map")
+    t = tl._target(first)
+    return (t["lon"], t["lat"]), (lon0, lat0, lon1, lat1)
+
+
 # ---------- audio / sidecar files ----------
 def build_audio(tl: Timeline, voice_dir: Path, music: Path | None, out: Path) -> Path | None:
     clips = [(s, voice_dir / f"{s.sid}.mp3") for s in tl.scenes]
@@ -198,8 +223,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
 
     ep, timings = load_episode(Path(args.episode))
-    root = Path(args.episode).resolve().parent.parent
-    out_dir = root / "out" / ep["slug"]
+    out_dir = OUT / ep["slug"]
     out_dir.mkdir(parents=True, exist_ok=True)
     r = Renderer(ep, timings)
     tl = r.tl

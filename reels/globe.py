@@ -17,9 +17,9 @@ from .style import STYLE, hex_rgb
 TEX_W, TEX_H = 8192, 4096
 
 
-def _texture(countries, highlight: dict[str, str]) -> np.ndarray:
+def _texture(countries, highlight: dict[str, str], lakes=None) -> np.ndarray:
     key = hashlib.md5(repr(sorted(highlight.items())).encode()).hexdigest()[:10]
-    path = CACHE / f"globe_tex_{key}.png"
+    path = CACHE / f"globe_tex2_{key}.png"
     if not path.exists():
         g = countries.copy()
         g["geometry"] = g.geometry.simplify(0.02)
@@ -29,6 +29,8 @@ def _texture(countries, highlight: dict[str, str]) -> np.ndarray:
         fig.patch.set_facecolor(STYLE["ocean"])
         colors = [highlight.get(a, STYLE["land"]) for a in g["ADM0_A3"]]
         g.plot(ax=ax, color=colors, edgecolor=STYLE["border"], linewidth=0.9)
+        if lakes is not None:
+            lakes.plot(ax=ax, color=STYLE["ocean"], edgecolor=STYLE["border"], linewidth=0.5)
         ax.set_aspect("auto")
         ax.set_xlim(-180, 180)
         ax.set_ylim(-90, 90)
@@ -38,8 +40,9 @@ def _texture(countries, highlight: dict[str, str]) -> np.ndarray:
 
 
 class Globe:
-    def __init__(self, countries):
+    def __init__(self, countries, lakes=None):
         self.countries = countries
+        self.lakes = lakes
         self.tex_cache: dict[str, np.ndarray] = {}
         rng = np.random.default_rng(7)
         bg = np.zeros((H, W, 3), np.float32)
@@ -56,7 +59,7 @@ class Globe:
     def texture(self, highlight: dict[str, str] | None) -> np.ndarray:
         key = repr(sorted((highlight or {}).items()))
         if key not in self.tex_cache:
-            self.tex_cache[key] = _texture(self.countries, highlight or {})
+            self.tex_cache[key] = _texture(self.countries, highlight or {}, self.lakes)
         return self.tex_cache[key]
 
     def render(self, lon0: float, lat0: float, radius: float, highlight=None, hl_alpha=0.0,

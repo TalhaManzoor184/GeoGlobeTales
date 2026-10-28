@@ -181,7 +181,8 @@ class Timeline:
 
 def load_episode(path: Path) -> tuple[dict, dict]:
     ep = json.loads(Path(path).read_text(encoding="utf-8"))
-    out_dir = Path(path).resolve().parent.parent / "out" / ep["slug"]
+    from .data import OUT
+    out_dir = OUT / ep["slug"]
     tf = out_dir / "voice" / "timings.json"
     timings = json.loads(tf.read_text()) if tf.exists() else {}
     return ep, timings

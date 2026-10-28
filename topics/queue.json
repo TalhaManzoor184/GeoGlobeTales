@@ -1,0 +1,1258 @@
+{
+  "_note": "Daily topic queue. The daily job takes the first topic not yet in data/history.json. Gemini may ONLY use the facts listed. Add new topics at the end; places are [lon, lat]. 'regions' are clipped parts of a country (e.g. an exclave) as [minLon, minLat, maxLon, maxLat].",
+  "topics": [
+    {
+      "id": "wakhan-corridor",
+      "episode": "episodes/wakhan-corridor-en.json"
+    },
+    {
+      "id": "pakistan-8000ers",
+      "hook": "Why does Pakistan have 5 of the world's 14 highest mountains?",
+      "facts": [
+        "Only 14 mountains on Earth are taller than 8,000 metres.",
+        "5 of them are in Pakistan: K2 (8,611 m), Nanga Parbat (8,126 m), Gasherbrum I (8,080 m), Broad Peak (8,051 m) and Gasherbrum II (8,035 m).",
+        "K2 is the second-highest mountain in the world, on the Pakistan-China border in the Karakoram range.",
+        "K2, Broad Peak and both Gasherbrums stand within a few dozen kilometres of each other around the Baltoro Glacier.",
+        "Nanga Parbat is the western anchor of the Himalayas.",
+        "These ranges exist because the Indian plate is still pushing north into Asia."
+      ],
+      "places": {
+        "K2": [
+          76.513,
+          35.881
+        ],
+        "Nanga Parbat": [
+          74.589,
+          35.237
+        ],
+        "Gasherbrum I": [
+          76.696,
+          35.724
+        ],
+        "Broad Peak": [
+          76.568,
+          35.811
+        ],
+        "Gasherbrum II": [
+          76.653,
+          35.758
+        ],
+        "Islamabad": [
+          73.05,
+          33.69
+        ]
+      },
+      "countries": [
+        "PAK",
+        "CHN",
+        "IND",
+        "NPL"
+      ],
+      "focus": {
+        "lon": 75.6,
+        "lat": 35.6,
+        "width_km": 450
+      }
+    },
+    {
+      "id": "kaliningrad",
+      "hook": "Why is there a piece of Russia in the middle of the EU?",
+      "facts": [
+        "Kaliningrad is a part of Russia on the Baltic Sea, squeezed between Poland and Lithuania.",
+        "It has no land connection to the rest of Russia.",
+        "The city was the German city of Königsberg until 1945.",
+        "After World War II the Soviet Union took the area.",
+        "When the Soviet Union broke up in 1991, Lithuania and Belarus became independent and Kaliningrad was cut off from Russia.",
+        "Its port on the Baltic usually stays ice-free in winter."
+      ],
+      "places": {
+        "Kaliningrad": [
+          20.51,
+          54.71
+        ],
+        "Moscow": [
+          37.62,
+          55.75
+        ],
+        "Vilnius": [
+          25.28,
+          54.69
+        ],
+        "Warsaw": [
+          21.01,
+          52.23
+        ]
+      },
+      "countries": [
+        "RUS",
+        "POL",
+        "LTU",
+        "BLR",
+        "LVA"
+      ],
+      "regions": {
+        "kaliningrad": {
+          "of": "RUS",
+          "clip": [
+            19.3,
+            54.2,
+            23.0,
+            55.4
+          ]
+        }
+      },
+      "focus": {
+        "lon": 21.5,
+        "lat": 54.6,
+        "width_km": 600
+      }
+    },
+    {
+      "id": "gwadar",
+      "hook": "Pakistan bought a city from Oman. Here's how.",
+      "facts": [
+        "Gwadar, on Pakistan's coast, was ruled by Oman for about 175 years.",
+        "In 1783 the Khan of Kalat granted Gwadar to a ruler of Muscat (Oman).",
+        "Pakistan bought Gwadar from the Sultan of Muscat and Oman, Said bin Taimur.",
+        "Pakistan took over Gwadar on 8 September 1958.",
+        "The price was about 5.5 billion rupees, and the Aga Khan paid most of it.",
+        "Today Gwadar is a deep-sea port city on the Arabian Sea."
+      ],
+      "places": {
+        "Gwadar": [
+          62.322,
+          25.126
+        ],
+        "Muscat": [
+          58.383,
+          23.588
+        ],
+        "Karachi": [
+          67.01,
+          24.86
+        ]
+      },
+      "countries": [
+        "PAK",
+        "OMN",
+        "IRN"
+      ],
+      "focus": {
+        "lon": 61.0,
+        "lat": 25.0,
+        "width_km": 1100
+      }
+    },
+    {
+      "id": "strait-of-gibraltar",
+      "hook": "Europe and Africa are only 13 km apart.",
+      "facts": [
+        "The Strait of Gibraltar is only 13 km wide at its narrowest point.",
+        "The narrowest point is between Point Marroquí in Spain and Point Cires in Morocco.",
+        "It is the only natural link between the Atlantic Ocean and the Mediterranean Sea.",
+        "Gibraltar, at its northern side, is a British overseas territory.",
+        "Ceuta, on the African side, is a Spanish city."
+      ],
+      "places": {
+        "Gibraltar": [
+          -5.35,
+          36.14
+        ],
+        "Ceuta": [
+          -5.32,
+          35.89
+        ],
+        "Tarifa": [
+          -5.6,
+          36.01
+        ],
+        "Tangier": [
+          -5.8,
+          35.77
+        ]
+      },
+      "countries": [
+        "ESP",
+        "MAR",
+        "GIB",
+        "PRT"
+      ],
+      "measure": {
+        "points": [
+          [
+            -5.6089,
+            36.0058
+          ],
+          [
+            -5.4775,
+            35.912
+          ]
+        ],
+        "text": "13 KM"
+      },
+      "focus": {
+        "lon": -5.5,
+        "lat": 36.0,
+        "width_km": 120
+      }
+    },
+    {
+      "id": "lesotho",
+      "hook": "This country is completely inside another country.",
+      "facts": [
+        "Lesotho is completely surrounded by South Africa.",
+        "It is one of only three countries entirely surrounded by a single other country, with San Marino and Vatican City.",
+        "Lesotho's lowest point is 1,400 metres above sea level, the highest low point of any country.",
+        "The whole country lies above 1,000 metres, so it is called the Kingdom in the Sky.",
+        "Its capital is Maseru."
+      ],
+      "places": {
+        "Maseru": [
+          27.48,
+          -29.31
+        ],
+        "Johannesburg": [
+          28.05,
+          -26.2
+        ],
+        "Durban": [
+          31.02,
+          -29.86
+        ]
+      },
+      "countries": [
+        "LSO",
+        "ZAF"
+      ],
+      "focus": {
+        "lon": 28.3,
+        "lat": -29.5,
+        "width_km": 700
+      }
+    },
+    {
+      "id": "panama-canal",
+      "hook": "Ships go EAST to reach the Pacific in Panama.",
+      "facts": [
+        "The Panama Canal is about 82 km long and opened in 1914.",
+        "It connects the Atlantic (Caribbean) to the Pacific Ocean.",
+        "Because Panama bends, the canal's Pacific end at Panama City is east of its Atlantic end at Colón.",
+        "Locks lift ships about 26 metres up to Gatun Lake and back down.",
+        "Before the canal, ships sailed around South America."
+      ],
+      "places": {
+        "Colón": [
+          -79.9,
+          9.36
+        ],
+        "Panama City": [
+          -79.52,
+          8.98
+        ],
+        "Gatun Lake": [
+          -79.85,
+          9.18
+        ]
+      },
+      "countries": [
+        "PAN",
+        "COL",
+        "CRI"
+      ],
+      "focus": {
+        "lon": -79.7,
+        "lat": 9.15,
+        "width_km": 140
+      }
+    },
+    {
+      "id": "suwalki-gap",
+      "hook": "This 65 km gap might be the most dangerous place in Europe.",
+      "facts": [
+        "The Suwałki Gap is a stretch of land about 65 km wide along the Poland-Lithuania border.",
+        "It separates Russia's Kaliningrad from Belarus, Russia's ally.",
+        "It is the only land link between the Baltic states (Lithuania, Latvia, Estonia) and the rest of NATO.",
+        "If it were ever closed, the Baltic states would be cut off by land."
+      ],
+      "places": {
+        "Suwałki": [
+          22.93,
+          54.1
+        ],
+        "Kaliningrad": [
+          20.51,
+          54.71
+        ],
+        "Vilnius": [
+          25.28,
+          54.69
+        ],
+        "Grodno": [
+          23.83,
+          53.68
+        ]
+      },
+      "countries": [
+        "POL",
+        "LTU",
+        "BLR",
+        "RUS",
+        "LVA",
+        "EST"
+      ],
+      "regions": {
+        "kaliningrad": {
+          "of": "RUS",
+          "clip": [
+            19.3,
+            54.2,
+            23.0,
+            55.4
+          ]
+        }
+      },
+      "measure": {
+        "between": [
+          "RUS",
+          "BLR"
+        ],
+        "within": [
+          21.5,
+          53.5,
+          24.5,
+          55.0
+        ],
+        "text": "~65 KM"
+      },
+      "focus": {
+        "lon": 23.2,
+        "lat": 54.3,
+        "width_km": 450
+      }
+    },
+    {
+      "id": "khunjerab-pass",
+      "hook": "The highest paved border crossing on Earth is in Pakistan.",
+      "facts": [
+        "Khunjerab Pass sits at 4,693 metres above sea level.",
+        "It is the highest paved international border crossing in the world.",
+        "It links Pakistan's Gilgit-Baltistan with China's Xinjiang.",
+        "It is the highest point on the Karakoram Highway.",
+        "The Karakoram Highway runs about 1,300 km from Hasan Abdal in Pakistan to Kashgar in China."
+      ],
+      "places": {
+        "Khunjerab Pass": [
+          75.428,
+          36.85
+        ],
+        "Hasan Abdal": [
+          72.69,
+          33.82
+        ],
+        "Kashgar": [
+          75.99,
+          39.47
+        ],
+        "Gilgit": [
+          74.31,
+          35.92
+        ]
+      },
+      "countries": [
+        "PAK",
+        "CHN",
+        "AFG",
+        "TJK"
+      ],
+      "focus": {
+        "lon": 74.5,
+        "lat": 36.6,
+        "width_km": 900
+      }
+    },
+    {
+      "id": "caprivi-strip",
+      "hook": "Why does Namibia have this long arm?",
+      "facts": [
+        "The Caprivi Strip is a narrow arm of Namibia stretching east between Angola, Zambia and Botswana.",
+        "Its width varies from about 32 km to 105 km.",
+        "Germany got it in 1890 through the Heligoland-Zanzibar Treaty with Britain, negotiated by Chancellor Leo von Caprivi.",
+        "Germany wanted access to the Zambezi River as a route to the east coast of Africa.",
+        "But the Zambezi was not navigable to the ocean: Victoria Falls lies about 65 km east of the strip.",
+        "At its eastern tip the strip comes within 150 metres of Zimbabwe."
+      ],
+      "places": {
+        "Katima Mulilo": [
+          24.27,
+          -17.5
+        ],
+        "Victoria Falls": [
+          25.86,
+          -17.92
+        ],
+        "Windhoek": [
+          17.08,
+          -22.56
+        ]
+      },
+      "countries": [
+        "NAM",
+        "BWA",
+        "ZMB",
+        "AGO",
+        "ZWE"
+      ],
+      "regions": {
+        "caprivi": {
+          "of": "NAM",
+          "clip": [
+            21.0,
+            -18.6,
+            25.4,
+            -17.3
+          ]
+        }
+      },
+      "focus": {
+        "lon": 22.5,
+        "lat": -19.5,
+        "width_km": 1300
+      }
+    },
+    {
+      "id": "china-one-time-zone",
+      "hook": "China is huge. So why does it have just ONE time zone?",
+      "facts": [
+        "China is about as wide as five time zones.",
+        "But since 1949 the whole country uses a single time: Beijing time, UTC+8.",
+        "In the far west, in places like Kashgar, the sun can rise as late as about 10 a.m. in winter.",
+        "Many people in Xinjiang also use an unofficial local time two hours behind Beijing."
+      ],
+      "places": {
+        "Beijing": [
+          116.4,
+          39.9
+        ],
+        "Kashgar": [
+          75.99,
+          39.47
+        ],
+        "Urumqi": [
+          87.62,
+          43.83
+        ],
+        "Shanghai": [
+          121.47,
+          31.23
+        ]
+      },
+      "countries": [
+        "CHN",
+        "IND",
+        "MNG",
+        "RUS"
+      ],
+      "focus": {
+        "lon": 98.0,
+        "lat": 36.0,
+        "width_km": 5200
+      }
+    },
+    {
+      "id": "cabinda",
+      "hook": "This part of Angola isn't connected to Angola.",
+      "facts": [
+        "Cabinda is a province of Angola that is not connected to the rest of Angola.",
+        "A narrow strip of the Democratic Republic of the Congo along the Congo River separates them.",
+        "That strip gives the DR Congo its short coastline on the Atlantic.",
+        "A big part of Angola's oil comes from Cabinda and its offshore waters."
+      ],
+      "places": {
+        "Cabinda": [
+          12.19,
+          -5.56
+        ],
+        "Luanda": [
+          13.23,
+          -8.84
+        ],
+        "Kinshasa": [
+          15.27,
+          -4.44
+        ],
+        "Congo River mouth": [
+          12.33,
+          -6.08
+        ]
+      },
+      "countries": [
+        "AGO",
+        "COD",
+        "COG"
+      ],
+      "regions": {
+        "cabinda": {
+          "of": "AGO",
+          "clip": [
+            11.5,
+            -6.1,
+            13.2,
+            -4.3
+          ]
+        }
+      },
+      "focus": {
+        "lon": 13.0,
+        "lat": -6.3,
+        "width_km": 650
+      }
+    },
+    {
+      "id": "indus-river",
+      "hook": "Pakistan's lifeline starts in Tibet.",
+      "facts": [
+        "The Indus River is about 3,180 km long.",
+        "It starts in Tibet near Mount Kailash and Lake Manasarovar.",
+        "It flows through Ladakh and Gilgit-Baltistan, then the whole length of Pakistan.",
+        "It reaches the Arabian Sea south-east of Karachi.",
+        "Most of Pakistan's farms depend on water from the Indus and its rivers.",
+        "The Indus Valley Civilisation, one of the world's oldest, grew along it."
+      ],
+      "places": {
+        "Mount Kailash": [
+          81.31,
+          31.07
+        ],
+        "Skardu": [
+          75.63,
+          35.3
+        ],
+        "Attock": [
+          72.24,
+          33.89
+        ],
+        "Sukkur": [
+          68.86,
+          27.7
+        ],
+        "Indus delta": [
+          67.45,
+          24.14
+        ],
+        "Mohenjo-daro": [
+          68.14,
+          27.33
+        ]
+      },
+      "countries": [
+        "PAK",
+        "CHN",
+        "IND"
+      ],
+      "focus": {
+        "lon": 73.5,
+        "lat": 29.5,
+        "width_km": 2000
+      }
+    },
+    {
+      "id": "aral-sea",
+      "hook": "This was once the 4th largest lake on Earth. Now look at it.",
+      "facts": [
+        "In 1960 the Aral Sea was the fourth-largest inland body of water in the world.",
+        "In the early 1960s the Soviet Union diverted its two rivers, the Amu Darya and Syr Darya.",
+        "The water went to irrigate cotton fields in the desert.",
+        "By 2007 the Aral Sea had shrunk to about 10% of its original size.",
+        "Former fishing ports like Moynaq are now far from the water."
+      ],
+      "places": {
+        "Moynaq": [
+          58.7,
+          43.77
+        ],
+        "Aralsk": [
+          61.67,
+          46.8
+        ]
+      },
+      "countries": [
+        "KAZ",
+        "UZB",
+        "TKM"
+      ],
+      "focus": {
+        "lon": 60.0,
+        "lat": 45.0,
+        "width_km": 900
+      }
+    },
+    {
+      "id": "gambia",
+      "hook": "This country is just a river.",
+      "facts": [
+        "The Gambia is the smallest country on mainland Africa.",
+        "It is surrounded by Senegal on every side except its short Atlantic coast.",
+        "The country follows the Gambia River inland.",
+        "It is less than 50 km wide.",
+        "Its capital is Banjul, at the mouth of the river."
+      ],
+      "places": {
+        "Banjul": [
+          -16.58,
+          13.45
+        ],
+        "Dakar": [
+          -17.44,
+          14.69
+        ]
+      },
+      "countries": [
+        "GMB",
+        "SEN",
+        "GNB",
+        "MLI"
+      ],
+      "focus": {
+        "lon": -15.4,
+        "lat": 13.5,
+        "width_km": 600
+      }
+    },
+    {
+      "id": "strait-of-hormuz",
+      "hook": "A quarter of the world's sea oil passes through this gap.",
+      "facts": [
+        "The Strait of Hormuz connects the Persian Gulf to the Gulf of Oman.",
+        "It is about 54 km wide at its narrowest.",
+        "In 2025 an average of about 20 million barrels of oil a day passed through it.",
+        "That is about a quarter of all oil traded by sea.",
+        "Iran is on the north side; on the south side is Musandam, a part of Oman cut off from the rest of Oman by the UAE."
+      ],
+      "places": {
+        "Bandar Abbas": [
+          56.27,
+          27.18
+        ],
+        "Khasab": [
+          56.25,
+          26.18
+        ],
+        "Dubai": [
+          55.27,
+          25.2
+        ]
+      },
+      "countries": [
+        "IRN",
+        "OMN",
+        "ARE",
+        "SAU",
+        "QAT"
+      ],
+      "regions": {
+        "musandam": {
+          "of": "OMN",
+          "clip": [
+            55.9,
+            25.6,
+            56.6,
+            26.5
+          ]
+        }
+      },
+      "measure": {
+        "between": [
+          "IRN",
+          "OMN"
+        ],
+        "within": [
+          55.5,
+          26.0,
+          57.5,
+          27.0
+        ],
+        "text": "~54 KM"
+      },
+      "focus": {
+        "lon": 56.4,
+        "lat": 26.6,
+        "width_km": 500
+      }
+    },
+    {
+      "id": "chile-long",
+      "hook": "Why is Chile so long and thin?",
+      "facts": [
+        "Chile is about 4,300 km long from north to south.",
+        "On average it is less than 180 km wide.",
+        "The Andes mountains form its eastern border with Argentina and Bolivia.",
+        "The Pacific Ocean is on its western side.",
+        "In the north is the Atacama, one of the driest deserts on Earth."
+      ],
+      "places": {
+        "Santiago": [
+          -70.67,
+          -33.45
+        ],
+        "Arica": [
+          -70.31,
+          -18.48
+        ],
+        "Punta Arenas": [
+          -70.91,
+          -53.16
+        ],
+        "Atacama Desert": [
+          -69.5,
+          -24.0
+        ]
+      },
+      "countries": [
+        "CHL",
+        "ARG",
+        "BOL",
+        "PER"
+      ],
+      "focus": {
+        "lon": -69.0,
+        "lat": -36.0,
+        "width_km": 4200
+      }
+    },
+    {
+      "id": "nakhchivan",
+      "hook": "This part of Azerbaijan doesn't touch Azerbaijan.",
+      "facts": [
+        "Nakhchivan is an exclave of Azerbaijan.",
+        "Armenia lies between Nakhchivan and the main part of Azerbaijan.",
+        "Nakhchivan borders Armenia, Iran and Turkey.",
+        "Its border with Turkey is very short."
+      ],
+      "places": {
+        "Nakhchivan": [
+          45.41,
+          39.21
+        ],
+        "Baku": [
+          49.87,
+          40.41
+        ],
+        "Yerevan": [
+          44.51,
+          40.18
+        ]
+      },
+      "countries": [
+        "AZE",
+        "ARM",
+        "IRN",
+        "TUR",
+        "GEO"
+      ],
+      "regions": {
+        "nakhchivan": {
+          "of": "AZE",
+          "clip": [
+            44.7,
+            38.8,
+            46.7,
+            39.85
+          ]
+        }
+      },
+      "focus": {
+        "lon": 46.5,
+        "lat": 39.6,
+        "width_km": 700
+      }
+    },
+    {
+      "id": "caspian-sea",
+      "hook": "The world's biggest lake is called a sea.",
+      "facts": [
+        "The Caspian Sea is the largest lake on Earth by area, about 371,000 square km.",
+        "Its surface is about 28 metres below sea level.",
+        "Five countries border it: Russia, Kazakhstan, Turkmenistan, Iran and Azerbaijan.",
+        "It has no natural connection to the ocean.",
+        "Its water is salty, but less salty than the ocean."
+      ],
+      "places": {
+        "Baku": [
+          49.87,
+          40.41
+        ],
+        "Astrakhan": [
+          48.04,
+          46.35
+        ],
+        "Aktau": [
+          51.17,
+          43.65
+        ]
+      },
+      "countries": [
+        "RUS",
+        "KAZ",
+        "TKM",
+        "IRN",
+        "AZE"
+      ],
+      "focus": {
+        "lon": 51.0,
+        "lat": 41.5,
+        "width_km": 1600
+      }
+    },
+    {
+      "id": "bir-tawil",
+      "hook": "No country wants this land. Here's why.",
+      "facts": [
+        "Bir Tawil is about 2,060 square km of desert between Egypt and Sudan.",
+        "No country claims it.",
+        "An 1899 border followed a straight line along the 22nd parallel; a 1902 border was drawn differently.",
+        "Egypt uses the 1899 line, which gives the bigger Halaib Triangle to Egypt and Bir Tawil to Sudan.",
+        "Sudan uses the 1902 line, which gives Halaib to Sudan and Bir Tawil to Egypt.",
+        "So both claim Halaib, which has a coast on the Red Sea, and neither claims Bir Tawil."
+      ],
+      "places": {
+        "Bir Tawil": [
+          33.748,
+          21.869
+        ],
+        "Halaib": [
+          36.33,
+          22.22
+        ],
+        "Cairo": [
+          31.24,
+          30.04
+        ],
+        "Khartoum": [
+          32.53,
+          15.5
+        ]
+      },
+      "countries": [
+        "BRT",
+        "EGY",
+        "SDN"
+      ],
+      "focus": {
+        "lon": 34.5,
+        "lat": 22.0,
+        "width_km": 700
+      }
+    },
+    {
+      "id": "lake-baikal",
+      "hook": "This one lake holds about a fifth of Earth's lake and river water.",
+      "facts": [
+        "Lake Baikal in Siberia is the deepest lake in the world, at about 1,642 metres.",
+        "It is also the oldest known lake, about 25 million years old.",
+        "It holds roughly a fifth of the world's unfrozen fresh surface water.",
+        "Over 300 rivers flow into it, but only one, the Angara, flows out."
+      ],
+      "places": {
+        "Irkutsk": [
+          104.3,
+          52.29
+        ],
+        "Ulan-Ude": [
+          107.58,
+          51.83
+        ]
+      },
+      "countries": [
+        "RUS",
+        "MNG",
+        "CHN"
+      ],
+      "focus": {
+        "lon": 107.0,
+        "lat": 53.5,
+        "width_km": 1000
+      }
+    },
+    {
+      "id": "equatorial-guinea",
+      "hook": "This country's capital is on an island closer to another country.",
+      "facts": [
+        "Equatorial Guinea's capital, Malabo, is on Bioko island, not on the mainland.",
+        "Bioko is much closer to Cameroon than to the country's own mainland, Río Muni.",
+        "Equatorial Guinea is the only country in Africa with Spanish as an official language.",
+        "It was a Spanish colony until 1968."
+      ],
+      "places": {
+        "Malabo": [
+          8.78,
+          3.75
+        ],
+        "Bata": [
+          9.77,
+          1.86
+        ],
+        "Douala": [
+          9.7,
+          4.05
+        ]
+      },
+      "countries": [
+        "GNQ",
+        "CMR",
+        "GAB"
+      ],
+      "regions": {
+        "bioko": {
+          "of": "GNQ",
+          "clip": [
+            8.3,
+            3.1,
+            9.1,
+            3.9
+          ]
+        }
+      },
+      "focus": {
+        "lon": 9.4,
+        "lat": 2.6,
+        "width_km": 600
+      }
+    },
+    {
+      "id": "russia-time-zones",
+      "hook": "Russia has 11 time zones.",
+      "facts": [
+        "Russia is the largest country in the world.",
+        "It has 11 time zones, from Kaliningrad in the west to Kamchatka in the east.",
+        "When it is 9 a.m. in Kaliningrad, it is already 7 p.m. in Kamchatka.",
+        "It is so wide it borders both the Baltic Sea and the Pacific Ocean."
+      ],
+      "places": {
+        "Kaliningrad": [
+          20.51,
+          54.71
+        ],
+        "Moscow": [
+          37.62,
+          55.75
+        ],
+        "Novosibirsk": [
+          82.93,
+          55.03
+        ],
+        "Petropavlovsk-Kamchatsky": [
+          158.65,
+          53.02
+        ]
+      },
+      "countries": [
+        "RUS",
+        "KAZ",
+        "CHN",
+        "MNG"
+      ],
+      "focus": {
+        "lon": 95.0,
+        "lat": 60.0,
+        "width_km": 7500
+      }
+    },
+    {
+      "id": "brazil-neighbours",
+      "hook": "Brazil touches almost every country in South America.",
+      "facts": [
+        "Brazil borders 10 countries.",
+        "In South America, only Chile and Ecuador do not border Brazil.",
+        "One of its neighbours is France, through French Guiana.",
+        "Brazil covers almost half of South America."
+      ],
+      "places": {
+        "Brasília": [
+          -47.88,
+          -15.79
+        ],
+        "French Guiana": [
+          -53.1,
+          4.0
+        ]
+      },
+      "countries": [
+        "BRA",
+        "URY",
+        "ARG",
+        "PRY",
+        "BOL",
+        "PER",
+        "COL",
+        "VEN",
+        "GUY",
+        "SUR",
+        "CHL",
+        "ECU"
+      ],
+      "focus": {
+        "lon": -58.0,
+        "lat": -15.0,
+        "width_km": 6000
+      }
+    },
+    {
+      "id": "northwest-angle",
+      "hook": "Why does the USA have a bump on its straight border?",
+      "facts": [
+        "The Northwest Angle in Minnesota is the only part of the contiguous United States north of the 49th parallel.",
+        "It sits on Lake of the Woods.",
+        "By land it can only be reached by driving through Canada.",
+        "It exists because the 1783 Treaty of Paris used an inaccurate map of the area's lakes and rivers."
+      ],
+      "places": {
+        "Angle Inlet": [
+          -95.07,
+          49.35
+        ],
+        "Winnipeg": [
+          -97.14,
+          49.9
+        ]
+      },
+      "countries": [
+        "USA",
+        "CAN"
+      ],
+      "regions": {
+        "angle": {
+          "of": "USA",
+          "clip": [
+            -95.4,
+            49.0,
+            -94.9,
+            49.4
+          ]
+        }
+      },
+      "focus": {
+        "lon": -95.0,
+        "lat": 49.2,
+        "width_km": 160
+      }
+    },
+    {
+      "id": "indonesia-wide",
+      "hook": "Indonesia is wider than the United States.",
+      "facts": [
+        "Indonesia is made of more than 17,000 islands.",
+        "From west to east it stretches more than 5,000 km.",
+        "That is wider than the mainland United States from coast to coast.",
+        "Its capital Jakarta is on the island of Java, one of the most crowded islands on Earth."
+      ],
+      "places": {
+        "Jakarta": [
+          106.85,
+          -6.2
+        ],
+        "Banda Aceh": [
+          95.32,
+          5.55
+        ],
+        "Jayapura": [
+          140.72,
+          -2.53
+        ]
+      },
+      "countries": [
+        "IDN",
+        "MYS",
+        "PNG",
+        "AUS",
+        "PHL"
+      ],
+      "focus": {
+        "lon": 118.0,
+        "lat": -2.5,
+        "width_km": 6000
+      }
+    },
+    {
+      "id": "alaska-purchase",
+      "hook": "The USA bought Alaska for about 2 cents an acre.",
+      "facts": [
+        "In 1867 the United States bought Alaska from Russia.",
+        "The price was 7.2 million dollars, about 2 cents an acre.",
+        "Critics called it Seward's Folly, after the Secretary of State who arranged it.",
+        "Gold and later oil were found in Alaska.",
+        "Across the Bering Strait, Alaska is only about 82 km from Russia."
+      ],
+      "places": {
+        "Anchorage": [
+          -149.9,
+          61.22
+        ],
+        "Juneau": [
+          -134.42,
+          58.3
+        ],
+        "Bering Strait": [
+          -168.9,
+          65.8
+        ]
+      },
+      "countries": [
+        "USA",
+        "CAN",
+        "RUS"
+      ],
+      "regions": {
+        "alaska": {
+          "of": "USA",
+          "clip": [
+            -170,
+            51,
+            -129,
+            72
+          ]
+        }
+      },
+      "focus": {
+        "lon": -152.0,
+        "lat": 62.0,
+        "width_km": 3200
+      }
+    },
+    {
+      "id": "australia-moon",
+      "hook": "Australia is wider than the Moon.",
+      "facts": [
+        "Australia is about 4,000 km wide from west to east.",
+        "The Moon is about 3,474 km across.",
+        "So Australia is wider than the Moon.",
+        "Most Australians live near the coast, especially in the south-east."
+      ],
+      "places": {
+        "Perth": [
+          115.86,
+          -31.95
+        ],
+        "Brisbane": [
+          153.03,
+          -27.47
+        ],
+        "Sydney": [
+          151.21,
+          -33.87
+        ]
+      },
+      "countries": [
+        "AUS",
+        "IDN",
+        "PNG",
+        "NZL"
+      ],
+      "focus": {
+        "lon": 134.0,
+        "lat": -26.0,
+        "width_km": 4800
+      }
+    },
+    {
+      "id": "canada-us-border",
+      "hook": "The world's longest border is between two friends.",
+      "facts": [
+        "The border between Canada and the United States is about 8,891 km long, the longest international border in the world.",
+        "It includes the border between Alaska and Canada.",
+        "A long section in the west follows the 49th parallel in a straight line.",
+        "It is often called the world's longest undefended border."
+      ],
+      "places": {
+        "Ottawa": [
+          -75.7,
+          45.42
+        ],
+        "Washington, D.C.": [
+          -77.04,
+          38.9
+        ],
+        "Vancouver": [
+          -123.12,
+          49.28
+        ]
+      },
+      "countries": [
+        "CAN",
+        "USA"
+      ],
+      "focus": {
+        "lon": -100.0,
+        "lat": 50.0,
+        "width_km": 6500
+      }
+    },
+    {
+      "id": "drake-passage",
+      "hook": "The roughest sea on Earth sits between South America and Antarctica.",
+      "facts": [
+        "The Drake Passage is about 800 km wide, between Cape Horn and the South Shetland Islands of Antarctica.",
+        "It is known as one of the roughest stretches of sea in the world.",
+        "There is no land all the way around the Earth at this latitude, so winds and currents build up.",
+        "The Antarctic Circumpolar Current flows through it."
+      ],
+      "places": {
+        "Cape Horn": [
+          -67.27,
+          -55.98
+        ],
+        "Ushuaia": [
+          -68.3,
+          -54.8
+        ],
+        "South Shetland Islands": [
+          -58.4,
+          -62.05
+        ]
+      },
+      "countries": [
+        "CHL",
+        "ARG",
+        "ATA"
+      ],
+      "focus": {
+        "lon": -64.0,
+        "lat": -59.0,
+        "width_km": 1600
+      }
+    },
+    {
+      "id": "bosphorus",
+      "hook": "One city, two continents.",
+      "facts": [
+        "Istanbul sits on both sides of the Bosphorus strait.",
+        "One side of the city is in Europe and the other is in Asia.",
+        "The Bosphorus is about 31 km long and only about 700 metres wide at its narrowest.",
+        "It connects the Black Sea to the Sea of Marmara and on to the Mediterranean."
+      ],
+      "places": {
+        "Istanbul": [
+          28.98,
+          41.01
+        ],
+        "Black Sea": [
+          29.4,
+          41.45
+        ],
+        "Sea of Marmara": [
+          28.5,
+          40.75
+        ]
+      },
+      "countries": [
+        "TUR",
+        "GRC",
+        "BGR"
+      ],
+      "focus": {
+        "lon": 29.05,
+        "lat": 41.1,
+        "width_km": 80
+      }
+    }
+  ]
+}

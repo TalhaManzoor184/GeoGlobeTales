@@ -184,8 +184,8 @@
           "id": "lbl_pak",
           "type": "label",
           "text": "Pakistan",
-          "lon": 71.6,
-          "lat": 34.2,
+          "lon": 71.0,
+          "lat": 35.1,
           "at": 1.8
         },
         {

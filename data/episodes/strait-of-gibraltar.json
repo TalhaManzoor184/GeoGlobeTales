@@ -1,0 +1,282 @@
+{
+  "slug": "strait-of-gibraltar",
+  "title": "Europe and Africa are 13 km apart",
+  "upload": {
+    "title": "Europe and Africa are only 13 km apart 🌍",
+    "description": "The Strait of Gibraltar is the only natural gate between the Atlantic and the Mediterranean. At its narrowest, Spain and Morocco are just 13 km apart.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#gibraltar",
+      "#spain",
+      "#morocco",
+      "#africa"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "camera": {
+        "from": {
+          "lon": -40,
+          "lat": 20,
+          "radius": 400
+        },
+        "lon": -5.5,
+        "lat": 36.0,
+        "radius": 1900
+      },
+      "globe_highlight": {
+        "ESP": "orange",
+        "MAR": "green"
+      },
+      "title": "Europe and Africa: *13 km*",
+      "vo": "Europe and Africa are only 13 kilometres apart.",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -5.5,
+          "lat": 36.0,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "caption": "Europe and Africa are only 13 kilometres apart.",
+      "duration": 3.7
+    },
+    {
+      "id": "s2",
+      "camera": {
+        "lon": -4.0,
+        "lat": 37.5,
+        "width_km": 1500
+      },
+      "vo": "This is the Strait of Gibraltar, the only natural link between the Atlantic Ocean and the Mediterranean Sea.",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "esp",
+          "type": "country",
+          "iso": "ESP",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "mar",
+          "type": "country",
+          "iso": "MAR",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_esp",
+          "type": "label",
+          "text": "Spain",
+          "lon": -3.7,
+          "lat": 40.0,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_mar",
+          "type": "label",
+          "text": "Morocco",
+          "lon": -5.5,
+          "lat": 34.4,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_atl",
+          "type": "label",
+          "text": "Atlantic",
+          "lon": -9.8,
+          "lat": 35.6,
+          "color": "blue",
+          "size": 40,
+          "at": 2.0
+        },
+        {
+          "id": "lbl_med",
+          "type": "label",
+          "text": "Mediterranean",
+          "lon": 1.5,
+          "lat": 37.4,
+          "color": "blue",
+          "size": 40,
+          "at": 2.6
+        }
+      ],
+      "caption": "This is the Strait of Gibraltar, the only natural link between the Atlantic Ocean and the Mediterranean Sea.",
+      "duration": 7.5
+    },
+    {
+      "id": "s3",
+      "camera": {
+        "lon": -5.5,
+        "lat": 36.0,
+        "width_km": 90
+      },
+      "vo": "At its narrowest point, between Point Marroquí in Spain and Point Cires in Morocco, it is just 13 kilometres wide.",
+      "hide": [
+        "lbl_atl",
+        "lbl_med",
+        "lbl_esp",
+        "lbl_mar"
+      ],
+      "show": [
+        {
+          "id": "ruler",
+          "type": "measure",
+          "text": "13 KM",
+          "color": "white",
+          "at": 1.2,
+          "points": [
+            [
+              -5.6089,
+              36.0058
+            ],
+            [
+              -5.4775,
+              35.912
+            ]
+          ],
+          "label_offset": [
+            200,
+            -60
+          ]
+        },
+        {
+          "id": "lbl_esp_z",
+          "type": "label",
+          "text": "Spain",
+          "lon": -5.75,
+          "lat": 36.25,
+          "size": 48,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_mar_z",
+          "type": "label",
+          "text": "Morocco",
+          "lon": -5.45,
+          "lat": 35.82,
+          "size": 48,
+          "at": 0.8
+        }
+      ],
+      "caption": "At its narrowest point, between Point Marroquí in Spain and Point Cires in Morocco, it is just 13 kilometres wide.",
+      "duration": 8.3
+    },
+    {
+      "id": "s4",
+      "camera": {
+        "lon": -5.35,
+        "lat": 36.1,
+        "width_km": 60
+      },
+      "title": "A piece of *Britain*",
+      "vo": "On the northern side sits Gibraltar, a British overseas territory.",
+      "hide": [
+        "ruler",
+        "lbl_esp_z",
+        "lbl_mar_z"
+      ],
+      "show": [
+        {
+          "id": "gib",
+          "type": "country",
+          "iso": "GIB",
+          "fill": "red",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 0.5
+        },
+        {
+          "id": "m_gib",
+          "type": "marker",
+          "lon": -5.35,
+          "lat": 36.14,
+          "text": "Gibraltar",
+          "side": "right",
+          "size": 38,
+          "at": 0.8
+        }
+      ],
+      "caption": "On the northern side sits Gibraltar, a British overseas territory.",
+      "duration": 4.4
+    },
+    {
+      "id": "s5",
+      "camera": {
+        "lon": -5.3,
+        "lat": 35.95,
+        "width_km": 70
+      },
+      "title": "And a piece of *Spain* in Africa",
+      "vo": "And on the African side is Ceuta, a Spanish city.",
+      "hide": [
+        "m_gib"
+      ],
+      "show": [
+        {
+          "id": "m_ceuta",
+          "type": "marker",
+          "lon": -5.32,
+          "lat": 35.89,
+          "text": "Ceuta",
+          "side": "right",
+          "size": 38,
+          "color": "orange",
+          "at": 0.6
+        }
+      ],
+      "caption": "And on the African side is Ceuta, a Spanish city.",
+      "duration": 4.4
+    },
+    {
+      "id": "s6",
+      "camera": {
+        "lon": -4.5,
+        "lat": 36.5,
+        "width_km": 900
+      },
+      "vo": "Two continents, two seas, and a gap you could almost swim. Follow for more map secrets!",
+      "hide": [
+        "m_ceuta",
+        "gib"
+      ],
+      "show": [
+        {
+          "id": "badge",
+          "type": "badge",
+          "text": "13 KM",
+          "sub": "Europe to Africa",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.5
+        }
+      ],
+      "caption": "Two continents, two seas, and a gap you could almost swim. Follow for more map secrets!",
+      "duration": 6.8
+    }
+  ],
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "brand": "",
+  "thumbnail_at": 10.4
+}

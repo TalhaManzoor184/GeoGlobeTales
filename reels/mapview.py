@@ -54,7 +54,7 @@ def geom_path(geom) -> MPath | None:
 class MapView:
     def __init__(self, countries: gpd.GeoDataFrame, center: tuple[float, float],
                  extent: tuple[float, float, float, float], rivers: gpd.GeoDataFrame | None,
-                 style: dict):
+                 style: dict, lakes: gpd.GeoDataFrame | None = None):
         self.style = style
         self.crs = f"+proj=aeqd +lat_0={center[1]} +lon_0={center[0]} +units=m +datum=WGS84"
         self.fwd = Transformer.from_crs("EPSG:4326", self.crs, always_xy=True)
@@ -94,6 +94,20 @@ class MapView:
                         segs.append(np.asarray(ln.simplify(200).coords)[:, :2])
             self.rivers = LineCollection(segs, colors=C(style["river"]), linewidths=1.4, zorder=3)
             self.ax.add_collection(self.rivers)
+
+        # lakes sit above country fills so a highlighted country never hides its lakes
+        self.lakes: list[list[PathPatch]] = [[] for _ in LODS]
+        if lakes is not None:
+            lk = lakes[lakes.intersects(clip)].to_crs(self.crs)
+            for geom in lk.geometry:
+                for li, tol in enumerate(LODS):
+                    p = geom_path(geom.simplify(tol))
+                    if p is None:
+                        continue
+                    patch = PathPatch(p, facecolor=C(style["ocean"]), edgecolor=C(style["border"]),
+                                      linewidth=0.8, zorder=7)
+                    self.ax.add_patch(patch)
+                    self.lakes[li].append(patch)
 
         self.layer_artists: dict[str, list[tuple[list[PathPatch], float]]] = {}
         self.lod = -1
@@ -154,7 +168,13 @@ class MapView:
         self.layer_artists[spec["id"]] = entries
 
     def measure_points(self, spec: dict):
-        """Nearest points between two countries inside a lon/lat window -> lon/lat pair + km."""
+        """Nearest points between two countries inside a lon/lat window -> lon/lat pair + km.
+        A spec with "points": [[lon, lat], [lon, lat]] draws exactly between those two places."""
+        if "points" in spec:
+            (lo1, la1), (lo2, la2) = spec["points"]
+            x1, y1 = self.fwd.transform(lo1, la1)
+            x2, y2 = self.fwd.transform(lo2, la2)
+            return (lo1, la1), (lo2, la2), math.hypot(x2 - x1, y2 - y1) / 1000.0
         a_iso, b_iso = spec["between"]
         win = gpd.GeoSeries([box(*spec["within"])], crs=4326).to_crs(self.crs).iloc[0]
         a, b = nearest_points(self.by_iso[a_iso].intersection(win), self.by_iso[b_iso].intersection(win))
@@ -174,9 +194,10 @@ class MapView:
         # coarsest LOD whose simplification error stays under ~0.8 px
         lod = next((i for i in range(len(LODS) - 1, -1, -1) if LODS[i] <= mpp * 0.8), 0)
         if lod != self.lod:
-            for i, patches in enumerate(self.base):
-                for p in patches:
-                    p.set_visible(i == lod)
+            for group in (self.base, self.lakes):
+                for i, patches in enumerate(group):
+                    for p in patches:
+                        p.set_visible(i == lod)
             self.lod = lod
         if self.rivers is not None:
             # rivers only read well once we are zoomed in

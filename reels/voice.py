@@ -39,7 +39,8 @@ def main(argv=None):
     path = Path(args.episode)
     ep = json.loads(path.read_text(encoding="utf-8"))
     v = ep.get("voice", {})
-    vdir = path.resolve().parent.parent / "out" / ep["slug"] / "voice"
+    from .data import OUT
+    vdir = OUT / ep["slug"] / "voice"
     vdir.mkdir(parents=True, exist_ok=True)
     timings = {}
     for i, s in enumerate(ep["scenes"]):

@@ -1,0 +1,90 @@
+name: Daily map short
+
+on:
+  schedule:
+    # GitHub often starts cron jobs late or skips them, so try three times before the
+    # 9:00 PM PKT slot: 5:13 PM, 6:43 PM and 8:07 PM PKT. Each run checks data/history.json
+    # and does nothing if today's slot already has a video, so only one goes out per day.
+    - cron: "13 12 * * *"
+    - cron: "43 13 * * *"
+    - cron: "7 15 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "test = Wakhan episode, no YouTube · upload-test = Wakhan uploaded PRIVATE (checks YouTube keys) · no-upload = real Gemini episode, no YouTube · full = real episode, public at 9 PM · publish-now = real episode, public immediately"
+        type: choice
+        options: [test, upload-test, no-upload, full, publish-now]
+        default: test
+
+permissions:
+  contents: write # to commit data/history.json and generated episodes
+
+concurrency:
+  group: daily-short
+  cancel-in-progress: false
+
+env:
+  # Override in Settings → Secrets and variables → Actions → Variables.
+  UPLOAD_MODE: ${{ vars.UPLOAD_MODE || 'schedule' }}
+  PUBLISH_TIME: ${{ vars.PUBLISH_TIME || '21:00' }}
+  PUBLISH_UTC_OFFSET: ${{ vars.PUBLISH_UTC_OFFSET || '5' }}
+  VOICE: ${{ vars.VOICE || 'en-US-GuyNeural' }}
+  MAP_POV: ${{ vars.MAP_POV || 'PAK' }}
+  BRAND: ${{ vars.BRAND }}
+  GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL }}
+
+jobs:
+  short:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Cache map data and fonts
+        uses: actions/cache@v4
+        with:
+          path: cache
+          key: map-cache-v2
+
+      - run: pip install -r requirements.txt
+
+      - name: Make (and upload) today's short
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          MODE: ${{ github.event_name == 'schedule' && 'scheduled' || inputs.mode }}
+        run: python -m reels.daily --mode "$MODE"
+
+      - name: Keep the video for 14 days
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: short-${{ github.run_number }}
+          path: |
+            out/*/*.mp4
+            out/*/script.md
+            out/*/thumbnail.png
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Save history and generated episodes
+        if: always()
+        run: |
+          git config user.name "map-bot"
+          git config user.email "map-bot@users.noreply.github.com"
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Short $(date -u +%F)"
+            git pull --rebase -q
+            git push
+          fi
