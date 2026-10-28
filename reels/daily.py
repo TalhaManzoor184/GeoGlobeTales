@@ -98,6 +98,10 @@ def preflight(mode: str):
             print(f"YouTube channel: {name}", flush=True)
         except Exception as e:  # noqa: BLE001
             msg = str(e)
+            if "insufficient authentication scopes" in msg:
+                # login worked; the token just can't read channel info. Uploading only needs youtube.upload.
+                print("YouTube login OK (token has upload scope only; channel name unavailable)", flush=True)
+                return
             if "invalid_grant" in msg:
                 msg = ("YouTube refresh token is invalid or expired (invalid_grant). The token must be "
                        "created with the SAME client id/secret that are in this repo's secrets. "
