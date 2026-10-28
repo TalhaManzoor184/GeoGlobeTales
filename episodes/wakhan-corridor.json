@@ -1,0 +1,512 @@
+{
+  "slug": "wakhan-corridor",
+  "title": "Wakhan Corridor: Afghanistan ki patli dum kyun hai?",
+  "brand": "",
+  "thumbnail_at": 8.6,
+  "voice": {
+    "name": "ur-PK-AsadNeural",
+    "rate": "+6%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "center": [
+      72.0,
+      36.5
+    ],
+    "extent": [
+      30,
+      -5,
+      115,
+      70
+    ],
+    "rivers": true
+  },
+  "upload": {
+    "title": "Afghanistan ki ye patli dum kyun hai? 🇦🇫🗺️ Wakhan Corridor",
+    "description": "Pakistan aur Tajikistan ke beech sirf 13 km ki Afghan patti — Wakhan Corridor. British India aur Russian Empire ke 'Great Game' ne 1893 aur 1895 mein ye ajeeb sarhad banayi.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#pakistan",
+      "#afghanistan",
+      "#wakhan",
+      "#history",
+      "#urdu"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.2,
+      "camera": {
+        "from": {
+          "lon": 5,
+          "lat": 12,
+          "radius": 400
+        },
+        "lon": 71.5,
+        "lat": 36.0,
+        "radius": 1900,
+        "move": 3.9
+      },
+      "globe_highlight": {
+        "AFG": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "Afghanistan ki ye *dum* kyun hai?",
+      "vo_ur": "افغانستان کے نقشے میں ایک عجیب سی لمبی دُم کیوں ہے؟",
+      "vo_roman": "Afghanistan ke naqshe mein ek ajeeb si lambi dum kyun hai?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 73.2,
+          "lat": 37.0,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "duration": 6.0,
+      "camera": {
+        "lon": 68.5,
+        "lat": 35.6,
+        "width_km": 1900,
+        "move": 1.8
+      },
+      "title": "*Wakhan* Corridor",
+      "vo_ur": "اسے کہتے ہیں واخان کوریڈور۔ تقریباً ساڑھے تین سو کلومیٹر لمبی ایک پتلی سی پٹی۔",
+      "vo_roman": "Isay kehte hain Wakhan Corridor. Takreeban 350 kilometer lambi ek patli si patti.",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "afg",
+          "type": "country",
+          "iso": "AFG",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "lbl_afg",
+          "type": "label",
+          "text": "Afghanistan",
+          "lon": 65.8,
+          "lat": 33.4,
+          "at": 0.8
+        },
+        {
+          "id": "wakhan",
+          "type": "region",
+          "of": "AFG",
+          "clip": [
+            71.55,
+            36.4,
+            75.2,
+            37.75
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 2.3
+        },
+        {
+          "id": "lbl_wakhan",
+          "type": "label",
+          "text": "Wakhan\nCorridor",
+          "lon": 73.6,
+          "lat": 38.35,
+          "color": "yellow",
+          "size": 54,
+          "at": 2.7
+        },
+        {
+          "id": "lbl_350",
+          "type": "label",
+          "text": "~350 km",
+          "lon": 73.4,
+          "lat": 36.05,
+          "size": 42,
+          "upper": false,
+          "at": 3.8
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "duration": 5.5,
+      "camera": {
+        "lon": 72.6,
+        "lat": 36.9,
+        "width_km": 1150,
+        "move": 1.5
+      },
+      "vo_ur": "اس کے اوپر تاجکستان ہے، نیچے پاکستان، اور آخری سرے پر چین۔",
+      "vo_roman": "Iske upar Tajikistan hai, neeche Pakistan, aur aakhri sire par China.",
+      "hide": [
+        "afg",
+        "lbl_afg",
+        "lbl_350",
+        "lbl_wakhan"
+      ],
+      "show": [
+        {
+          "id": "tjk",
+          "type": "country",
+          "iso": "TJK",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_tjk",
+          "type": "label",
+          "text": "Tajikistan",
+          "lon": 70.6,
+          "lat": 38.75,
+          "at": 0.6
+        },
+        {
+          "id": "pak",
+          "type": "country",
+          "iso": "PAK",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 1.6
+        },
+        {
+          "id": "lbl_pak",
+          "type": "label",
+          "text": "Pakistan",
+          "lon": 71.6,
+          "lat": 34.2,
+          "at": 1.8
+        },
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 3.0
+        },
+        {
+          "id": "lbl_chn",
+          "type": "label",
+          "text": "China",
+          "lon": 77.2,
+          "lat": 38.4,
+          "at": 3.2
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.1,
+        "lat": 36.76,
+        "width_km": 80,
+        "move": 2.0
+      },
+      "vo_ur": "ایک جگہ یہ صرف تیرہ کلومیٹر چوڑی ہے۔ یعنی پاکستان اور تاجکستان کے بیچ بس افغانستان کی ایک پتلی سی لکیر۔",
+      "vo_roman": "Ek jagah ye sirf 13 kilometer chaudi hai. Yani Pakistan aur Tajikistan ke beech bas Afghanistan ki ek patli si lakeer.",
+      "hide": [
+        "lbl_tjk",
+        "lbl_pak",
+        "lbl_chn"
+      ],
+      "show": [
+        {
+          "id": "lbl_tjk_z",
+          "type": "label",
+          "text": "Tajikistan",
+          "lon": 72.25,
+          "lat": 37.05,
+          "size": 50,
+          "at": 1.6
+        },
+        {
+          "id": "lbl_pak_z",
+          "type": "label",
+          "text": "Pakistan",
+          "lon": 72.2,
+          "lat": 36.45,
+          "size": 50,
+          "at": 1.8
+        },
+        {
+          "id": "ruler",
+          "type": "measure",
+          "between": [
+            "PAK",
+            "TJK"
+          ],
+          "within": [
+            71.5,
+            36.4,
+            72.8,
+            37.2
+          ],
+          "text": "13 KM",
+          "label_offset": [
+            170,
+            40
+          ],
+          "at": 2.6,
+          "color": "white"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.0,
+        "lat": 33.5,
+        "width_km": 4300,
+        "move": 2.0
+      },
+      "title": "Wajah: *Great Game*",
+      "vo_ur": "وجہ تھی گریٹ گیم۔ انیسویں صدی میں برٹش انڈیا اور روسی سلطنت ایک دوسرے کی طرف بڑھ رہے تھے۔",
+      "vo_roman": "Wajah thi Great Game. Unneesvi sadi mein British India aur Russian Empire ek doosre ki taraf barh rahe the.",
+      "hide": [
+        "lbl_tjk_z",
+        "lbl_pak_z",
+        "ruler",
+        "tjk",
+        "pak",
+        "chn"
+      ],
+      "show": [
+        {
+          "id": "brit",
+          "type": "country",
+          "iso": [
+            "PAK",
+            "IND",
+            "BGD"
+          ],
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_brit",
+          "type": "label",
+          "text": "British\nIndia",
+          "lon": 77.8,
+          "lat": 13.5,
+          "color": "orange",
+          "size": 58,
+          "at": 1.4
+        },
+        {
+          "id": "rus",
+          "type": "country",
+          "iso": [
+            "RUS",
+            "KAZ",
+            "UZB",
+            "TKM",
+            "KGZ",
+            "TJK"
+          ],
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 2.6
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russian\nEmpire",
+          "lon": 66.0,
+          "lat": 46.0,
+          "color": "purple",
+          "size": 58,
+          "at": 2.8
+        },
+        {
+          "id": "arr_rus",
+          "type": "arrow",
+          "from": [
+            66.5,
+            43.0
+          ],
+          "to": [
+            71.0,
+            38.7
+          ],
+          "color": "purple",
+          "at": 4.2
+        },
+        {
+          "id": "arr_brit",
+          "type": "arrow",
+          "from": [
+            76.0,
+            28.5
+          ],
+          "to": [
+            72.6,
+            35.4
+          ],
+          "color": "orange",
+          "at": 4.6
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.6,
+        "lat": 36.6,
+        "width_km": 900,
+        "move": 1.8
+      },
+      "vo_ur": "تو اٹھارہ سو ترانوے اور اٹھارہ سو پچانوے کے معاہدوں میں یہ پٹی افغانستان کے حصے میں ڈال دی گئی، تاکہ دونوں سلطنتیں کبھی آپس میں نہ ملیں۔",
+      "vo_roman": "To 1893 aur 1895 ke muahidon mein ye patti Afghanistan ke hisse mein daal di gayi, taake dono saltanatein kabhi aapas mein na milein.",
+      "hide": [
+        "arr_rus",
+        "arr_brit",
+        "lbl_brit",
+        "lbl_rus"
+      ],
+      "show": [
+        {
+          "id": "lbl_brit_z",
+          "type": "label",
+          "text": "British India",
+          "lon": 72.0,
+          "lat": 34.9,
+          "color": "orange",
+          "size": 44,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_rus_z",
+          "type": "label",
+          "text": "Russian Empire",
+          "lon": 72.6,
+          "lat": 38.6,
+          "color": "purple",
+          "size": 44,
+          "at": 1.2
+        },
+        {
+          "id": "badge_years",
+          "type": "badge",
+          "text": "1893 + 1895",
+          "sub": "Buffer zone",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "duration": 7.5,
+      "camera": {
+        "lon": 74.25,
+        "lat": 37.0,
+        "width_km": 330,
+        "move": 2.0
+      },
+      "title": "Aakhri sira: *China*",
+      "vo_ur": "اس کا آخری سرا چین سے ملتا ہے۔ صرف بانوے کلومیٹر کی سرحد، اور واخجیر پاس تقریباً انچاس سو میٹر کی اونچائی پر۔",
+      "vo_roman": "Iska aakhri sira China se milta hai. Sirf 92 kilometer ki sarhad, aur Wakhjir Pass takreeban 4,900 meter ki unchai par.",
+      "hide": [
+        "brit",
+        "rus",
+        "lbl_brit_z",
+        "lbl_rus_z",
+        "badge_years"
+      ],
+      "show": [
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_chn_z",
+          "type": "label",
+          "text": "China",
+          "lon": 75.4,
+          "lat": 37.45,
+          "size": 52,
+          "at": 0.9
+        },
+        {
+          "id": "badge_92",
+          "type": "badge",
+          "text": "92 KM",
+          "sub": "China ke saath sarhad",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.6
+        },
+        {
+          "id": "wakhjir",
+          "type": "marker",
+          "lon": 74.4842,
+          "lat": 37.0872,
+          "text": "Wakhjir Pass\n4,923 m",
+          "side": "bottom",
+          "size": 36,
+          "at": 3.4
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "duration": 8.0,
+      "camera": {
+        "lon": 72.8,
+        "lat": 36.6,
+        "width_km": 1500,
+        "move": 2.0
+      },
+      "title": "*Follow* karein: aur naqshon ke raaz",
+      "vo_ur": "آج بھی یہاں صرف تقریباً اٹھارہ ہزار لوگ رہتے ہیں۔ ایک نقشہ، جو دو سلطنتوں کے ڈر سے بنا۔ ایسے اور رازوں کے لیے فالو کریں!",
+      "vo_roman": "Aaj bhi yahan sirf takreeban 18 hazaar log rehte hain. Ek naqsha, jo do saltanaton ke dar se bana. Aise aur raaz ke liye follow karein!",
+      "hide": [
+        "badge_92",
+        "wakhjir",
+        "lbl_chn_z"
+      ],
+      "show": [
+        {
+          "id": "tjk",
+          "at": 0.4
+        },
+        {
+          "id": "pak",
+          "at": 0.4
+        },
+        {
+          "id": "badge_pop",
+          "type": "badge",
+          "text": "~18,000",
+          "sub": "log aaj bhi yahan",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ]
+    }
+  ]
+}

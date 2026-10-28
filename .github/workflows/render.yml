@@ -1,0 +1,67 @@
+name: Render reels
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episode file (blank = all episodes)"
+        required: false
+        default: "episodes/wakhan-corridor.json"
+  push:
+    branches: [main]
+    paths: ["episodes/**.json"]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Cache map data and fonts
+        uses: actions/cache@v4
+        with:
+          path: cache
+          key: map-cache-v1
+
+      - run: pip install -r requirements.txt
+
+      - name: Pick episodes
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.episode }}" ]; then
+            echo "files=${{ github.event.inputs.episode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            echo "files=$(git diff --name-only HEAD~1 HEAD -- 'episodes/*.json' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          else
+            echo "files=$(ls episodes/*.json | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Voice + render
+        run: |
+          for f in ${{ steps.pick.outputs.files }}; do
+            echo "::group::$f"
+            # Urdu voice via edge-tts; if it fails the reel still renders silent
+            python -m reels.voice "$f" || echo "::warning::voice skipped for $f"
+            python -m reels.render "$f"
+            echo "::endgroup::"
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reels
+          path: |
+            out/*/*.mp4
+            out/*/thumbnail.png
+            out/*/script.md
+            out/*/captions_roman.srt
