@@ -24,12 +24,30 @@ def publish_at_iso(now: dt.datetime | None = None) -> str:
     return slot.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def secret(name: str) -> str:
+    """Secret value with the usual copy-paste mistakes removed (spaces, quotes, NAME= prefix)."""
+    v = os.environ.get(name, "").strip().strip('"').strip("'").strip()
+    if v.startswith(name + "="):
+        v = v[len(name) + 1:].strip().strip('"').strip("'")
+    return v
+
+
+def diagnose() -> str:
+    """Shape of the secrets, without revealing them."""
+    tok, cid, cs = secret("YOUTUBE_REFRESH_TOKEN"), secret("YOUTUBE_CLIENT_ID"), secret("YOUTUBE_CLIENT_SECRET")
+    notes = [f"refresh token: {len(tok)} chars, {'starts with 1//' if tok.startswith('1//') else 'does NOT start with 1// (not a Google refresh token)'}",
+             f"client id ends with ...{cid[-28:-27] if len(cid) > 28 else ''}{'.apps.googleusercontent.com OK' if cid.endswith('.apps.googleusercontent.com') else ' — not an OAuth client id'}",
+             f"client id project number {cid.split('-')[0] if '-' in cid else '?'}",
+             f"client secret {'starts with GOCSPX-' if cs.startswith('GOCSPX-') else 'has an unusual format'}"]
+    return "; ".join(notes)
+
+
 def youtube():
     from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
-    creds = Credentials(None, refresh_token=os.environ["YOUTUBE_REFRESH_TOKEN"],
-                        client_id=os.environ["YOUTUBE_CLIENT_ID"],
-                        client_secret=os.environ["YOUTUBE_CLIENT_SECRET"],
+    creds = Credentials(None, refresh_token=secret("YOUTUBE_REFRESH_TOKEN"),
+                        client_id=secret("YOUTUBE_CLIENT_ID"),
+                        client_secret=secret("YOUTUBE_CLIENT_SECRET"),
                         token_uri="https://oauth2.googleapis.com/token",
                         scopes=["https://www.googleapis.com/auth/youtube.upload"])
     return build("youtube", "v3", credentials=creds, cache_discovery=False)

@@ -91,7 +91,7 @@ def preflight(mode: str):
         raise SystemExit(f"Missing GitHub secrets: {', '.join(missing)}. "
                          "Add them in Settings → Secrets and variables → Actions.")
     if mode not in ("test", "no-upload"):
-        from .upload import youtube
+        from .upload import diagnose, youtube
         try:
             ch = youtube().channels().list(part="snippet", mine=True).execute()
             name = ch["items"][0]["snippet"]["title"] if ch.get("items") else "(no channel)"
@@ -99,8 +99,9 @@ def preflight(mode: str):
         except Exception as e:  # noqa: BLE001
             msg = str(e)
             if "invalid_grant" in msg:
-                msg = ("YouTube refresh token is invalid or expired (invalid_grant). Run "
-                       "python -m reels.auth_youtube again and update YOUTUBE_REFRESH_TOKEN.")
+                msg = ("YouTube refresh token is invalid or expired (invalid_grant). The token must be "
+                       "created with the SAME client id/secret that are in this repo's secrets. "
+                       f"Secrets look like: {diagnose()}")
             elif "insufficient" in msg.lower() or "scope" in msg.lower():
                 msg = "Refresh token lacks youtube.readonly scope; re-run reels.auth_youtube. " + msg[:200]
             raise SystemExit(f"YouTube login failed: {msg[:400]}")
