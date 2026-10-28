@@ -7,8 +7,8 @@ file hai, aur script usse 1080×1920 animated map reel banati hai:
 - country / region highlights, glow aur pulse
 - labels, markers, measurement lines, arrows aur stat badges
 - Roman Urdu karaoke captions + hook title
-- Urdu voiceover (edge-tts, `ur-PK-AsadNeural`), har scene voice ki length ke hisaab se stretch hota hai
-- Saath mein `script.md`, `captions_roman.srt` aur `thumbnail.png` bhi banti hain
+- Voiceover (edge-tts: `ur-PK-AsadNeural` Urdu, `en-US-GuyNeural` English — episode ki `"voice"` setting), har scene voice ki length ke hisaab se stretch hota hai
+- Saath mein `script.md`, `captions.srt` aur `thumbnail.png` bhi banti hain
 
 Map data [Natural Earth](https://www.naturalearthdata.com/) ka hai (public domain), aur default
 mein **Pakistan point of view** (`"pov": "PAK"`) use hota hai. Is wajah se Kashmir Pakistan ke
@@ -59,3 +59,6 @@ Layer types: `country` (iso: code ya list), `region` (country ka clipped hissa),
 `marker`, `measure` (do mulkon ke beech sab se kam faasla, data se nikalta hai), `arrow`, `badge`.
 Har layer `at` second par fade in hoti hai aur `hide` hone tak rehti hai. Colours: `yellow green
 blue red orange purple teal white grey` ya koi bhi hex. ISO codes Natural Earth ke `ADM0_A3` hain.
+
+**Language:** har scene mein `"vo"` (voice ka text) aur `"caption"` (screen par text) likhein.
+English example: `episodes/wakhan-corridor-en.json`. Finished reels `renders` branch par push hoti hain.

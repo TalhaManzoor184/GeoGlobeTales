@@ -68,14 +68,16 @@ class Overlay:
     def rich_lines(self, text: str, weight: str, size: int, max_w: int):
         """Wrap words; *word* marks accent words. Returns lines of [(word, accent)]."""
         f = F(weight, size)
-        words = [(m.group(1) or m.group(2), bool(m.group(1))) for m in re.finditer(r"\*([^*]+)\*|(\S+)", text)]
+        # (word, accent, trailing punctuation drawn right after the accent word)
+        words = [(m.group(1), True, m.group(2)) if m.group(1) else (m.group(3), False, "")
+                 for m in re.finditer(r"\*([^*]+)\*([^\s*]*)|(\S+)", text)]
         lines, cur = [], []
-        for w, acc in words:
-            trial = " ".join(x for x, _ in cur + [(w, acc)])
+        for w in words:
+            trial = " ".join(x + tl for x, _, tl in cur + [w])
             if cur and f.getlength(trial) > max_w:
                 lines.append(cur)
                 cur = []
-            cur.append((w, acc))
+            cur.append(w)
         if cur:
             lines.append(cur)
         return lines
@@ -93,10 +95,12 @@ class Overlay:
         y = cy - lh * (len(lines) - 1) / 2
         space = f.getlength(" ")
         for line in lines:
-            widths = [f.getlength(w) for w, _ in line]
+            widths = [f.getlength(w + tl) for w, _, tl in line]
             x = cx - (sum(widths) + space * (len(line) - 1)) / 2
-            for (w, acc), wd in zip(line, widths):
+            for (w, acc, tl), wd in zip(line, widths):
                 self.text((x, y), w, weight, size, accent_color if acc else base_color, alpha, anchor="lm")
+                if tl:
+                    self.text((x + f.getlength(w), y), tl, weight, size, base_color, alpha, anchor="lm")
                 x += wd + space
             y += lh
 

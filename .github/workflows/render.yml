@@ -6,10 +6,13 @@ on:
       episode:
         description: "Episode file (blank = all episodes)"
         required: false
-        default: "episodes/wakhan-corridor.json"
+        default: ""
   push:
     branches: [main]
     paths: ["episodes/**.json"]
+
+permissions:
+  contents: write
 
 jobs:
   render:
@@ -42,7 +45,10 @@ jobs:
           if [ -n "${{ github.event.inputs.episode }}" ]; then
             echo "files=${{ github.event.inputs.episode }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "push" ]; then
-            echo "files=$(git diff --name-only HEAD~1 HEAD -- 'episodes/*.json' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+            changed=$(git diff --name-only HEAD~1 HEAD -- 'episodes/*.json' 2>/dev/null | tr '\n' ' ')
+            # first commit has no parent: render everything
+            [ -z "$changed" ] && changed=$(ls episodes/*.json | tr '\n' ' ')
+            echo "files=$changed" >> "$GITHUB_OUTPUT"
           else
             echo "files=$(ls episodes/*.json | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
           fi
@@ -51,7 +57,7 @@ jobs:
         run: |
           for f in ${{ steps.pick.outputs.files }}; do
             echo "::group::$f"
-            # Urdu voice via edge-tts; if it fails the reel still renders silent
+            # voice via edge-tts; if it fails the reel still renders silent
             python -m reels.voice "$f" || echo "::warning::voice skipped for $f"
             python -m reels.render "$f"
             echo "::endgroup::"
@@ -64,4 +70,23 @@ jobs:
             out/*/*.mp4
             out/*/thumbnail.png
             out/*/script.md
-            out/*/captions_roman.srt
+            out/*/captions.srt
+
+      - name: Publish finished reels to the renders branch
+        run: |
+          set -e
+          ls out/*/*.mp4 >/dev/null
+          mkdir -p /tmp/pub && for d in out/*/; do
+            n=$(basename "$d"); mkdir -p "/tmp/pub/$n"
+            cp "$d"/*.mp4 "$d"/thumbnail.png "$d"/script.md "$d"/captions.srt "/tmp/pub/$n/" 2>/dev/null || true
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin renders || true
+          if git rev-parse --verify -q origin/renders; then git checkout -B renders origin/renders; else git checkout --orphan renders && git rm -rqf .; fi
+          rm -rf episodes reels .github README.md requirements.txt
+          printf "cache/\nout/\n__pycache__/\n" > .gitignore
+          cp -r /tmp/pub/* .
+          git add -A
+          git commit -m "Render ${GITHUB_SHA::7}" || echo "nothing new"
+          git push origin renders

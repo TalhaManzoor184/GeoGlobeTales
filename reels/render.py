@@ -173,12 +173,12 @@ def write_sidecars(ep: dict, tl: Timeline, out_dir: Path):
         end = s.start + (s.vo_len or s.duration - 0.3)
         lines += [str(n), f"{srt_time(s.start + 0.1)} --> {srt_time(end)}", s.vo_roman, ""]
         n += 1
-    (out_dir / "captions_roman.srt").write_text("\n".join(lines), encoding="utf-8")
+    (out_dir / "captions.srt").write_text("\n".join(lines), encoding="utf-8")
 
     md = [f"# {ep['title']}", "", f"Total: ~{tl.duration:.0f}s", ""]
     for s in tl.scenes:
         md += [f"## {s.sid}  ({s.start:.1f}s – {s.end:.1f}s)", "",
-               f"**Urdu (TTS):** {s.vo_ur}", "", f"**Roman Urdu:** {s.vo_roman}", ""]
+               f"**Voice:** {s.vo_ur}", ""] + ([f"**Captions:** {s.vo_roman}", ""] if s.vo_roman != s.vo_ur else [])
     meta = ep.get("upload", {})
     if meta:
         md += ["## Upload", "", f"**Title:** {meta.get('title', '')}", "",

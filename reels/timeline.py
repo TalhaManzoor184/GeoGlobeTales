@@ -33,8 +33,8 @@ class Scene:
     move: float               # seconds to reach target
     title: str | None         # active title (inherited)
     title_changed: bool
-    vo_roman: str
-    vo_ur: str
+    vo_roman: str             # caption text ("caption", or legacy "vo_roman")
+    vo_ur: str                # text sent to TTS ("vo", or legacy "vo_ur")
     vo_len: float | None      # measured voice length, if any
     raw: dict
 
@@ -92,7 +92,7 @@ class Timeline:
             cam = s.get("camera", {})
             move = min(float(cam.get("move", min(1.6, cfg_dur * 0.6))) * min(scale, 1.0), dur)
             sc = Scene(i, sid, s.get("mode", "map"), t, dur, cam, move, title, changed,
-                       s.get("vo_roman", ""), s.get("vo_ur", ""), vo_len, s)
+                       s.get("caption", s.get("vo_roman", "")), s.get("vo", s.get("vo_ur", "")), vo_len, s)
             self.scenes.append(sc)
             for h in s.get("hide", []):
                 hid, at = (h, 0.0) if isinstance(h, str) else (h["id"], float(h.get("at", 0)) * scale)

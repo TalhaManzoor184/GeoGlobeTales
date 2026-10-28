@@ -1,0 +1,512 @@
+{
+  "slug": "wakhan-corridor-en",
+  "title": "Wakhan Corridor: why does Afghanistan have a tail?",
+  "brand": "",
+  "thumbnail_at": 8.6,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "center": [
+      72.0,
+      36.5
+    ],
+    "extent": [
+      30,
+      -5,
+      115,
+      70
+    ],
+    "rivers": true
+  },
+  "upload": {
+    "title": "Why does Afghanistan have this weird tail? 🇦🇫🗺️ Wakhan Corridor",
+    "description": "A strip of Afghanistan only 13 km wide separates Pakistan and Tajikistan. The Great Game between British India and the Russian Empire drew this strange border in 1893 and 1895.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#afghanistan",
+      "#pakistan",
+      "#history",
+      "#greatgame",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.2,
+      "camera": {
+        "from": {
+          "lon": 5,
+          "lat": 12,
+          "radius": 400
+        },
+        "lon": 71.5,
+        "lat": 36.0,
+        "radius": 1900,
+        "move": 3.9
+      },
+      "globe_highlight": {
+        "AFG": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "Why does Afghanistan have a *tail*?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 73.2,
+          "lat": 37.0,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "Why does Afghanistan have this strange, long tail?",
+      "caption": "Why does Afghanistan have this strange, long tail?"
+    },
+    {
+      "id": "s2",
+      "duration": 6.0,
+      "camera": {
+        "lon": 68.5,
+        "lat": 35.6,
+        "width_km": 1900,
+        "move": 1.8
+      },
+      "title": "The *Wakhan* Corridor",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "afg",
+          "type": "country",
+          "iso": "AFG",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "lbl_afg",
+          "type": "label",
+          "text": "Afghanistan",
+          "lon": 65.8,
+          "lat": 33.4,
+          "at": 0.8
+        },
+        {
+          "id": "wakhan",
+          "type": "region",
+          "of": "AFG",
+          "clip": [
+            71.55,
+            36.4,
+            75.2,
+            37.75
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 2.3
+        },
+        {
+          "id": "lbl_wakhan",
+          "type": "label",
+          "text": "Wakhan\nCorridor",
+          "lon": 73.6,
+          "lat": 38.35,
+          "color": "yellow",
+          "size": 54,
+          "at": 2.7
+        },
+        {
+          "id": "lbl_350",
+          "type": "label",
+          "text": "~350 km",
+          "lon": 73.4,
+          "lat": 36.05,
+          "size": 42,
+          "upper": false,
+          "at": 3.8
+        }
+      ],
+      "vo": "It's called the Wakhan Corridor. A thin strip of land, about 350 kilometers long.",
+      "caption": "It's called the Wakhan Corridor. A thin strip of land, about 350 kilometers long."
+    },
+    {
+      "id": "s3",
+      "duration": 5.5,
+      "camera": {
+        "lon": 72.6,
+        "lat": 36.9,
+        "width_km": 1150,
+        "move": 1.5
+      },
+      "hide": [
+        "afg",
+        "lbl_afg",
+        "lbl_350",
+        "lbl_wakhan"
+      ],
+      "show": [
+        {
+          "id": "tjk",
+          "type": "country",
+          "iso": "TJK",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_tjk",
+          "type": "label",
+          "text": "Tajikistan",
+          "lon": 70.6,
+          "lat": 38.75,
+          "at": 0.6
+        },
+        {
+          "id": "pak",
+          "type": "country",
+          "iso": "PAK",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 1.6
+        },
+        {
+          "id": "lbl_pak",
+          "type": "label",
+          "text": "Pakistan",
+          "lon": 71.6,
+          "lat": 34.2,
+          "at": 1.8
+        },
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 3.0
+        },
+        {
+          "id": "lbl_chn",
+          "type": "label",
+          "text": "China",
+          "lon": 77.2,
+          "lat": 38.4,
+          "at": 3.2
+        }
+      ],
+      "vo": "To its north is Tajikistan. To the south, Pakistan. And at the very end, China.",
+      "caption": "To its north is Tajikistan. To the south, Pakistan. And at the very end, China."
+    },
+    {
+      "id": "s4",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.1,
+        "lat": 36.76,
+        "width_km": 80,
+        "move": 2.0
+      },
+      "hide": [
+        "lbl_tjk",
+        "lbl_pak",
+        "lbl_chn"
+      ],
+      "show": [
+        {
+          "id": "lbl_tjk_z",
+          "type": "label",
+          "text": "Tajikistan",
+          "lon": 72.25,
+          "lat": 37.05,
+          "size": 50,
+          "at": 1.6
+        },
+        {
+          "id": "lbl_pak_z",
+          "type": "label",
+          "text": "Pakistan",
+          "lon": 72.2,
+          "lat": 36.45,
+          "size": 50,
+          "at": 1.8
+        },
+        {
+          "id": "ruler",
+          "type": "measure",
+          "between": [
+            "PAK",
+            "TJK"
+          ],
+          "within": [
+            71.5,
+            36.4,
+            72.8,
+            37.2
+          ],
+          "text": "13 KM",
+          "label_offset": [
+            170,
+            40
+          ],
+          "at": 2.6,
+          "color": "white"
+        }
+      ],
+      "vo": "At one point, it's only 13 kilometers wide. Just a thin line of Afghanistan between Pakistan and Tajikistan.",
+      "caption": "At one point, it's only 13 kilometers wide. Just a thin line of Afghanistan between Pakistan and Tajikistan."
+    },
+    {
+      "id": "s5",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.0,
+        "lat": 33.5,
+        "width_km": 4300,
+        "move": 2.0
+      },
+      "title": "The reason: *The Great Game*",
+      "hide": [
+        "lbl_tjk_z",
+        "lbl_pak_z",
+        "ruler",
+        "tjk",
+        "pak",
+        "chn"
+      ],
+      "show": [
+        {
+          "id": "brit",
+          "type": "country",
+          "iso": [
+            "PAK",
+            "IND",
+            "BGD"
+          ],
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_brit",
+          "type": "label",
+          "text": "British\nIndia",
+          "lon": 77.8,
+          "lat": 13.5,
+          "color": "orange",
+          "size": 58,
+          "at": 1.4
+        },
+        {
+          "id": "rus",
+          "type": "country",
+          "iso": [
+            "RUS",
+            "KAZ",
+            "UZB",
+            "TKM",
+            "KGZ",
+            "TJK"
+          ],
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 2.6
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russian\nEmpire",
+          "lon": 66.0,
+          "lat": 46.0,
+          "color": "purple",
+          "size": 58,
+          "at": 2.8
+        },
+        {
+          "id": "arr_rus",
+          "type": "arrow",
+          "from": [
+            66.5,
+            43.0
+          ],
+          "to": [
+            71.0,
+            38.7
+          ],
+          "color": "purple",
+          "at": 4.2
+        },
+        {
+          "id": "arr_brit",
+          "type": "arrow",
+          "from": [
+            76.0,
+            28.5
+          ],
+          "to": [
+            72.6,
+            35.4
+          ],
+          "color": "orange",
+          "at": 4.6
+        }
+      ],
+      "vo": "The reason? The Great Game. In the 1800s, British India and the Russian Empire were expanding toward each other.",
+      "caption": "The reason? The Great Game. In the 1800s, British India and the Russian Empire were expanding toward each other."
+    },
+    {
+      "id": "s6",
+      "duration": 7.5,
+      "camera": {
+        "lon": 72.6,
+        "lat": 36.6,
+        "width_km": 900,
+        "move": 1.8
+      },
+      "hide": [
+        "arr_rus",
+        "arr_brit",
+        "lbl_brit",
+        "lbl_rus"
+      ],
+      "show": [
+        {
+          "id": "lbl_brit_z",
+          "type": "label",
+          "text": "British India",
+          "lon": 72.0,
+          "lat": 34.9,
+          "color": "orange",
+          "size": 44,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_rus_z",
+          "type": "label",
+          "text": "Russian Empire",
+          "lon": 72.6,
+          "lat": 38.6,
+          "color": "purple",
+          "size": 44,
+          "at": 1.2
+        },
+        {
+          "id": "badge_years",
+          "type": "badge",
+          "text": "1893 + 1895",
+          "sub": "Buffer zone",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "So in 1893 and 1895, treaties left this strip to Afghanistan, so the two empires would never touch.",
+      "caption": "So in 1893 and 1895, treaties left this strip to Afghanistan, so the two empires would never touch."
+    },
+    {
+      "id": "s7",
+      "duration": 7.5,
+      "camera": {
+        "lon": 74.25,
+        "lat": 37.0,
+        "width_km": 330,
+        "move": 2.0
+      },
+      "title": "The far end: *China*",
+      "hide": [
+        "brit",
+        "rus",
+        "lbl_brit_z",
+        "lbl_rus_z",
+        "badge_years"
+      ],
+      "show": [
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_chn_z",
+          "type": "label",
+          "text": "China",
+          "lon": 75.4,
+          "lat": 37.45,
+          "size": 52,
+          "at": 0.9
+        },
+        {
+          "id": "badge_92",
+          "type": "badge",
+          "text": "92 KM",
+          "sub": "China border",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.6
+        },
+        {
+          "id": "wakhjir",
+          "type": "marker",
+          "lon": 74.4842,
+          "lat": 37.0872,
+          "text": "Wakhjir Pass\n4,923 m",
+          "side": "bottom",
+          "size": 36,
+          "at": 3.4
+        }
+      ],
+      "vo": "Its far end meets China. A border just 92 kilometers long, with the Wakhjir Pass nearly 4,900 meters high.",
+      "caption": "Its far end meets China. A border just 92 kilometers long, with the Wakhjir Pass nearly 4,900 meters high."
+    },
+    {
+      "id": "s8",
+      "duration": 8.0,
+      "camera": {
+        "lon": 72.8,
+        "lat": 36.6,
+        "width_km": 1500,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_92",
+        "wakhjir",
+        "lbl_chn_z"
+      ],
+      "show": [
+        {
+          "id": "tjk",
+          "at": 0.4
+        },
+        {
+          "id": "pak",
+          "at": 0.4
+        },
+        {
+          "id": "badge_pop",
+          "type": "badge",
+          "text": "~18,000",
+          "sub": "people live here today",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ],
+      "vo": "Today, only about 18,000 people live here. A border drawn by two empires' fear. Follow for more map secrets!",
+      "caption": "Today, only about 18,000 people live here. A border drawn by two empires' fear. Follow for more map secrets!"
+    }
+  ]
+}

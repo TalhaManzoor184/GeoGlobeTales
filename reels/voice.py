@@ -45,7 +45,7 @@ def main(argv=None):
     for i, s in enumerate(ep["scenes"]):
         sid = s.get("id", f"s{i + 1}")
         dest = vdir / f"{sid}.mp3"
-        text = s.get("vo_ur") or s.get("vo_roman")
+        text = s.get("vo") or s.get("vo_ur") or s.get("caption") or s.get("vo_roman")
         if not text:
             continue
         if not args.measure_only and not dest.exists():
