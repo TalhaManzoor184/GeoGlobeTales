@@ -1,0 +1,351 @@
+{
+  "slug": "kaliningrad",
+  "title": "Kaliningrad: Russia's territory in the EU",
+  "brand": "",
+  "thumbnail_at": 9.6,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Russia's Island Inside Europe: The Kaliningrad Exclave 🇷🇺🗺️",
+    "description": "Kaliningrad is a Russian territory on the Baltic Sea with no land connection to the rest of Russia. Squeezed between Poland and Lithuania, it became part of the Soviet Union after World War II.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#kaliningrad",
+      "#russia",
+      "#europe",
+      "#history"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 10.0,
+          "lat": 50.0,
+          "radius": 400
+        },
+        "lon": 21.5,
+        "lat": 54.6,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "RUS": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "A piece of Russia in *Europe*?",
+      "show": [
+        {
+          "id": "pin_s1",
+          "type": "marker",
+          "lon": 20.51,
+          "lat": 54.71,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Why is there a piece of Russia inside the European Union?",
+      "caption": "Why is there a piece of Russia inside the European Union?"
+    },
+    {
+      "id": "s2",
+      "duration": 5.6,
+      "camera": {
+        "lon": 21.5,
+        "lat": 54.6,
+        "width_km": 620,
+        "move": 1.8
+      },
+      "title": "Squeezed on the *Baltic*",
+      "hide": [
+        "pin_s1"
+      ],
+      "show": [
+        {
+          "id": "kaliningrad_reg",
+          "type": "region",
+          "of": "RUS",
+          "clip": [
+            19.3,
+            54.2,
+            23.0,
+            55.4
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 0.5
+        },
+        {
+          "id": "lbl_kaliningrad",
+          "type": "label",
+          "text": "Kaliningrad",
+          "lon": 21.2,
+          "lat": 54.9,
+          "color": "yellow",
+          "size": 52,
+          "at": 0.8
+        },
+        {
+          "id": "pol",
+          "type": "country",
+          "iso": "POL",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 1.5
+        },
+        {
+          "id": "lbl_pol",
+          "type": "label",
+          "text": "Poland",
+          "lon": 21.0,
+          "lat": 53.4,
+          "size": 48,
+          "at": 1.7
+        },
+        {
+          "id": "ltu",
+          "type": "country",
+          "iso": "LTU",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 2.2
+        },
+        {
+          "id": "lbl_ltu",
+          "type": "label",
+          "text": "Lithuania",
+          "lon": 23.5,
+          "lat": 55.6,
+          "size": 48,
+          "at": 2.4
+        }
+      ],
+      "vo": "This is Kaliningrad on the Baltic Sea, squeezed directly between Poland and Lithuania.",
+      "caption": "This is Kaliningrad on the Baltic Sea, squeezed directly between Poland and Lithuania."
+    },
+    {
+      "id": "s3",
+      "duration": 6.0,
+      "camera": {
+        "lon": 28.5,
+        "lat": 54.8,
+        "width_km": 1900,
+        "move": 1.8
+      },
+      "title": "No *land* connection",
+      "hide": [
+        "lbl_pol",
+        "lbl_ltu"
+      ],
+      "show": [
+        {
+          "id": "rus",
+          "type": "country",
+          "iso": "RUS",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russia",
+          "lon": 34.5,
+          "lat": 56.5,
+          "color": "orange",
+          "size": 56,
+          "at": 0.8
+        },
+        {
+          "id": "blr",
+          "type": "country",
+          "iso": "BLR",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 1.6
+        },
+        {
+          "id": "lbl_blr",
+          "type": "label",
+          "text": "Belarus",
+          "lon": 27.5,
+          "lat": 53.6,
+          "size": 46,
+          "at": 1.8
+        }
+      ],
+      "vo": "If you look east, it has no land connection to the rest of Russia.",
+      "caption": "If you look east, it has no land connection to the rest of Russia."
+    },
+    {
+      "id": "s4",
+      "duration": 9.4,
+      "camera": {
+        "lon": 20.51,
+        "lat": 54.71,
+        "width_km": 280,
+        "move": 1.8
+      },
+      "title": "German *Königsberg*",
+      "hide": [
+        "rus",
+        "lbl_rus",
+        "blr",
+        "lbl_blr",
+        "lbl_kaliningrad"
+      ],
+      "show": [
+        {
+          "id": "badge_1945",
+          "type": "badge",
+          "text": "UNTIL 1945",
+          "sub": "German Königsberg",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        },
+        {
+          "id": "marker_city",
+          "type": "marker",
+          "lon": 20.51,
+          "lat": 54.71,
+          "text": "Königsberg\n(Kaliningrad)",
+          "side": "bottom",
+          "color": "yellow",
+          "at": 1.5
+        }
+      ],
+      "vo": "Before nineteen forty-five, the city was known as Königsberg, part of Germany. But after World War Two, the Soviet Union took the area.",
+      "caption": "Before nineteen forty-five, the city was known as Königsberg, part of Germany. But after World War Two, the Soviet Union took the area."
+    },
+    {
+      "id": "s5",
+      "duration": 8.3,
+      "camera": {
+        "lon": 25.0,
+        "lat": 54.5,
+        "width_km": 1300,
+        "move": 1.8
+      },
+      "title": "Separated in *1991*",
+      "hide": [
+        "badge_1945",
+        "marker_city"
+      ],
+      "show": [
+        {
+          "id": "badge_1991",
+          "type": "badge",
+          "text": "1991",
+          "sub": "Soviet Union broke up",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_ltu_s5",
+          "type": "label",
+          "text": "Lithuania",
+          "lon": 24.5,
+          "lat": 55.4,
+          "size": 48,
+          "at": 2.0
+        },
+        {
+          "id": "lbl_blr_s5",
+          "type": "label",
+          "text": "Belarus",
+          "lon": 27.8,
+          "lat": 53.5,
+          "size": 48,
+          "at": 2.4
+        }
+      ],
+      "vo": "Then, when the Soviet Union broke up in nineteen ninety-one, Lithuania and Belarus became independent, leaving Kaliningrad completely cut off.",
+      "caption": "Then, when the Soviet Union broke up in nineteen ninety-one, Lithuania and Belarus became independent, leaving Kaliningrad completely cut off."
+    },
+    {
+      "id": "s6",
+      "duration": 7.1,
+      "camera": {
+        "lon": 20.5,
+        "lat": 54.7,
+        "width_km": 260,
+        "move": 1.8
+      },
+      "title": "An *ice-free* port",
+      "hide": [
+        "badge_1991",
+        "lbl_ltu_s5",
+        "lbl_blr_s5"
+      ],
+      "show": [
+        {
+          "id": "badge_ice",
+          "type": "badge",
+          "text": "ICE-FREE",
+          "sub": "Baltic port in winter",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        },
+        {
+          "id": "marker_port",
+          "type": "marker",
+          "lon": 20.51,
+          "lat": 54.71,
+          "text": "Baltic Port",
+          "side": "bottom",
+          "color": "yellow",
+          "at": 1.6
+        }
+      ],
+      "vo": "The territory is vital because its port on the Baltic Sea usually stays ice-free all winter long.",
+      "caption": "The territory is vital because its port on the Baltic Sea usually stays ice-free all winter long."
+    },
+    {
+      "id": "s7",
+      "duration": 5.6,
+      "camera": {
+        "lon": 21.5,
+        "lat": 54.6,
+        "width_km": 850,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_ice",
+        "marker_port"
+      ],
+      "show": [
+        {
+          "id": "lbl_final",
+          "type": "label",
+          "text": "Kaliningrad\n(Russia)",
+          "lon": 21.3,
+          "lat": 54.9,
+          "color": "yellow",
+          "size": 50,
+          "at": 0.5
+        }
+      ],
+      "vo": "A historic prize now isolated from its homeland. Follow for more map secrets!",
+      "caption": "A historic prize now isolated from its homeland. Follow for more map secrets!"
+    }
+  ]
+}
