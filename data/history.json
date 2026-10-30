@@ -14,5 +14,13 @@
     "episode": "data/episodes/kaliningrad.json",
     "videoId": "1Vcuc9up_1s",
     "publishAt": "2026-10-30T16:00:00Z"
+  },
+  {
+    "date": "2026-10-30",
+    "topic": "gwadar",
+    "title": "How Pakistan Bought Gwadar From Oman 🇵🇰🇴🇲",
+    "episode": "data/episodes/gwadar.json",
+    "videoId": "6cstbpI-ZZs",
+    "publishAt": "2026-10-31T16:00:00Z"
   }
 ]
