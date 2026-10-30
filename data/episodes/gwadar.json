@@ -1,0 +1,277 @@
+{
+  "slug": "gwadar",
+  "title": "How Pakistan bought Gwadar from Oman",
+  "brand": "",
+  "thumbnail_at": 10.7,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "How Pakistan Bought Gwadar From Oman 🇵🇰🇴🇲",
+    "description": "Gwadar was ruled by Oman for about 175 years until Pakistan purchased it in 1958. The historic deal transformed an overseas enclave into a strategic deep-sea port.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#pakistan",
+      "#oman",
+      "#history",
+      "#gwadar"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.4,
+      "camera": {
+        "from": {
+          "lon": 45.0,
+          "lat": 18.0,
+          "radius": 400
+        },
+        "lon": 62.0,
+        "lat": 24.5,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "PAK": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Pakistan *bought* a city?",
+      "show": [
+        {
+          "id": "pin_gwadar",
+          "type": "marker",
+          "lon": 62.322,
+          "lat": 25.126,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Did you know Pakistan bought an entire city from Oman?",
+      "caption": "Did you know Pakistan bought an entire city from Oman?"
+    },
+    {
+      "id": "s2",
+      "duration": 7.1,
+      "camera": {
+        "lon": 63.5,
+        "lat": 25.2,
+        "width_km": 850,
+        "move": 1.8
+      },
+      "title": "The Port of *Gwadar*",
+      "hide": [
+        "pin_gwadar"
+      ],
+      "show": [
+        {
+          "id": "pak",
+          "type": "country",
+          "iso": "PAK",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.2
+        },
+        {
+          "id": "lbl_pak",
+          "type": "label",
+          "text": "Pakistan",
+          "lon": 64.5,
+          "lat": 27.2,
+          "at": 0.5
+        },
+        {
+          "id": "gwadar_pt",
+          "type": "marker",
+          "lon": 62.322,
+          "lat": 25.126,
+          "text": "Gwadar",
+          "side": "top",
+          "color": "yellow",
+          "at": 1.0
+        },
+        {
+          "id": "badge_rule",
+          "type": "badge",
+          "text": "~175 YEARS",
+          "sub": "Ruled by Oman",
+          "size": 100,
+          "y": 0.32,
+          "at": 2.4
+        }
+      ],
+      "vo": "This is Gwadar, on Pakistan's coast. Today it's a major deep-sea port city on the Arabian Sea.",
+      "caption": "This is Gwadar, on Pakistan's coast. Today it's a major deep-sea port city on the Arabian Sea."
+    },
+    {
+      "id": "s3",
+      "duration": 7.5,
+      "camera": {
+        "lon": 63.0,
+        "lat": 26.2,
+        "width_km": 1200,
+        "move": 1.8
+      },
+      "title": "A Gift in *1783*",
+      "hide": [
+        "badge_rule"
+      ],
+      "show": [
+        {
+          "id": "badge_1783",
+          "type": "badge",
+          "text": "YEAR 1783",
+          "sub": "Khan of Kalat grant",
+          "size": 100,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "Its strange story began in 1783, when the Khan of Kalat granted Gwadar to a ruler of Muscat.",
+      "caption": "Its strange story began in 1783, when the Khan of Kalat granted Gwadar to a ruler of Muscat."
+    },
+    {
+      "id": "s4",
+      "duration": 6.8,
+      "camera": {
+        "lon": 60.5,
+        "lat": 24.3,
+        "width_km": 1500,
+        "move": 2.0
+      },
+      "title": "Ruled Across the *Sea*",
+      "hide": [
+        "badge_1783",
+        "lbl_pak"
+      ],
+      "show": [
+        {
+          "id": "omn",
+          "type": "country",
+          "iso": "OMN",
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 0.3
+        },
+        {
+          "id": "muscat_pt",
+          "type": "marker",
+          "lon": 58.383,
+          "lat": 23.588,
+          "text": "Muscat",
+          "side": "left",
+          "color": "orange",
+          "at": 0.8
+        },
+        {
+          "id": "arr_oman",
+          "type": "arrow",
+          "from": [
+            58.383,
+            23.588
+          ],
+          "to": [
+            62.322,
+            25.126
+          ],
+          "color": "orange",
+          "at": 1.6
+        }
+      ],
+      "vo": "For about 175 years, Gwadar was ruled by Oman as an overseas territory across the sea.",
+      "caption": "For about 175 years, Gwadar was ruled by Oman as an overseas territory across the sea."
+    },
+    {
+      "id": "s5",
+      "duration": 6.8,
+      "camera": {
+        "lon": 60.5,
+        "lat": 24.3,
+        "width_km": 1100,
+        "move": 1.8
+      },
+      "title": "Buying *Gwadar*",
+      "hide": [
+        "arr_oman"
+      ],
+      "show": [
+        {
+          "id": "badge_sultan",
+          "type": "badge",
+          "text": "PURCHASE",
+          "sub": "Sultan Said bin Taimur",
+          "size": 100,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "Later, Pakistan arranged to buy Gwadar from the Sultan of Muscat and Oman, Said bin Taimur.",
+      "caption": "Later, Pakistan arranged to buy Gwadar from the Sultan of Muscat and Oman, Said bin Taimur."
+    },
+    {
+      "id": "s6",
+      "duration": 6.8,
+      "camera": {
+        "lon": 62.5,
+        "lat": 25.1,
+        "width_km": 650,
+        "move": 1.8
+      },
+      "title": "The *5.5 Billion* Price",
+      "hide": [
+        "badge_sultan",
+        "omn",
+        "muscat_pt"
+      ],
+      "show": [
+        {
+          "id": "badge_price",
+          "type": "badge",
+          "text": "5.5B RUPEES",
+          "sub": "Paid mostly by Aga Khan",
+          "size": 100,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "The agreed price was about 5.5 billion rupees, and the Aga Khan paid most of it.",
+      "caption": "The agreed price was about 5.5 billion rupees, and the Aga Khan paid most of it."
+    },
+    {
+      "id": "s7",
+      "duration": 9.4,
+      "camera": {
+        "lon": 62.3,
+        "lat": 25.1,
+        "width_km": 950,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_price"
+      ],
+      "show": [
+        {
+          "id": "badge_transfer",
+          "type": "badge",
+          "text": "8 SEP 1958",
+          "sub": "Gwadar joins Pakistan",
+          "size": 100,
+          "y": 0.32,
+          "at": 0.8
+        }
+      ],
+      "vo": "On 8 September 1958, Pakistan officially took over Gwadar. Today it's Pakistan's deep-sea gateway on the Arabian Sea. Follow for more map secrets!",
+      "caption": "On 8 September 1958, Pakistan officially took over Gwadar. Today it's Pakistan's deep-sea gateway on the Arabian Sea. Follow for more map secrets!"
+    }
+  ]
+}
