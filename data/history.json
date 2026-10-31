@@ -22,5 +22,13 @@
     "episode": "data/episodes/gwadar.json",
     "videoId": "6cstbpI-ZZs",
     "publishAt": "2026-10-31T16:00:00Z"
+  },
+  {
+    "date": "2026-10-31",
+    "topic": "strait-of-gibraltar",
+    "title": "Europe and Africa are only 13 km apart 🌍",
+    "episode": "data/episodes/strait-of-gibraltar.json",
+    "videoId": "ZSkd2lHLBvw",
+    "publishAt": "2026-11-01T16:00:00Z"
   }
 ]
