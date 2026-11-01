@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = Wakhan episode, no YouTube · upload-test = Wakhan uploaded PRIVATE (checks YouTube keys) · facebook-test = Wakhan saved as a Facebook DRAFT (checks Facebook keys) · no-upload = real Gemini episode, no YouTube · full = real episode, public at 9 PM · publish-now = real episode, public immediately"
+        description: "test = Wakhan episode, no YouTube · upload-test = Wakhan uploaded PRIVATE (checks YouTube keys) · facebook-test = Wakhan saved as a Facebook DRAFT (checks Facebook keys) · facebook-backfill = post past YouTube videos that are not on Facebook yet · no-upload = real Gemini episode, no YouTube · full = real episode, public at 9 PM · publish-now = real episode, public immediately"
         type: choice
-        options: [test, upload-test, facebook-test, no-upload, full, publish-now]
+        options: [test, upload-test, facebook-test, facebook-backfill, no-upload, full, publish-now]
         default: test
 
 permissions:

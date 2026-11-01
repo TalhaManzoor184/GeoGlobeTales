@@ -7,6 +7,7 @@
     python -m reels.daily --mode test        # Wakhan episode, no Gemini, no YouTube
     python -m reels.daily --mode upload-test # Wakhan episode uploaded PRIVATE (checks YouTube keys)
     python -m reels.daily --mode facebook-test # Wakhan episode saved as a Facebook DRAFT only
+    python -m reels.daily --mode facebook-backfill # post past YouTube videos missing on Facebook
 
 Facebook runs whenever FACEBOOK_PAGE_ID and FACEBOOK_PAGE_TOKEN are set (FACEBOOK_ENABLED=false
 pauses it). A Facebook failure never blocks the YouTube upload.
@@ -111,18 +112,47 @@ def post_facebook(video: Path, ep: dict, publish_at: str | None, draft: bool) ->
         return {"facebookError": str(e)[:200]}
 
 
+def backfill(history: list[dict]):
+    """Post every YouTube video that never reached Facebook, oldest first, published now.
+    Each success is saved right away, so a rerun continues where this one stopped."""
+    todo = [h for h in history if h.get("videoId") and not h.get("facebookVideoId")]
+    if not todo:
+        summary("Facebook backfill: nothing to do, every video is already on Facebook.")
+        return
+    done, failed = [], []
+    for h in todo:
+        print(f"::group::{h['topic']}", flush=True)
+        try:
+            ep, video = produce(ROOT / h["episode"])
+            res = post_facebook(video, ep, None, draft=False)
+        finally:
+            print("::endgroup::", flush=True)
+        if "facebookVideoId" in res:
+            h.pop("facebookError", None)
+            h.update(res)
+            done.append(h["title"])
+        else:
+            failed.append(f"{h['title']}: {res.get('facebookError')}")
+        save_history(history)
+    summary(f"Facebook backfill: posted {len(done)} of {len(todo)}.\n"
+            + "".join(f"- {t}\n" for t in done) + "".join(f"- FAILED {t}\n" for t in failed))
+    if failed:
+        raise SystemExit(f"{len(failed)} backfill uploads failed")
+
+
 def preflight(mode: str):
     """Fail in seconds, with a readable reason, instead of after a full render."""
     need = []
-    if mode not in ("test", "no-upload", "facebook-test"):
+    fb_only = ("facebook-test", "facebook-backfill")
+    if mode not in ("test", "no-upload", *fb_only):
         need += UPLOAD_SECRETS
-    if mode not in ("test", "upload-test", "facebook-test"):
+    if mode not in ("test", "upload-test", *fb_only):
         need.append("GEMINI_API_KEY")
     missing = [k for k in need if not os.environ.get(k)]
     if missing:
         raise SystemExit(f"Missing GitHub secrets: {', '.join(missing)}. "
                          "Add them in Settings → Secrets and variables → Actions.")
-    if mode not in ("test", "no-upload", "facebook-test"):
+    if mode not in ("test", "no-upload", *fb_only):
         from .upload import diagnose, youtube
         try:
             ch = youtube().channels().list(part="snippet", mine=True).execute()
@@ -158,11 +188,16 @@ def _main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", default="scheduled",
                     choices=["scheduled", "full", "publish-now", "no-upload", "test", "upload-test",
-                             "facebook-test"])
+                             "facebook-test", "facebook-backfill"])
     mode = ap.parse_args().mode
     history = load_history()
     preflight(mode)
-    fb_on = mode not in ("test", "no-upload") and facebook_preflight(required=mode == "facebook-test")
+    fb_on = mode not in ("test", "no-upload") and facebook_preflight(
+        required=mode in ("facebook-test", "facebook-backfill"))
+
+    if mode == "facebook-backfill":
+        backfill(history)
+        return
 
     if mode == "facebook-test":
         ep, video = produce(TEST_EPISODE)
