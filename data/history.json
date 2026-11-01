@@ -38,5 +38,15 @@
     "publishAt": "2026-11-01T16:00:00Z",
     "facebookVideoId": "1486756453329122",
     "facebookState": "published"
+  },
+  {
+    "date": "2026-11-01",
+    "topic": "pakistan-8000ers",
+    "title": "Pakistan's Cluster of 8,000-Metre Giants 🏔️🇵🇰",
+    "episode": "data/episodes/pakistan-8000ers.json",
+    "videoId": "28ak-DCIEmo",
+    "publishAt": "2026-11-02T16:00:00Z",
+    "facebookVideoId": "3362002810667416",
+    "facebookState": "scheduled for 2026-11-02T16:00:00Z"
   }
 ]
