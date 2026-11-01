@@ -1,4 +1,4 @@
-"""Daily job: next topic -> episode (Gemini) -> voice -> render -> YouTube.
+"""Daily job: next topic -> episode (Gemini) -> voice -> render -> YouTube (+ Facebook Reel).
 
     python -m reels.daily --mode scheduled   # cron: skip if today's slot is already filled
     python -m reels.daily --mode full        # make one now, scheduled for the next slot
@@ -6,6 +6,10 @@
     python -m reels.daily --mode no-upload   # make one, keep the video, no YouTube
     python -m reels.daily --mode test        # Wakhan episode, no Gemini, no YouTube
     python -m reels.daily --mode upload-test # Wakhan episode uploaded PRIVATE (checks YouTube keys)
+    python -m reels.daily --mode facebook-test # Wakhan episode saved as a Facebook DRAFT only
+
+Facebook runs whenever FACEBOOK_PAGE_ID and FACEBOOK_PAGE_TOKEN are set (FACEBOOK_ENABLED=false
+pauses it). A Facebook failure never blocks the YouTube upload.
 
 data/history.json records every uploaded episode, so a topic is used once.
 """
@@ -79,18 +83,46 @@ def produce(ep_path: Path, allow_silent: bool = False) -> tuple[dict, Path]:
 UPLOAD_SECRETS = ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN")
 
 
+def facebook_preflight(required: bool) -> bool:
+    """True when Facebook uploads should run this time. Problems are warnings unless required."""
+    from . import facebook
+    if not facebook.configured():
+        if required:
+            raise SystemExit("Facebook test needs the secrets FACEBOOK_PAGE_ID and FACEBOOK_PAGE_TOKEN.")
+        print("Facebook: off (FACEBOOK_PAGE_ID / FACEBOOK_PAGE_TOKEN not set, or FACEBOOK_ENABLED=false)", flush=True)
+        return False
+    try:
+        print(f"Facebook Page: {facebook.page_name()}", flush=True)
+        return True
+    except Exception as e:  # noqa: BLE001
+        msg = f"Facebook login failed, skipping Facebook: {str(e)[:300]}"
+        if required:
+            raise SystemExit(msg)
+        print(f"::warning title=Facebook skipped::{msg}", flush=True)
+        return False
+
+
+def post_facebook(video: Path, ep: dict, publish_at: str | None, draft: bool) -> dict:
+    from . import facebook
+    try:
+        return facebook.upload_reel(str(video), ep, publish_at=publish_at, draft=draft)
+    except Exception as e:  # noqa: BLE001
+        print(f"::error title=Facebook upload failed::{str(e)[:500]}", flush=True)
+        return {"facebookError": str(e)[:200]}
+
+
 def preflight(mode: str):
     """Fail in seconds, with a readable reason, instead of after a full render."""
     need = []
-    if mode not in ("test", "no-upload"):
+    if mode not in ("test", "no-upload", "facebook-test"):
         need += UPLOAD_SECRETS
-    if mode not in ("test", "upload-test"):
+    if mode not in ("test", "upload-test", "facebook-test"):
         need.append("GEMINI_API_KEY")
     missing = [k for k in need if not os.environ.get(k)]
     if missing:
         raise SystemExit(f"Missing GitHub secrets: {', '.join(missing)}. "
                          "Add them in Settings → Secrets and variables → Actions.")
-    if mode not in ("test", "no-upload"):
+    if mode not in ("test", "no-upload", "facebook-test"):
         from .upload import diagnose, youtube
         try:
             ch = youtube().channels().list(part="snippet", mine=True).execute()
@@ -125,10 +157,21 @@ def main():
 def _main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", default="scheduled",
-                    choices=["scheduled", "full", "publish-now", "no-upload", "test", "upload-test"])
+                    choices=["scheduled", "full", "publish-now", "no-upload", "test", "upload-test",
+                             "facebook-test"])
     mode = ap.parse_args().mode
     history = load_history()
     preflight(mode)
+    fb_on = mode not in ("test", "no-upload") and facebook_preflight(required=mode == "facebook-test")
+
+    if mode == "facebook-test":
+        ep, video = produce(TEST_EPISODE)
+        res = post_facebook(video, ep, None, draft=True)
+        if "facebookError" in res:
+            raise SystemExit(f"Facebook test failed: {res['facebookError']}")
+        summary(f"Facebook test OK: Reel {res['facebookVideoId']} saved as a DRAFT on the Page "
+                "(Meta Business Suite → Content → Drafts). Delete it there.")
+        return
 
     if mode in ("test", "upload-test"):
         ep, video = produce(TEST_EPISODE, allow_silent=mode == "test")
@@ -176,12 +219,20 @@ def _main():
         summary(f"Rendered {topic['id']} without uploading.")
         return
     from .upload import upload
-    res = upload(str(video), ep, mode="public" if mode == "publish-now" else None)
+    yt_mode = "public" if mode == "publish-now" else os.environ.get("UPLOAD_MODE", "schedule")
+    res = upload(str(video), ep, mode=yt_mode)
     entry.update(res)
     history.append(entry)
-    save_history(history)
+    save_history(history)  # YouTube is done; record it before trying Facebook
     when = f"goes public {res['publishAt']}" if res.get("publishAt") else "uploaded"
     summary(f"**{entry['title']}** → https://youtube.com/shorts/{res['videoId']} ({when})")
+    if fb_on:
+        # same moment as YouTube; a private YouTube upload becomes a Facebook draft
+        fb = post_facebook(video, ep, res.get("publishAt"), draft=yt_mode == "private")
+        entry.update(fb)
+        save_history(history)
+        if "facebookVideoId" in fb:
+            summary(f"Facebook Reel {fb['facebookVideoId']}: {fb['facebookState']}")
 
 
 if __name__ == "__main__":

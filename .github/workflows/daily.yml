@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = Wakhan episode, no YouTube · upload-test = Wakhan uploaded PRIVATE (checks YouTube keys) · no-upload = real Gemini episode, no YouTube · full = real episode, public at 9 PM · publish-now = real episode, public immediately"
+        description: "test = Wakhan episode, no YouTube · upload-test = Wakhan uploaded PRIVATE (checks YouTube keys) · facebook-test = Wakhan saved as a Facebook DRAFT (checks Facebook keys) · no-upload = real Gemini episode, no YouTube · full = real episode, public at 9 PM · publish-now = real episode, public immediately"
         type: choice
-        options: [test, upload-test, no-upload, full, publish-now]
+        options: [test, upload-test, facebook-test, no-upload, full, publish-now]
         default: test
 
 permissions:
@@ -32,6 +32,8 @@ env:
   MAP_POV: ${{ vars.MAP_POV || 'PAK' }}
   BRAND: ${{ vars.BRAND }}
   GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL }}
+  # Facebook Reels run whenever FACEBOOK_PAGE_ID and FACEBOOK_PAGE_TOKEN secrets exist.
+  FACEBOOK_ENABLED: ${{ vars.FACEBOOK_ENABLED || 'true' }}
 
 jobs:
   short:
@@ -62,6 +64,8 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
           MODE: ${{ github.event_name == 'schedule' && 'scheduled' || inputs.mode }}
         run: python -m reels.daily --mode "$MODE"
 

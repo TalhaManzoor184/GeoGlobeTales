@@ -83,3 +83,19 @@ Setup (ek baar):
 
 Variables (optional): `PUBLISH_TIME` (21:00), `VOICE` (en-US-GuyNeural), `BRAND`, `MAP_POV` (PAK),
 `UPLOAD_MODE` (schedule | private | public). Naye topics `topics/queue.json` ke end mein add karein.
+
+## Facebook Page Reels
+
+Jab repo mein `FACEBOOK_PAGE_ID` aur `FACEBOOK_PAGE_TOKEN` secrets hon, to har daily video
+YouTube ke saath Facebook Page par Reel ke taur par bhi jati hai, usi 9 PM waqt par schedule hoti hai.
+Facebook fail ho to YouTube upload phir bhi hota hai (`reels/facebook.py`).
+
+1. Graph API Explorer (developers.facebook.com/tools/explorer) mein apna Meta app chunein (Sunny wala
+   chalega), "Get User Access Token" karein: `pages_show_list`, `pages_read_engagement`,
+   `pages_manage_posts`, aur geography Page approve karein.
+2. Apne computer par: `FACEBOOK_APP_ID=... FACEBOOK_APP_SECRET=... python -m reels.auth_facebook`,
+   token paste karein, geography Page chunein.
+3. Printed `FACEBOOK_PAGE_ID` aur `FACEBOOK_PAGE_TOKEN` is repo ke secrets mein daalein.
+4. **Actions → Daily map short → Run workflow → facebook-test**: Wakhan Reel Page par DRAFT ban kar
+   save hogi (public nahi). Theek ho to agle din se khud chalega. Rokna ho to variable
+   `FACEBOOK_ENABLED=false`.

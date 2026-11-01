@@ -16,6 +16,7 @@ import argparse
 import asyncio
 import json
 import subprocess
+import time
 from pathlib import Path
 
 
@@ -50,8 +51,18 @@ def main(argv=None):
         if not text:
             continue
         if not args.measure_only and not dest.exists():
-            asyncio.run(synth(text, v.get("name", "ur-PK-AsadNeural"), v.get("rate", "+6%"),
-                              v.get("pitch", "+0Hz"), dest))
+            for attempt in range(4):  # the free TTS service drops connections now and then
+                try:
+                    asyncio.run(synth(text, v.get("name", "ur-PK-AsadNeural"), v.get("rate", "+6%"),
+                                      v.get("pitch", "+0Hz"), dest))
+                    if dest.exists() and dest.stat().st_size > 1000:
+                        break
+                except Exception as e:  # noqa: BLE001
+                    print(f"{sid}: TTS attempt {attempt + 1} failed: {str(e)[:120]}", flush=True)
+                dest.unlink(missing_ok=True)
+                time.sleep(5 * (attempt + 1))
+            else:
+                raise SystemExit(f"TTS failed 4 times for {sid}")
         if dest.exists():
             timings[sid] = round(duration(dest), 3)
             print(f"{sid}: {timings[sid]:.2f}s")

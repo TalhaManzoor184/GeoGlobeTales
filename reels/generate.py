@@ -76,9 +76,10 @@ def ask_gemini(prompt: str, model: str) -> str:
     }).encode()
     req = urllib.request.Request(API.format(model=model), data=body, method="POST",
                                  headers={"Content-Type": "application/json", "x-goog-api-key": key})
+    timeouts = 0
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(req, timeout=180) as r:
+            with urllib.request.urlopen(req, timeout=240) as r:
                 data = json.loads(r.read())
             return data["candidates"][0]["content"]["parts"][0]["text"]
         except urllib.error.HTTPError as e:
@@ -89,6 +90,12 @@ def ask_gemini(prompt: str, model: str) -> str:
                 time.sleep(wait)
                 continue
             raise RuntimeError(f"Gemini {model} HTTP {e.code}: {detail}") from e
+        except (TimeoutError, urllib.error.URLError) as e:
+            # slow "thinking" answers can time out; one retry, then let call() try the fallback model
+            timeouts += 1
+            if timeouts >= 2:
+                raise RuntimeError(f"Gemini {model} timed out twice") from e
+            print(f"  {model}: {e}; retrying", flush=True)
     raise RuntimeError("unreachable")
 
 
