@@ -5,7 +5,9 @@
     "title": "Why does Afghanistan have this weird tail? 🇦🇫🗺️ Wakhan Corridor",
     "episode": "episodes/wakhan-corridor-en.json",
     "videoId": "_bVWNOVwsYs",
-    "publishAt": "2026-10-29T16:00:00Z"
+    "publishAt": "2026-10-29T16:00:00Z",
+    "facebookVideoId": "1461452895885528",
+    "facebookState": "published"
   },
   {
     "date": "2026-10-29",
@@ -13,7 +15,9 @@
     "title": "Russia's Island Inside Europe: The Kaliningrad Exclave 🇷🇺🗺️",
     "episode": "data/episodes/kaliningrad.json",
     "videoId": "1Vcuc9up_1s",
-    "publishAt": "2026-10-30T16:00:00Z"
+    "publishAt": "2026-10-30T16:00:00Z",
+    "facebookVideoId": "1102579705917729",
+    "facebookState": "published"
   },
   {
     "date": "2026-10-30",
@@ -21,7 +25,9 @@
     "title": "How Pakistan Bought Gwadar From Oman 🇵🇰🇴🇲",
     "episode": "data/episodes/gwadar.json",
     "videoId": "6cstbpI-ZZs",
-    "publishAt": "2026-10-31T16:00:00Z"
+    "publishAt": "2026-10-31T16:00:00Z",
+    "facebookVideoId": "1664281001733171",
+    "facebookState": "published"
   },
   {
     "date": "2026-10-31",
@@ -29,6 +35,8 @@
     "title": "Europe and Africa are only 13 km apart 🌍",
     "episode": "data/episodes/strait-of-gibraltar.json",
     "videoId": "ZSkd2lHLBvw",
-    "publishAt": "2026-11-01T16:00:00Z"
+    "publishAt": "2026-11-01T16:00:00Z",
+    "facebookVideoId": "1486756453329122",
+    "facebookState": "published"
   }
 ]
