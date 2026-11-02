@@ -1,0 +1,269 @@
+{
+  "slug": "lesotho",
+  "title": "Lesotho: The Kingdom Inside South Africa",
+  "brand": "",
+  "thumbnail_at": 10.8,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "The Kingdom Locked Inside Another Country 🇱🇸🗺️",
+    "description": "Lesotho is completely surrounded by South Africa, making it one of only three countries on Earth enclosed by a single neighbor. With its entire territory above 1,000 metres, it is truly the Kingdom in the Sky.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#lesotho",
+      "#southafrica",
+      "#africa",
+      "#borders"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.1,
+      "camera": {
+        "from": {
+          "lon": 15.0,
+          "lat": 5.0,
+          "radius": 400
+        },
+        "lon": 28.3,
+        "lat": -29.5,
+        "radius": 1900,
+        "move": 3.2
+      },
+      "globe_highlight": {
+        "LSO": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "A country *inside* another country?",
+      "show": [
+        {
+          "id": "pin_hook",
+          "type": "marker",
+          "lon": 28.3,
+          "lat": -29.5,
+          "color": "yellow",
+          "at": 1.5
+        }
+      ],
+      "vo": "This entire country is completely trapped inside another nation.",
+      "caption": "This entire country is completely trapped inside another nation."
+    },
+    {
+      "id": "s2",
+      "duration": 7.5,
+      "camera": {
+        "lon": 26.5,
+        "lat": -29.0,
+        "width_km": 1800,
+        "move": 1.8
+      },
+      "title": "Completely *surrounded*",
+      "hide": [
+        "pin_hook"
+      ],
+      "show": [
+        {
+          "id": "zaf",
+          "type": "country",
+          "iso": "ZAF",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.3
+        },
+        {
+          "id": "lbl_zaf",
+          "type": "label",
+          "text": "South Africa",
+          "lon": 23.5,
+          "lat": -31.0,
+          "color": "orange",
+          "size": 52,
+          "at": 0.8
+        },
+        {
+          "id": "lso",
+          "type": "country",
+          "iso": "LSO",
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.8
+        },
+        {
+          "id": "lbl_lso",
+          "type": "label",
+          "text": "Lesotho",
+          "lon": 28.3,
+          "lat": -29.5,
+          "color": "yellow",
+          "size": 48,
+          "at": 2.2
+        }
+      ],
+      "vo": "This is Lesotho. Look closer at the map, and you'll see it is completely surrounded by South Africa.",
+      "caption": "This is Lesotho. Look closer at the map, and you'll see it is completely surrounded by South Africa."
+    },
+    {
+      "id": "s3",
+      "duration": 10.2,
+      "camera": {
+        "lon": 25.0,
+        "lat": -27.5,
+        "width_km": 2600,
+        "move": 1.8
+      },
+      "title": "One of only *three*",
+      "hide": [
+        "lbl_zaf",
+        "lbl_lso"
+      ],
+      "show": [
+        {
+          "id": "badge_three",
+          "type": "badge",
+          "text": "ONLY 3",
+          "sub": "Surrounded by one country",
+          "size": 100,
+          "y": 0.34,
+          "at": 1.2
+        }
+      ],
+      "vo": "That makes it incredibly rare. Lesotho is one of only three countries entirely surrounded by a single other country, alongside San Marino and Vatican City.",
+      "caption": "That makes it incredibly rare. Lesotho is one of only three countries entirely surrounded by a single other country, alongside San Marino and Vatican City."
+    },
+    {
+      "id": "s4",
+      "duration": 8.7,
+      "camera": {
+        "lon": 28.3,
+        "lat": -29.5,
+        "width_km": 650,
+        "move": 1.8
+      },
+      "title": "Kingdom in the *Sky*",
+      "hide": [
+        "badge_three"
+      ],
+      "show": [
+        {
+          "id": "badge_sky",
+          "type": "badge",
+          "text": "> 1,000 M",
+          "sub": "Kingdom in the Sky",
+          "size": 102,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "It is also remarkably elevated. Because the whole country lies above 1,000 metres, people call it the Kingdom in the Sky.",
+      "caption": "It is also remarkably elevated. Because the whole country lies above 1,000 metres, people call it the Kingdom in the Sky."
+    },
+    {
+      "id": "s5",
+      "duration": 8.3,
+      "camera": {
+        "lon": 28.0,
+        "lat": -29.6,
+        "width_km": 420,
+        "move": 1.8
+      },
+      "title": "Highest *low point*",
+      "hide": [
+        "badge_sky"
+      ],
+      "show": [
+        {
+          "id": "badge_low",
+          "type": "badge",
+          "text": "1,400 M",
+          "sub": "Highest low point on Earth",
+          "size": 102,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Even its lowest point sits at 1,400 metres above sea level, making it the highest low point of any country.",
+      "caption": "Even its lowest point sits at 1,400 metres above sea level, making it the highest low point of any country."
+    },
+    {
+      "id": "s6",
+      "duration": 5.2,
+      "camera": {
+        "lon": 27.5,
+        "lat": -29.3,
+        "width_km": 180,
+        "move": 1.5
+      },
+      "title": "The capital: *Maseru*",
+      "hide": [
+        "badge_low"
+      ],
+      "show": [
+        {
+          "id": "pin_maseru",
+          "type": "marker",
+          "lon": 27.48,
+          "lat": -29.31,
+          "text": "Maseru\nCapital",
+          "side": "right",
+          "color": "yellow",
+          "size": 42,
+          "at": 0.8
+        }
+      ],
+      "vo": "Perched right along the border with South Africa sits Lesotho's capital, Maseru.",
+      "caption": "Perched right along the border with South Africa sits Lesotho's capital, Maseru."
+    },
+    {
+      "id": "s7",
+      "duration": 6.0,
+      "camera": {
+        "lon": 27.5,
+        "lat": -29.2,
+        "width_km": 1200,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "pin_maseru"
+      ],
+      "show": [
+        {
+          "id": "lbl_lso_final",
+          "type": "label",
+          "text": "Lesotho",
+          "lon": 28.3,
+          "lat": -29.5,
+          "color": "yellow",
+          "size": 52,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_zaf_final",
+          "type": "label",
+          "text": "South Africa",
+          "lon": 24.5,
+          "lat": -30.5,
+          "color": "orange",
+          "size": 46,
+          "at": 0.8
+        }
+      ],
+      "vo": "An entire high-altitude kingdom locked within a single neighbor. Follow for more map secrets!",
+      "caption": "An entire high-altitude kingdom locked within a single neighbor. Follow for more map secrets!"
+    }
+  ]
+}

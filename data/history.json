@@ -48,5 +48,15 @@
     "publishAt": "2026-11-02T16:00:00Z",
     "facebookVideoId": "3362002810667416",
     "facebookState": "scheduled for 2026-11-02T16:00:00Z"
+  },
+  {
+    "date": "2026-11-02",
+    "topic": "lesotho",
+    "title": "The Kingdom Locked Inside Another Country 🇱🇸🗺️",
+    "episode": "data/episodes/lesotho.json",
+    "videoId": "PEvuu8ixnms",
+    "publishAt": "2026-11-03T16:00:00Z",
+    "facebookVideoId": "1100037085982950",
+    "facebookState": "scheduled for 2026-11-03T16:00:00Z"
   }
 ]
