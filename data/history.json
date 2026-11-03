@@ -58,5 +58,15 @@
     "publishAt": "2026-11-03T16:00:00Z",
     "facebookVideoId": "1100037085982950",
     "facebookState": "scheduled for 2026-11-03T16:00:00Z"
+  },
+  {
+    "date": "2026-11-03",
+    "topic": "panama-canal",
+    "title": "Why do ships go EAST to reach the Pacific? 🇵🇦🚢 Panama Canal",
+    "episode": "data/episodes/panama-canal.json",
+    "videoId": "9jSKAV8qOAA",
+    "publishAt": "2026-11-04T16:00:00Z",
+    "facebookVideoId": "1867764234227942",
+    "facebookState": "scheduled for 2026-11-04T16:00:00Z"
   }
 ]

@@ -1,0 +1,280 @@
+{
+  "slug": "panama-canal",
+  "title": "Panama Canal: why do ships go EAST to the Pacific?",
+  "brand": "",
+  "thumbnail_at": 8.5,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Why do ships go EAST to reach the Pacific? 🇵🇦🚢 Panama Canal",
+    "description": "The Panama Canal connects the Atlantic and Pacific oceans across an 82 km stretch of land. Because of how Panama bends, the Pacific end is actually east of the Atlantic end.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#panama",
+      "#canals",
+      "#ocean",
+      "#history",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.1,
+      "camera": {
+        "from": {
+          "lon": -60,
+          "lat": 20,
+          "radius": 400
+        },
+        "lon": -80.0,
+        "lat": 9.0,
+        "radius": 1900,
+        "move": 4.0
+      },
+      "globe_highlight": {
+        "PAN": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "Ships go *east* to the Pacific?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -79.7,
+          "lat": 9.15,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "Ships go east to reach the Pacific in Panama.",
+      "caption": "Ships go east to reach the Pacific in Panama.",
+      "hide": []
+    },
+    {
+      "id": "s2",
+      "duration": 5.2,
+      "camera": {
+        "lon": -79.7,
+        "lat": 9.35,
+        "width_km": 200,
+        "move": 1.8
+      },
+      "title": "The *Panama Canal*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "pan",
+          "type": "country",
+          "iso": "PAN",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "lbl_pan",
+          "type": "label",
+          "text": "Panama",
+          "lon": -79.7,
+          "lat": 9.9,
+          "at": 0.8
+        },
+        {
+          "id": "col",
+          "type": "marker",
+          "lon": -79.9,
+          "lat": 9.36,
+          "text": "Colón",
+          "size": 36,
+          "at": 2.0
+        },
+        {
+          "id": "pancity",
+          "type": "marker",
+          "lon": -79.52,
+          "lat": 8.98,
+          "text": "Panama City",
+          "size": 36,
+          "at": 2.6
+        }
+      ],
+      "vo": "The Panama Canal opened in 1914, connecting the Atlantic and Pacific oceans.",
+      "caption": "The Panama Canal opened in 1914, connecting the Atlantic and Pacific oceans."
+    },
+    {
+      "id": "s3",
+      "duration": 4.8,
+      "camera": {
+        "lon": -79.7,
+        "lat": 9.15,
+        "width_km": 100,
+        "move": 1.5
+      },
+      "title": "Length: *82 kilometres*",
+      "hide": [
+        "lbl_pan",
+        "col",
+        "pancity"
+      ],
+      "show": [
+        {
+          "id": "badge_len",
+          "type": "badge",
+          "text": "82 KM",
+          "sub": "Canal length",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "The canal is about 82 kilometers long across the narrow country.",
+      "caption": "The canal is about 82 kilometers long across the narrow country."
+    },
+    {
+      "id": "s4",
+      "duration": 7.1,
+      "camera": {
+        "lon": -79.7,
+        "lat": 9.15,
+        "width_km": 120,
+        "move": 1.8
+      },
+      "title": "Why the Pacific is *East*",
+      "hide": [
+        "badge_len"
+      ],
+      "show": [
+        {
+          "id": "col_z",
+          "type": "marker",
+          "lon": -79.9,
+          "lat": 9.36,
+          "text": "Atlantic (Colón)",
+          "size": 38,
+          "at": 1.0
+        },
+        {
+          "id": "pancity_z",
+          "type": "marker",
+          "lon": -79.52,
+          "lat": 8.98,
+          "text": "Pacific (Panama City)",
+          "size": 38,
+          "at": 1.8
+        }
+      ],
+      "vo": "Because Panama bends, the Pacific end at Panama City is east of the Atlantic end at Colón.",
+      "caption": "Because Panama bends, the Pacific end at Panama City is east of the Atlantic end at Colón."
+    },
+    {
+      "id": "s5",
+      "duration": 5.6,
+      "camera": {
+        "lon": -79.85,
+        "lat": 9.18,
+        "width_km": 80,
+        "move": 2.0
+      },
+      "title": "Lifting ships: *26 metres*",
+      "hide": [
+        "col_z",
+        "pancity_z"
+      ],
+      "show": [
+        {
+          "id": "gatun",
+          "type": "marker",
+          "lon": -79.85,
+          "lat": 9.18,
+          "text": "Gatun Lake",
+          "size": 40,
+          "at": 1.0
+        },
+        {
+          "id": "badge_lift",
+          "type": "badge",
+          "text": "26 M",
+          "sub": "Locks lift up",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.0
+        }
+      ],
+      "vo": "Locks lift ships about 26 meters up to Gatun Lake and back down.",
+      "caption": "Locks lift ships about 26 meters up to Gatun Lake and back down."
+    },
+    {
+      "id": "s6",
+      "duration": 5.6,
+      "camera": {
+        "lon": -70.0,
+        "lat": -25.0,
+        "width_km": 4500,
+        "move": 2.2
+      },
+      "title": "Before the *Canal*",
+      "hide": [
+        "gatun",
+        "badge_lift",
+        "pan"
+      ],
+      "show": [
+        {
+          "id": "south_america",
+          "type": "country",
+          "iso": [
+            "COL",
+            "ECU",
+            "PER",
+            "BRA",
+            "VEN",
+            "CHL",
+            "ARG"
+          ],
+          "fill": "blue",
+          "alpha": 0.5,
+          "at": 0.8
+        }
+      ],
+      "vo": "Before the canal, ships had to sail all the way around South America.",
+      "caption": "Before the canal, ships had to sail all the way around South America."
+    },
+    {
+      "id": "s7",
+      "duration": 5.2,
+      "camera": {
+        "lon": -79.7,
+        "lat": 9.15,
+        "width_km": 1200,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "south_america"
+      ],
+      "show": [
+        {
+          "id": "pan_end",
+          "type": "country",
+          "iso": "PAN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        }
+      ],
+      "vo": "A massive shortcut that reshaped global trade. Follow for more map secrets!",
+      "caption": "A massive shortcut that reshaped global trade. Follow for more map secrets!"
+    }
+  ]
+}
