@@ -68,5 +68,15 @@
     "publishAt": "2026-11-04T16:00:00Z",
     "facebookVideoId": "1867764234227942",
     "facebookState": "scheduled for 2026-11-04T16:00:00Z"
+  },
+  {
+    "date": "2026-11-04",
+    "topic": "suwalki-gap",
+    "title": "This gap might start World War Three 🇵🇱🗺️ Suwałki Gap",
+    "episode": "data/episodes/suwalki-gap.json",
+    "videoId": "R-i3-64brxA",
+    "publishAt": "2026-11-05T16:00:00Z",
+    "facebookVideoId": "1449486353962819",
+    "facebookState": "scheduled for 2026-11-05T16:00:00Z"
   }
 ]
