@@ -1,0 +1,256 @@
+{
+  "slug": "china-one-time-zone",
+  "title": "China: Why does it have just ONE time zone?",
+  "brand": "",
+  "thumbnail_at": 11.5,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Why does all of China run on Beijing time? 🇨🇳⏰ Single Time Zone",
+    "description": "China is about as wide as five time zones, but since 1949 the entire country uses Beijing time. In the far west, the sun can rise as late as 10 a.m. in winter.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#china",
+      "#timezone",
+      "#history",
+      "#beijing",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 5.2,
+      "camera": {
+        "from": {
+          "lon": 70,
+          "lat": 20,
+          "radius": 400
+        },
+        "lon": 98.0,
+        "lat": 36.0,
+        "radius": 2200,
+        "move": 4.1
+      },
+      "globe_highlight": {
+        "CHN": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "China: *One* time zone?",
+      "show": [
+        {
+          "id": "pin_bj",
+          "type": "marker",
+          "lon": 116.4,
+          "lat": 39.9,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "China is huge. So why does it have just one time zone?",
+      "caption": "China is huge. So why does it have just one time zone?"
+    },
+    {
+      "id": "s2",
+      "duration": 7.1,
+      "camera": {
+        "lon": 98.0,
+        "lat": 36.0,
+        "width_km": 5200,
+        "move": 2.0
+      },
+      "title": "Five zones *wide*",
+      "hide": [
+        "pin_bj"
+      ],
+      "show": [
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_chn",
+          "type": "label",
+          "text": "China",
+          "lon": 104.0,
+          "lat": 35.0,
+          "at": 0.8
+        }
+      ],
+      "vo": "China is about as wide as five time zones, spanning thousands of kilometers from east to west.",
+      "caption": "China is about as wide as five time zones, spanning thousands of kilometers from east to west."
+    },
+    {
+      "id": "s3",
+      "duration": 6.4,
+      "camera": {
+        "lon": 104.0,
+        "lat": 36.0,
+        "width_km": 4200,
+        "move": 2.0
+      },
+      "title": "*Beijing* Time",
+      "hide": [
+        "lbl_chn"
+      ],
+      "show": [
+        {
+          "id": "badge_1949",
+          "type": "badge",
+          "text": "Since 1949",
+          "sub": "UTC+8 universal time",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        },
+        {
+          "id": "marker_bj",
+          "type": "marker",
+          "lon": 116.4,
+          "lat": 39.9,
+          "text": "Beijing",
+          "side": "top",
+          "size": 40,
+          "at": 2.0
+        }
+      ],
+      "vo": "But since 1949, the whole country uses a single time: Beijing time, UTC plus eight.",
+      "caption": "But since 1949, the whole country uses a single time: Beijing time, UTC plus eight."
+    },
+    {
+      "id": "s4",
+      "duration": 6.4,
+      "camera": {
+        "lon": 82.0,
+        "lat": 39.0,
+        "width_km": 2400,
+        "move": 2.2
+      },
+      "title": "The Far *West*",
+      "hide": [
+        "badge_1949",
+        "marker_bj"
+      ],
+      "show": [
+        {
+          "id": "marker_ks",
+          "type": "marker",
+          "lon": 75.99,
+          "lat": 39.47,
+          "text": "Kashgar",
+          "side": "top",
+          "size": 40,
+          "at": 0.8
+        },
+        {
+          "id": "marker_ur",
+          "type": "marker",
+          "lon": 87.62,
+          "lat": 43.83,
+          "text": "Urumqi",
+          "side": "top",
+          "size": 40,
+          "at": 2.0
+        }
+      ],
+      "vo": "In the far west, in places like Kashgar and Urumqi, people experience extreme schedule shifts.",
+      "caption": "In the far west, in places like Kashgar and Urumqi, people experience extreme schedule shifts."
+    },
+    {
+      "id": "s5",
+      "duration": 6.4,
+      "camera": {
+        "lon": 75.99,
+        "lat": 39.47,
+        "width_km": 900,
+        "move": 2.0
+      },
+      "title": "Sun rises at *10 AM*",
+      "hide": [
+        "marker_ur"
+      ],
+      "show": [
+        {
+          "id": "badge_sun",
+          "type": "badge",
+          "text": "10:00 AM",
+          "sub": "Winter sunrise in Kashgar",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Because of this, the sun can rise as late as about ten a.m. in winter.",
+      "caption": "Because of this, the sun can rise as late as about ten a.m. in winter."
+    },
+    {
+      "id": "s6",
+      "duration": 6.0,
+      "camera": {
+        "lon": 85.0,
+        "lat": 41.0,
+        "width_km": 2000,
+        "move": 2.0
+      },
+      "title": "Unofficial *Local* Time",
+      "hide": [
+        "badge_sun",
+        "marker_ks"
+      ],
+      "show": [
+        {
+          "id": "badge_xinjiang",
+          "type": "badge",
+          "text": "2 Hours Back",
+          "sub": "Unofficial Xinjiang time",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Many people in Xinjiang also use an unofficial local time two hours behind Beijing.",
+      "caption": "Many people in Xinjiang also use an unofficial local time two hours behind Beijing."
+    },
+    {
+      "id": "s7",
+      "duration": 4.4,
+      "camera": {
+        "lon": 98.0,
+        "lat": 36.0,
+        "width_km": 5200,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_xinjiang",
+        "chn"
+      ],
+      "show": [
+        {
+          "id": "chn_final",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        }
+      ],
+      "vo": "One clock covers a continent. Follow for more map secrets!",
+      "caption": "One clock covers a continent. Follow for more map secrets!"
+    }
+  ]
+}
