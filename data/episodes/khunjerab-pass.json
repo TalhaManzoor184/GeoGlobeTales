@@ -1,0 +1,286 @@
+{
+  "slug": "khunjerab-pass",
+  "title": "Khunjerab Pass: the highest paved border crossing",
+  "brand": "",
+  "thumbnail_at": 12.7,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "The highest paved border crossing on Earth 🇵🇰🇨🇳 Khunjerab Pass",
+    "description": "Khunjerab Pass sits at 4,693 metres above sea level and links Pakistan with China. It is the highest point on the Karakoram Highway.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#pakistan",
+      "#china",
+      "#himalayas",
+      "#mountains",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 5.6,
+      "camera": {
+        "from": {
+          "lon": 60,
+          "lat": 25,
+          "radius": 400
+        },
+        "lon": 74.5,
+        "lat": 36.6,
+        "radius": 1900,
+        "move": 3.7
+      },
+      "globe_highlight": {
+        "PAK": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "The *highest* paved border crossing",
+      "show": [
+        {
+          "id": "pin_pass",
+          "type": "marker",
+          "lon": 75.428,
+          "lat": 36.85,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "The highest paved border crossing on Earth is located right here in Pakistan.",
+      "caption": "The highest paved border crossing on Earth is located right here in Pakistan."
+    },
+    {
+      "id": "s2",
+      "duration": 7.9,
+      "camera": {
+        "lon": 74.5,
+        "lat": 36.6,
+        "width_km": 600,
+        "move": 1.8
+      },
+      "title": "Khunjerab *Pass*",
+      "hide": [
+        "pin_pass"
+      ],
+      "show": [
+        {
+          "id": "pak",
+          "type": "country",
+          "iso": "PAK",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 0.6
+        },
+        {
+          "id": "pass_marker",
+          "type": "marker",
+          "lon": 75.428,
+          "lat": 36.85,
+          "text": "Khunjerab Pass",
+          "side": "top",
+          "size": 42,
+          "color": "yellow",
+          "at": 1.5
+        },
+        {
+          "id": "badge_alt",
+          "type": "badge",
+          "text": "4,693 M",
+          "sub": "above sea level",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.5
+        }
+      ],
+      "vo": "Khunjerab Pass sits at 4,693 metres above sea level, making it the highest international border crossing in the world.",
+      "caption": "Khunjerab Pass sits at 4,693 metres above sea level, making it the highest international border crossing in the world."
+    },
+    {
+      "id": "s3",
+      "duration": 5.2,
+      "camera": {
+        "lon": 74.8,
+        "lat": 36.4,
+        "width_km": 1200,
+        "move": 2.0
+      },
+      "title": "Connecting *two* nations",
+      "hide": [
+        "pass_marker",
+        "badge_alt"
+      ],
+      "show": [
+        {
+          "id": "lbl_gilgit",
+          "type": "label",
+          "text": "Gilgit-Baltistan",
+          "lon": 74.31,
+          "lat": 35.92,
+          "color": "orange",
+          "size": 42,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_xinjiang",
+          "type": "label",
+          "text": "Xinjiang",
+          "lon": 75.99,
+          "lat": 38.5,
+          "color": "red",
+          "size": 42,
+          "at": 1.4
+        },
+        {
+          "id": "arr_link",
+          "type": "arrow",
+          "from": [
+            74.31,
+            36.1
+          ],
+          "to": [
+            75.4,
+            36.7
+          ],
+          "color": "yellow",
+          "at": 2.2
+        }
+      ],
+      "vo": "This incredible mountain crossing links Pakistan's Gilgit-Baltistan directly with China's Xinjiang region.",
+      "caption": "This incredible mountain crossing links Pakistan's Gilgit-Baltistan directly with China's Xinjiang region."
+    },
+    {
+      "id": "s4",
+      "duration": 7.1,
+      "camera": {
+        "lon": 74.4,
+        "lat": 36.5,
+        "width_km": 700,
+        "move": 1.8
+      },
+      "title": "The Karakoram *Highway*",
+      "hide": [
+        "lbl_gilgit",
+        "lbl_xinjiang",
+        "arr_link"
+      ],
+      "show": [
+        {
+          "id": "pass_dot",
+          "type": "marker",
+          "lon": 75.428,
+          "lat": 36.85,
+          "color": "yellow",
+          "at": 0.6
+        },
+        {
+          "id": "badge_kkh",
+          "type": "badge",
+          "text": "HIGH POINT",
+          "sub": "Karakoram Highway",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.2
+        }
+      ],
+      "vo": "Beyond just a border crossing, it serves as the single highest point on the massive Karakoram Highway.",
+      "caption": "Beyond just a border crossing, it serves as the single highest point on the massive Karakoram Highway."
+    },
+    {
+      "id": "s5",
+      "duration": 8.7,
+      "camera": {
+        "lon": 74.3,
+        "lat": 36.6,
+        "width_km": 2400,
+        "move": 2.2
+      },
+      "title": "From *Hasan Abdal* to *Kashgar*",
+      "hide": [
+        "pass_dot",
+        "badge_kkh"
+      ],
+      "show": [
+        {
+          "id": "mk_hasan",
+          "type": "marker",
+          "lon": 72.69,
+          "lat": 33.82,
+          "text": "Hasan Abdal",
+          "side": "bottom",
+          "size": 36,
+          "at": 0.8
+        },
+        {
+          "id": "mk_kashgar",
+          "type": "marker",
+          "lon": 75.99,
+          "lat": 39.47,
+          "text": "Kashgar",
+          "side": "top",
+          "size": 36,
+          "at": 1.5
+        },
+        {
+          "id": "badge_dist",
+          "type": "badge",
+          "text": "1,300 KM",
+          "sub": "Highway length",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.2
+        }
+      ],
+      "vo": "In total, the Karakoram Highway runs about 1,300 kilometers from Hasan Abdal in Pakistan all the way to Kashgar in China.",
+      "caption": "In total, the Karakoram Highway runs about 1,300 kilometers from Hasan Abdal in Pakistan all the way to Kashgar in China."
+    },
+    {
+      "id": "s6",
+      "duration": 5.6,
+      "camera": {
+        "lon": 74.5,
+        "lat": 36.6,
+        "width_km": 1500,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "mk_hasan",
+        "mk_kashgar",
+        "badge_dist",
+        "pak",
+        "chn"
+      ],
+      "show": [
+        {
+          "id": "pass_final",
+          "type": "marker",
+          "lon": 75.428,
+          "lat": 36.85,
+          "color": "yellow",
+          "at": 0.6
+        }
+      ],
+      "vo": "An engineering marvel built high above the clouds. Follow for more map secrets!",
+      "caption": "An engineering marvel built high above the clouds. Follow for more map secrets!"
+    }
+  ]
+}
