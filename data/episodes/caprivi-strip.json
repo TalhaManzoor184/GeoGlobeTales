@@ -1,0 +1,340 @@
+{
+  "slug": "caprivi-strip",
+  "title": "Why Namibia Has This Strange Arm: The Caprivi Strip",
+  "brand": "",
+  "thumbnail_at": 13.1,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Namibia's Useless Panhandle: The Caprivi Strip 🇳🇦🗺️",
+    "description": "In 1890, Germany acquired the Caprivi Strip hoping for a navigable river route to Africa's east coast. But the Zambezi was blocked by Victoria Falls just 65 km away, making the entire strip useless.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#namibia",
+      "#africa",
+      "#history",
+      "#borders"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 3.7,
+      "camera": {
+        "from": {
+          "lon": 10.0,
+          "lat": 5.0,
+          "radius": 400
+        },
+        "lon": 20.0,
+        "lat": -20.0,
+        "radius": 1900,
+        "move": 3.5
+      },
+      "globe_highlight": {
+        "NAM": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Why does Namibia have an *arm*?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 23.5,
+          "lat": -17.8,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Why does Namibia have this bizarre, long arm?",
+      "caption": "Why does Namibia have this bizarre, long arm?"
+    },
+    {
+      "id": "s2",
+      "duration": 10.2,
+      "camera": {
+        "lon": 21.5,
+        "lat": -18.5,
+        "width_km": 1500,
+        "move": 1.6
+      },
+      "title": "The *Caprivi* Strip",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "nam",
+          "type": "country",
+          "iso": "NAM",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "ago",
+          "type": "country",
+          "iso": "AGO",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_ago",
+          "type": "label",
+          "text": "Angola",
+          "lon": 19.5,
+          "lat": -16.2,
+          "at": 0.6
+        },
+        {
+          "id": "zmb",
+          "type": "country",
+          "iso": "ZMB",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_zmb",
+          "type": "label",
+          "text": "Zambia",
+          "lon": 24.5,
+          "lat": -15.5,
+          "at": 1.0
+        },
+        {
+          "id": "bwa",
+          "type": "country",
+          "iso": "BWA",
+          "fill": "teal",
+          "alpha": 0.55,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_bwa",
+          "type": "label",
+          "text": "Botswana",
+          "lon": 23.5,
+          "lat": -21.0,
+          "at": 1.4
+        },
+        {
+          "id": "caprivi",
+          "type": "region",
+          "of": "NAM",
+          "clip": [
+            21.0,
+            -18.6,
+            25.4,
+            -17.3
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.8
+        },
+        {
+          "id": "badge_width",
+          "type": "badge",
+          "text": "32-105 KM",
+          "sub": "width of the strip",
+          "size": 104,
+          "y": 0.34,
+          "at": 3.8
+        }
+      ],
+      "vo": "This is the Caprivi Strip, stretching east between Angola, Zambia, and Botswana. Its width varies from about thirty-two kilometers to one hundred and five kilometers.",
+      "caption": "This is the Caprivi Strip, stretching east between Angola, Zambia, and Botswana. Its width varies from about thirty-two kilometers to one hundred and five kilometers."
+    },
+    {
+      "id": "s3",
+      "duration": 7.9,
+      "camera": {
+        "lon": 22.5,
+        "lat": -18.2,
+        "width_km": 1100,
+        "move": 1.6
+      },
+      "title": "The *1890* Treaty",
+      "hide": [
+        "badge_width",
+        "lbl_ago",
+        "lbl_zmb",
+        "lbl_bwa"
+      ],
+      "show": [
+        {
+          "id": "badge_treaty",
+          "type": "badge",
+          "text": "1890",
+          "sub": "Heligoland-Zanzibar Treaty",
+          "size": 100,
+          "y": 0.34,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_chancellor",
+          "type": "label",
+          "text": "Leo von Caprivi",
+          "lon": 23.0,
+          "lat": -19.4,
+          "color": "yellow",
+          "size": 48,
+          "at": 2.6
+        }
+      ],
+      "vo": "Germany acquired this strip in eighteen ninety through the Heligoland-Zanzibar Treaty with Britain, negotiated by Chancellor Leo von Caprivi.",
+      "caption": "Germany acquired this strip in eighteen ninety through the Heligoland-Zanzibar Treaty with Britain, negotiated by Chancellor Leo von Caprivi."
+    },
+    {
+      "id": "s4",
+      "duration": 8.7,
+      "camera": {
+        "lon": 25.5,
+        "lat": -18.0,
+        "width_km": 2100,
+        "move": 1.8
+      },
+      "title": "Route to the *East Coast*",
+      "hide": [
+        "badge_treaty",
+        "lbl_chancellor"
+      ],
+      "show": [
+        {
+          "id": "lbl_zambezi",
+          "type": "label",
+          "text": "Zambezi River",
+          "lon": 25.2,
+          "lat": -16.2,
+          "color": "teal",
+          "size": 48,
+          "at": 0.8
+        },
+        {
+          "id": "arr_east",
+          "type": "arrow",
+          "from": [
+            24.2,
+            -17.5
+          ],
+          "to": [
+            31.5,
+            -18.5
+          ],
+          "color": "yellow",
+          "at": 1.8
+        },
+        {
+          "id": "badge_route",
+          "type": "badge",
+          "text": "ZAMBEZI",
+          "sub": "Route to the east coast",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.4
+        }
+      ],
+      "vo": "Germany wanted access to the Zambezi River, hoping for a water route all the way to the east coast of Africa.",
+      "caption": "Germany wanted access to the Zambezi River, hoping for a water route all the way to the east coast of Africa."
+    },
+    {
+      "id": "s5",
+      "duration": 10.2,
+      "camera": {
+        "lon": 25.2,
+        "lat": -17.8,
+        "width_km": 360,
+        "move": 1.8
+      },
+      "title": "The *Fatal* Flaw",
+      "hide": [
+        "arr_east",
+        "lbl_zambezi",
+        "badge_route"
+      ],
+      "show": [
+        {
+          "id": "vic_falls",
+          "type": "marker",
+          "lon": 25.86,
+          "lat": -17.92,
+          "text": "Victoria Falls\n~65 km east",
+          "color": "red",
+          "side": "right",
+          "size": 40,
+          "at": 1.6
+        },
+        {
+          "id": "badge_falls",
+          "type": "badge",
+          "text": "65 KM",
+          "sub": "East to Victoria Falls",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.2
+        }
+      ],
+      "vo": "There was just one massive problem. The Zambezi was not navigable to the ocean, because Victoria Falls lies about sixty-five kilometers east of the strip.",
+      "caption": "There was just one massive problem. The Zambezi was not navigable to the ocean, because Victoria Falls lies about sixty-five kilometers east of the strip."
+    },
+    {
+      "id": "s6",
+      "duration": 12.9,
+      "camera": {
+        "lon": 24.8,
+        "lat": -17.8,
+        "width_km": 460,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_falls",
+        "vic_falls"
+      ],
+      "show": [
+        {
+          "id": "zwe",
+          "type": "country",
+          "iso": "ZWE",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_zwe",
+          "type": "label",
+          "text": "Zimbabwe",
+          "lon": 26.2,
+          "lat": -18.3,
+          "color": "purple",
+          "size": 46,
+          "at": 0.6
+        },
+        {
+          "id": "badge_tip",
+          "type": "badge",
+          "text": "150 METRES",
+          "sub": "Distance to Zimbabwe",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.2
+        }
+      ],
+      "vo": "At its eastern tip, the strip even comes within one hundred and fifty metres of Zimbabwe. Germany got their river access, but the route was totally useless. Follow for more map secrets!",
+      "caption": "At its eastern tip, the strip even comes within one hundred and fifty metres of Zimbabwe. Germany got their river access, but the route was totally useless. Follow for more map secrets!"
+    }
+  ]
+}
