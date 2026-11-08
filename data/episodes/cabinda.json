@@ -1,0 +1,261 @@
+{
+  "slug": "cabinda",
+  "title": "Cabinda: Angola's separated province",
+  "brand": "",
+  "thumbnail_at": 11.2,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "The piece of Angola cut off from Angola 🇦🇴🗺️",
+    "description": "Cabinda is a province of Angola completely detached from the rest of the nation. A narrow corridor belonging to the Democratic Republic of the Congo separates them along the Atlantic coast.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#angola",
+      "#africa",
+      "#cabinda",
+      "#borders"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.1,
+      "camera": {
+        "from": {
+          "lon": 5.0,
+          "lat": 0.0,
+          "radius": 400
+        },
+        "lon": 13.0,
+        "lat": -7.0,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "AGO": "orange"
+      },
+      "highlight_at": 1.0,
+      "title": "Angola's *separated* province",
+      "show": [
+        {
+          "id": "pin_cabinda",
+          "type": "marker",
+          "lon": 12.19,
+          "lat": -5.56,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "This part of Angola is not connected to Angola.",
+      "caption": "This part of Angola is not connected to Angola."
+    },
+    {
+      "id": "s2",
+      "duration": 7.9,
+      "camera": {
+        "lon": 13.0,
+        "lat": -7.5,
+        "width_km": 1100,
+        "move": 1.8
+      },
+      "title": "Meet *Cabinda*",
+      "hide": [
+        "pin_cabinda"
+      ],
+      "show": [
+        {
+          "id": "ago_main",
+          "type": "country",
+          "iso": "AGO",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.3
+        },
+        {
+          "id": "lbl_luanda",
+          "type": "marker",
+          "lon": 13.23,
+          "lat": -8.84,
+          "text": "Luanda",
+          "side": "right",
+          "size": 42,
+          "at": 1.0
+        },
+        {
+          "id": "cabinda_reg",
+          "type": "region",
+          "of": "AGO",
+          "clip": [
+            11.5,
+            -6.1,
+            13.2,
+            -4.3
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 2.2
+        },
+        {
+          "id": "lbl_cabinda",
+          "type": "label",
+          "text": "Cabinda",
+          "lon": 12.19,
+          "lat": -5.1,
+          "color": "yellow",
+          "size": 52,
+          "at": 2.5
+        }
+      ],
+      "vo": "Down here is mainland Angola, stretching past Luanda. But look further up the coast: this separate land is Cabinda.",
+      "caption": "Down here is mainland Angola, stretching past Luanda. But look further up the coast: this separate land is Cabinda."
+    },
+    {
+      "id": "s3",
+      "duration": 7.9,
+      "camera": {
+        "lon": 13.0,
+        "lat": -6.3,
+        "width_km": 650,
+        "move": 1.6
+      },
+      "title": "A *country* in between",
+      "hide": [
+        "lbl_luanda"
+      ],
+      "show": [
+        {
+          "id": "cod_country",
+          "type": "country",
+          "iso": "COD",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 0.5
+        },
+        {
+          "id": "lbl_cod",
+          "type": "label",
+          "text": "DR Congo",
+          "lon": 13.8,
+          "lat": -5.8,
+          "color": "green",
+          "size": 50,
+          "at": 1.0
+        }
+      ],
+      "vo": "Cabinda is an official province of Angola. Yet it is completely separated by the Democratic Republic of the Congo.",
+      "caption": "Cabinda is an official province of Angola. Yet it is completely separated by the Democratic Republic of the Congo."
+    },
+    {
+      "id": "s4",
+      "duration": 8.7,
+      "camera": {
+        "lon": 12.6,
+        "lat": -5.9,
+        "width_km": 280,
+        "move": 1.8
+      },
+      "title": "Access to the *Atlantic*",
+      "hide": [
+        "lbl_cod"
+      ],
+      "show": [
+        {
+          "id": "congo_mouth",
+          "type": "marker",
+          "lon": 12.33,
+          "lat": -6.08,
+          "text": "Congo River mouth",
+          "side": "bottom",
+          "size": 38,
+          "color": "blue",
+          "at": 1.0
+        },
+        {
+          "id": "arrow_sea",
+          "type": "arrow",
+          "from": [
+            13.1,
+            -5.9
+          ],
+          "to": [
+            12.3,
+            -6.0
+          ],
+          "color": "blue",
+          "at": 2.0
+        }
+      ],
+      "vo": "A narrow strip of the DR Congo cuts right along the Congo River mouth, giving the country its short Atlantic coastline.",
+      "caption": "A narrow strip of the DR Congo cuts right along the Congo River mouth, giving the country its short Atlantic coastline."
+    },
+    {
+      "id": "s5",
+      "duration": 7.9,
+      "camera": {
+        "lon": 12.19,
+        "lat": -5.56,
+        "width_km": 240,
+        "move": 1.8
+      },
+      "title": "Angola's *oil* treasure",
+      "hide": [
+        "congo_mouth",
+        "arrow_sea"
+      ],
+      "show": [
+        {
+          "id": "badge_oil",
+          "type": "badge",
+          "text": "OFFSHORE OIL",
+          "sub": "Major source for Angola",
+          "size": 100,
+          "y": 0.32,
+          "at": 0.8
+        }
+      ],
+      "vo": "Cabinda is vital to Angola. A big part of Angola's oil comes from Cabinda and its rich offshore waters.",
+      "caption": "Cabinda is vital to Angola. A big part of Angola's oil comes from Cabinda and its rich offshore waters."
+    },
+    {
+      "id": "s6",
+      "duration": 8.7,
+      "camera": {
+        "lon": 13.0,
+        "lat": -6.3,
+        "width_km": 650,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_oil"
+      ],
+      "show": [
+        {
+          "id": "lbl_final_cab",
+          "type": "label",
+          "text": "Cabinda (Angola)",
+          "lon": 12.19,
+          "lat": -5.2,
+          "color": "yellow",
+          "size": 42,
+          "at": 0.6
+        }
+      ],
+      "vo": "A narrow corridor giving DR Congo Atlantic access leaves Cabinda completely detached, yet full of oil. Follow for more map secrets!",
+      "caption": "A narrow corridor giving DR Congo Atlantic access leaves Cabinda completely detached, yet full of oil. Follow for more map secrets!"
+    }
+  ]
+}
