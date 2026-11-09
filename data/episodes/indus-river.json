@@ -1,0 +1,301 @@
+{
+  "slug": "indus-river",
+  "title": "Where Does Pakistan's Greatest River Actually Begin?",
+  "brand": "",
+  "thumbnail_at": 9.6,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Where Does Pakistan's Greatest River Actually Begin? 🇵🇰🏔️",
+    "description": "The Indus River flows about 3,180 kilometres from Tibet all the way to the Arabian Sea. It sustains most of Pakistan's farms and once gave rise to the Indus Valley Civilisation.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#pakistan",
+      "#indusriver",
+      "#tibet",
+      "#history"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 15.0,
+          "lat": 18.0,
+          "radius": 400
+        },
+        "lon": 73.5,
+        "lat": 29.5,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "PAK": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Pakistan's *Lifeline* in Tibet?",
+      "show": [
+        {
+          "id": "pin_source",
+          "type": "marker",
+          "lon": 81.31,
+          "lat": 31.07,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Did you know that Pakistan's greatest lifeline actually starts in Tibet?",
+      "caption": "Did you know that Pakistan's greatest lifeline actually starts in Tibet?"
+    },
+    {
+      "id": "s2",
+      "duration": 5.6,
+      "camera": {
+        "lon": 81.3,
+        "lat": 31.1,
+        "width_km": 750,
+        "move": 1.8
+      },
+      "title": "The *Source* in Tibet",
+      "hide": [
+        "pin_source"
+      ],
+      "show": [
+        {
+          "id": "chn",
+          "type": "country",
+          "iso": "CHN",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 0.3
+        },
+        {
+          "id": "lbl_tibet",
+          "type": "label",
+          "text": "Tibet",
+          "lon": 82.8,
+          "lat": 32.2,
+          "color": "purple",
+          "size": 52,
+          "at": 0.6
+        },
+        {
+          "id": "kailash",
+          "type": "marker",
+          "lon": 81.31,
+          "lat": 31.07,
+          "text": "Mount Kailash",
+          "side": "bottom",
+          "size": 38,
+          "color": "yellow",
+          "at": 1.4
+        }
+      ],
+      "vo": "The Indus River starts in Tibet, high near Mount Kailash and Lake Manasarovar.",
+      "caption": "The Indus River starts in Tibet, high near Mount Kailash and Lake Manasarovar."
+    },
+    {
+      "id": "s3",
+      "duration": 7.5,
+      "camera": {
+        "lon": 76.2,
+        "lat": 34.6,
+        "width_km": 1100,
+        "move": 1.8
+      },
+      "title": "*3,180* Kilometres Long",
+      "hide": [
+        "kailash",
+        "lbl_tibet"
+      ],
+      "show": [
+        {
+          "id": "ind",
+          "type": "country",
+          "iso": "IND",
+          "fill": "blue",
+          "alpha": 0.5,
+          "at": 0.3
+        },
+        {
+          "id": "pak",
+          "type": "country",
+          "iso": "PAK",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.5
+        },
+        {
+          "id": "skardu",
+          "type": "marker",
+          "lon": 75.63,
+          "lat": 35.3,
+          "text": "Skardu\nGilgit-Baltistan",
+          "side": "top",
+          "size": 36,
+          "at": 1.2
+        },
+        {
+          "id": "badge_length",
+          "type": "badge",
+          "text": "3,180 KM",
+          "sub": "Indus River length",
+          "size": 102,
+          "y": 0.32,
+          "at": 2.2
+        }
+      ],
+      "vo": "From Tibet, it flows through Ladakh and Gilgit-Baltistan past Skardu. In total, it is about 3,180 kilometers long.",
+      "caption": "From Tibet, it flows through Ladakh and Gilgit-Baltistan past Skardu. In total, it is about 3,180 kilometers long."
+    },
+    {
+      "id": "s4",
+      "duration": 6.8,
+      "camera": {
+        "lon": 71.0,
+        "lat": 31.0,
+        "width_km": 1600,
+        "move": 2.0
+      },
+      "title": "The *Length* of Pakistan",
+      "hide": [
+        "badge_length",
+        "skardu",
+        "ind",
+        "chn"
+      ],
+      "show": [
+        {
+          "id": "attock",
+          "type": "marker",
+          "lon": 72.24,
+          "lat": 33.89,
+          "text": "Attock",
+          "side": "right",
+          "size": 38,
+          "at": 1.0
+        },
+        {
+          "id": "sukkur",
+          "type": "marker",
+          "lon": 68.86,
+          "lat": 27.7,
+          "text": "Sukkur",
+          "side": "left",
+          "size": 38,
+          "at": 2.2
+        }
+      ],
+      "vo": "Then, it flows the whole length of Pakistan, cutting past Attock and continuing south past Sukkur.",
+      "caption": "Then, it flows the whole length of Pakistan, cutting past Attock and continuing south past Sukkur."
+    },
+    {
+      "id": "s5",
+      "duration": 7.1,
+      "camera": {
+        "lon": 70.0,
+        "lat": 29.5,
+        "width_km": 1300,
+        "move": 1.6
+      },
+      "title": "Feeding Pakistan's *Farms*",
+      "hide": [
+        "attock",
+        "sukkur"
+      ],
+      "show": [
+        {
+          "id": "badge_farms",
+          "type": "badge",
+          "text": "FARMLAND",
+          "sub": "depends on the Indus",
+          "size": 104,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "Its impact is enormous. Most of Pakistan's farms depend on water from the Indus and its rivers.",
+      "caption": "Its impact is enormous. Most of Pakistan's farms depend on water from the Indus and its rivers."
+    },
+    {
+      "id": "s6",
+      "duration": 8.3,
+      "camera": {
+        "lon": 68.14,
+        "lat": 27.33,
+        "width_km": 650,
+        "move": 1.8
+      },
+      "title": "The Ancient *Indus*",
+      "hide": [
+        "badge_farms"
+      ],
+      "show": [
+        {
+          "id": "mohenjo",
+          "type": "marker",
+          "lon": 68.14,
+          "lat": 27.33,
+          "text": "Mohenjo-daro",
+          "side": "top",
+          "size": 42,
+          "color": "yellow",
+          "at": 1.0
+        },
+        {
+          "id": "badge_ancient",
+          "type": "badge",
+          "text": "ANCIENT",
+          "sub": "Indus Valley Civilisation",
+          "size": 102,
+          "y": 0.32,
+          "at": 2.2
+        }
+      ],
+      "vo": "History was born here too. The Indus Valley Civilisation, one of the world's oldest, grew directly along it near Mohenjo-daro.",
+      "caption": "History was born here too. The Indus Valley Civilisation, one of the world's oldest, grew directly along it near Mohenjo-daro."
+    },
+    {
+      "id": "s7",
+      "duration": 9.4,
+      "camera": {
+        "lon": 67.45,
+        "lat": 24.5,
+        "width_km": 600,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "mohenjo",
+        "badge_ancient"
+      ],
+      "show": [
+        {
+          "id": "delta",
+          "type": "marker",
+          "lon": 67.45,
+          "lat": 24.14,
+          "text": "Indus delta\n(Arabian Sea)",
+          "side": "bottom",
+          "size": 40,
+          "color": "teal",
+          "at": 1.0
+        }
+      ],
+      "vo": "At last, it reaches the Arabian Sea south-east of Karachi. Pakistan's ultimate lifeline from Tibet to the sea. Follow for more map secrets!",
+      "caption": "At last, it reaches the Arabian Sea south-east of Karachi. Pakistan's ultimate lifeline from Tibet to the sea. Follow for more map secrets!"
+    }
+  ]
+}
