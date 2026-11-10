@@ -1,0 +1,274 @@
+{
+  "slug": "aral-sea",
+  "title": "Aral Sea: how a giant lake disappeared",
+  "brand": "",
+  "thumbnail_at": 11.9,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "This was once the fourth-largest lake on Earth 🌊🇰🇿 Aral Sea",
+    "description": "In the nineteen sixties, the Soviet Union diverted the rivers feeding the Aral Sea to irrigate desert cotton fields. By two thousand seven, it had shrunk to about ten percent of its original size.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#aralsea",
+      "#kazakhstan",
+      "#uzbekistan",
+      "#environment",
+      "#history"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 5.6,
+      "camera": {
+        "from": {
+          "lon": 30,
+          "lat": 30,
+          "radius": 400
+        },
+        "lon": 60.0,
+        "lat": 45.0,
+        "radius": 1900,
+        "move": 4.1
+      },
+      "globe_highlight": {
+        "KAZ": "orange",
+        "UZB": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "This lake *vanished* into the desert",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 60.0,
+          "lat": 45.0,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "This was once the fourth largest lake on Earth. Now look at it.",
+      "caption": "This was once the fourth largest lake on Earth. Now look at it.",
+      "hide": []
+    },
+    {
+      "id": "s2",
+      "duration": 7.1,
+      "camera": {
+        "lon": 60.0,
+        "lat": 48.0,
+        "width_km": 1200,
+        "move": 1.8
+      },
+      "title": "The *Aral* Sea",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "kaz",
+          "type": "country",
+          "iso": "KAZ",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_kaz",
+          "type": "label",
+          "text": "Kazakhstan",
+          "lon": 63.5,
+          "lat": 52.5,
+          "at": 0.6
+        },
+        {
+          "id": "uzb",
+          "type": "country",
+          "iso": "UZB",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_uzb",
+          "type": "label",
+          "text": "Uzbekistan",
+          "lon": 63.0,
+          "lat": 45.5,
+          "at": 1.2
+        },
+        {
+          "id": "aralsk",
+          "type": "marker",
+          "lon": 61.67,
+          "lat": 46.8,
+          "text": "Aralsk",
+          "size": 36,
+          "at": 2.2
+        }
+      ],
+      "vo": "In nineteen sixty, the Aral Sea was the fourth largest inland body of water in the world.",
+      "caption": "In nineteen sixty, the Aral Sea was the fourth largest inland body of water in the world."
+    },
+    {
+      "id": "s3",
+      "duration": 7.5,
+      "camera": {
+        "lon": 62.0,
+        "lat": 42.0,
+        "width_km": 1800,
+        "move": 1.8
+      },
+      "title": "Soviet *diversion* projects",
+      "hide": [
+        "aralsk"
+      ],
+      "show": [
+        {
+          "id": "tkm",
+          "type": "country",
+          "iso": "TKM",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_tkm",
+          "type": "label",
+          "text": "Turkmenistan",
+          "lon": 59.5,
+          "lat": 39.0,
+          "at": 0.6
+        },
+        {
+          "id": "arr_amu",
+          "type": "arrow",
+          "from": [
+            65.0,
+            38.0
+          ],
+          "to": [
+            60.0,
+            43.0
+          ],
+          "color": "yellow",
+          "at": 2.0
+        },
+        {
+          "id": "arr_syr",
+          "type": "arrow",
+          "from": [
+            69.0,
+            41.0
+          ],
+          "to": [
+            62.0,
+            45.5
+          ],
+          "color": "yellow",
+          "at": 2.6
+        }
+      ],
+      "vo": "In the early nineteen sixties, the Soviet Union diverted its two rivers, the Amu Darya and Syr Darya.",
+      "caption": "In the early nineteen sixties, the Soviet Union diverted its two rivers, the Amu Darya and Syr Darya."
+    },
+    {
+      "id": "s4",
+      "duration": 6.0,
+      "camera": {
+        "lon": 63.0,
+        "lat": 41.5,
+        "width_km": 1100,
+        "move": 1.8
+      },
+      "hide": [
+        "arr_amu",
+        "arr_syr",
+        "lbl_tkm"
+      ],
+      "show": [
+        {
+          "id": "badge_cotton",
+          "type": "badge",
+          "text": "COTTON",
+          "sub": "Desert irrigation",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "The water went to irrigate vast cotton fields in the middle of the desert.",
+      "caption": "The water went to irrigate vast cotton fields in the middle of the desert."
+    },
+    {
+      "id": "s5",
+      "duration": 7.1,
+      "camera": {
+        "lon": 60.0,
+        "lat": 45.0,
+        "width_km": 900,
+        "move": 2.0
+      },
+      "title": "Shrunk to *ten percent*",
+      "hide": [
+        "badge_cotton"
+      ],
+      "show": [
+        {
+          "id": "badge_2007",
+          "type": "badge",
+          "text": "10%",
+          "sub": "By year 2007",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "By two thousand seven, the Aral Sea had shrunk to about ten percent of its original size.",
+      "caption": "By two thousand seven, the Aral Sea had shrunk to about ten percent of its original size."
+    },
+    {
+      "id": "s6",
+      "duration": 7.1,
+      "camera": {
+        "lon": 58.7,
+        "lat": 43.77,
+        "width_km": 400,
+        "move": 2.0
+      },
+      "title": "*Ports* stranded in the sand",
+      "hide": [
+        "badge_2007",
+        "kaz",
+        "uzb",
+        "tkm",
+        "lbl_kaz",
+        "lbl_uzb"
+      ],
+      "show": [
+        {
+          "id": "moynaq_z",
+          "type": "marker",
+          "lon": 58.7,
+          "lat": 43.77,
+          "text": "Moynaq Port",
+          "size": 44,
+          "at": 1.2
+        }
+      ],
+      "vo": "Former fishing ports like Moynaq are now stranded far from the water. Follow for more map secrets!",
+      "caption": "Former fishing ports like Moynaq are now stranded far from the water. Follow for more map secrets!"
+    }
+  ]
+}
