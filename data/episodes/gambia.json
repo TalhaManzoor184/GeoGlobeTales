@@ -1,0 +1,258 @@
+{
+  "slug": "gambia",
+  "title": "The Gambia: a country built around a river",
+  "brand": "",
+  "thumbnail_at": 12.0,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "This country is just a river 🇬🇲🗺️ The Gambia",
+    "description": "The Gambia is the smallest country on mainland Africa, surrounded by Senegal except for its Atlantic coast. It follows the Gambia River inland and is less than 50 km wide.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#gambia",
+      "#senegal",
+      "#africa",
+      "#river",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 6.0,
+      "camera": {
+        "from": {
+          "lon": -5,
+          "lat": 20,
+          "radius": 400
+        },
+        "lon": -15.4,
+        "lat": 13.5,
+        "radius": 1900,
+        "move": 3.9
+      },
+      "globe_highlight": {
+        "GMB": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "This country is just a *river*.",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -16.58,
+          "lat": 13.45,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "This country is just a river, winding its way through the West African landscape.",
+      "caption": "This country is just a river, winding its way through the West African landscape."
+    },
+    {
+      "id": "s2",
+      "duration": 6.8,
+      "camera": {
+        "lon": -15.4,
+        "lat": 13.5,
+        "width_km": 600,
+        "move": 1.8
+      },
+      "title": "The *Gambia*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "sen",
+          "type": "country",
+          "iso": "SEN",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_sen",
+          "type": "label",
+          "text": "Senegal",
+          "lon": -14.5,
+          "lat": 15.0,
+          "at": 0.6
+        },
+        {
+          "id": "gmb",
+          "type": "country",
+          "iso": "GMB",
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.8
+        },
+        {
+          "id": "lbl_gmb",
+          "type": "label",
+          "text": "The Gambia",
+          "lon": -15.2,
+          "lat": 12.7,
+          "color": "yellow",
+          "size": 48,
+          "at": 2.2
+        }
+      ],
+      "vo": "The Gambia is the smallest country on mainland Africa, almost entirely enclosed by its larger neighbor.",
+      "caption": "The Gambia is the smallest country on mainland Africa, almost entirely enclosed by its larger neighbor."
+    },
+    {
+      "id": "s3",
+      "duration": 7.5,
+      "camera": {
+        "lon": -15.0,
+        "lat": 13.6,
+        "width_km": 400,
+        "move": 1.5
+      },
+      "title": "Surrounded by *Senegal*",
+      "hide": [
+        "lbl_sen",
+        "lbl_gmb"
+      ],
+      "show": [
+        {
+          "id": "badge_coast",
+          "type": "badge",
+          "text": "Atlantic",
+          "sub": "Short coastline",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "It is completely surrounded by Senegal on every single side, except for a short stretch of Atlantic coastline.",
+      "caption": "It is completely surrounded by Senegal on every single side, except for a short stretch of Atlantic coastline."
+    },
+    {
+      "id": "s4",
+      "duration": 7.5,
+      "camera": {
+        "lon": -15.4,
+        "lat": 13.5,
+        "width_km": 500,
+        "move": 1.8
+      },
+      "title": "Following the *river*",
+      "hide": [
+        "badge_coast"
+      ],
+      "show": [
+        {
+          "id": "lbl_river",
+          "type": "label",
+          "text": "Gambia River",
+          "lon": -14.8,
+          "lat": 13.7,
+          "color": "yellow",
+          "size": 44,
+          "at": 1.0
+        }
+      ],
+      "vo": "The borders of the nation strictly follow the course of the Gambia River as it reaches deep inland.",
+      "caption": "The borders of the nation strictly follow the course of the Gambia River as it reaches deep inland."
+    },
+    {
+      "id": "s5",
+      "duration": 6.8,
+      "camera": {
+        "lon": -14.8,
+        "lat": 13.6,
+        "width_km": 250,
+        "move": 2.0
+      },
+      "title": "Less than *50 km* wide",
+      "hide": [
+        "lbl_river"
+      ],
+      "show": [
+        {
+          "id": "badge_width",
+          "type": "badge",
+          "text": "< 50 KM",
+          "sub": "Country width",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Throughout almost its entire length, the country remains remarkably narrow, staying less than fifty kilometers wide.",
+      "caption": "Throughout almost its entire length, the country remains remarkably narrow, staying less than fifty kilometers wide."
+    },
+    {
+      "id": "s6",
+      "duration": 7.5,
+      "camera": {
+        "lon": -16.5,
+        "lat": 13.45,
+        "width_km": 120,
+        "move": 2.0
+      },
+      "title": "Capital: *Banjul*",
+      "hide": [
+        "badge_width"
+      ],
+      "show": [
+        {
+          "id": "banjul",
+          "type": "marker",
+          "lon": -16.58,
+          "lat": 13.45,
+          "text": "Banjul",
+          "side": "bottom",
+          "size": 40,
+          "at": 1.0
+        }
+      ],
+      "vo": "Its capital city is Banjul, positioned right at the strategic mouth where the river empties into the ocean.",
+      "caption": "Its capital city is Banjul, positioned right at the strategic mouth where the river empties into the ocean."
+    },
+    {
+      "id": "s7",
+      "duration": 5.6,
+      "camera": {
+        "lon": -15.4,
+        "lat": 13.5,
+        "width_km": 700,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "banjul",
+        "gmb",
+        "sen"
+      ],
+      "show": [
+        {
+          "id": "gmb_final",
+          "type": "country",
+          "iso": "GMB",
+          "fill": "yellow",
+          "alpha": 0.6,
+          "at": 0.4
+        }
+      ],
+      "vo": "A fascinating nation defined entirely by its waterway. Follow for more map secrets!",
+      "caption": "A fascinating nation defined entirely by its waterway. Follow for more map secrets!"
+    }
+  ]
+}

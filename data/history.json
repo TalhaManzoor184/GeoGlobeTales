@@ -138,5 +138,15 @@
     "publishAt": "2026-11-11T16:00:00Z",
     "facebookVideoId": "2277359253127525",
     "facebookState": "scheduled for 2026-11-11T16:00:00Z"
+  },
+  {
+    "date": "2026-11-11",
+    "topic": "gambia",
+    "title": "This country is just a river 🇬🇲🗺️ The Gambia",
+    "episode": "data/episodes/gambia.json",
+    "videoId": "zyJO4Qk9Ta4",
+    "publishAt": "2026-11-12T16:00:00Z",
+    "facebookVideoId": "1518700803421919",
+    "facebookState": "scheduled for 2026-11-12T16:00:00Z"
   }
 ]
