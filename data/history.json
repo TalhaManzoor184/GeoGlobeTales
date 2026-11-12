@@ -148,5 +148,15 @@
     "publishAt": "2026-11-12T16:00:00Z",
     "facebookVideoId": "1518700803421919",
     "facebookState": "scheduled for 2026-11-12T16:00:00Z"
+  },
+  {
+    "date": "2026-11-12",
+    "topic": "chile-long",
+    "title": "Why is Chile the narrowest country on Earth? 🇨🇱🗺️",
+    "episode": "data/episodes/chile-long.json",
+    "videoId": "leze9J9UzFM",
+    "publishAt": "2026-11-13T16:00:00Z",
+    "facebookVideoId": "2007590796602105",
+    "facebookState": "scheduled for 2026-11-13T16:00:00Z"
   }
 ]

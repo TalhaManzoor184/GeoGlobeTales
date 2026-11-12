@@ -1,0 +1,335 @@
+{
+  "slug": "chile-long",
+  "title": "Why is Chile so long and thin?",
+  "brand": "",
+  "thumbnail_at": 11.6,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Why is Chile the narrowest country on Earth? 🇨🇱🗺️",
+    "description": "Chile stretches about 4,300 km from north to south, but averages less than 180 km in width. Hemmed in by the Andes mountains and the Pacific Ocean, its geography shaped one of the world's most extreme borders.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#chile",
+      "#andes",
+      "#southamerica",
+      "#atacama"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 3.7,
+      "camera": {
+        "from": {
+          "lon": -40.0,
+          "lat": -10.0,
+          "radius": 400
+        },
+        "lon": -70.0,
+        "lat": -33.0,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "CHL": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Why is Chile so *thin*?",
+      "show": [
+        {
+          "id": "pin_stgo",
+          "type": "marker",
+          "lon": -70.67,
+          "lat": -33.45,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Why is Chile so strangely long and thin?",
+      "caption": "Why is Chile so strangely long and thin?"
+    },
+    {
+      "id": "s2",
+      "duration": 8.7,
+      "camera": {
+        "lon": -70.0,
+        "lat": -33.0,
+        "width_km": 4400,
+        "move": 2.0
+      },
+      "title": "4,300 km from *North* to South",
+      "hide": [
+        "pin_stgo"
+      ],
+      "show": [
+        {
+          "id": "chl",
+          "type": "country",
+          "iso": "CHL",
+          "fill": "yellow",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "badge_length",
+          "type": "badge",
+          "text": "4,300 KM",
+          "sub": "North to south length",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.2
+        },
+        {
+          "id": "pin_arica",
+          "type": "marker",
+          "lon": -70.31,
+          "lat": -18.48,
+          "text": "Arica",
+          "side": "right",
+          "size": 40,
+          "at": 2.2
+        },
+        {
+          "id": "pin_punta",
+          "type": "marker",
+          "lon": -70.91,
+          "lat": -53.16,
+          "text": "Punta Arenas",
+          "side": "right",
+          "size": 40,
+          "at": 3.2
+        }
+      ],
+      "vo": "From north to south, Chile is about 4,300 kilometers long. It stretches all the way from Arica down to Punta Arenas.",
+      "caption": "From north to south, Chile is about 4,300 kilometers long. It stretches all the way from Arica down to Punta Arenas."
+    },
+    {
+      "id": "s3",
+      "duration": 8.3,
+      "camera": {
+        "lon": -70.5,
+        "lat": -33.5,
+        "width_km": 600,
+        "move": 1.8
+      },
+      "title": "Less than *180 km* wide",
+      "hide": [
+        "pin_arica",
+        "pin_punta",
+        "badge_length"
+      ],
+      "show": [
+        {
+          "id": "badge_width",
+          "type": "badge",
+          "text": "<180 KM",
+          "sub": "Average width",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        },
+        {
+          "id": "pin_santiago",
+          "type": "marker",
+          "lon": -70.67,
+          "lat": -33.45,
+          "text": "Santiago",
+          "side": "bottom",
+          "size": 46,
+          "at": 1.8
+        }
+      ],
+      "vo": "Yet across that massive length, it is less than 180 kilometers wide on average. A remarkably narrow strip of land.",
+      "caption": "Yet across that massive length, it is less than 180 kilometers wide on average. A remarkably narrow strip of land."
+    },
+    {
+      "id": "s4",
+      "duration": 6.4,
+      "camera": {
+        "lon": -75.0,
+        "lat": -33.0,
+        "width_km": 2200,
+        "move": 1.6
+      },
+      "title": "The *Pacific Ocean* to the West",
+      "hide": [
+        "badge_width",
+        "pin_santiago"
+      ],
+      "show": [
+        {
+          "id": "lbl_pacific",
+          "type": "label",
+          "text": "Pacific\nOcean",
+          "lon": -78.5,
+          "lat": -33.0,
+          "color": "blue",
+          "size": 56,
+          "at": 0.8
+        },
+        {
+          "id": "arr_ocean",
+          "type": "arrow",
+          "from": [
+            -78.0,
+            -35.0
+          ],
+          "to": [
+            -73.0,
+            -35.0
+          ],
+          "color": "blue",
+          "at": 2.0
+        }
+      ],
+      "vo": "On its western side, Chile is bounded by the open waters of the Pacific Ocean.",
+      "caption": "On its western side, Chile is bounded by the open waters of the Pacific Ocean."
+    },
+    {
+      "id": "s5",
+      "duration": 7.5,
+      "camera": {
+        "lon": -68.0,
+        "lat": -27.0,
+        "width_km": 2600,
+        "move": 1.8
+      },
+      "title": "Bordered by the *Andes*",
+      "hide": [
+        "lbl_pacific",
+        "arr_ocean"
+      ],
+      "show": [
+        {
+          "id": "arg",
+          "type": "country",
+          "iso": "ARG",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_arg",
+          "type": "label",
+          "text": "Argentina",
+          "lon": -65.0,
+          "lat": -31.0,
+          "color": "green",
+          "size": 52,
+          "at": 0.8
+        },
+        {
+          "id": "bol",
+          "type": "country",
+          "iso": "BOL",
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 1.4
+        },
+        {
+          "id": "lbl_bol",
+          "type": "label",
+          "text": "Bolivia",
+          "lon": -64.5,
+          "lat": -17.5,
+          "color": "purple",
+          "size": 50,
+          "at": 1.8
+        },
+        {
+          "id": "lbl_andes",
+          "type": "label",
+          "text": "Andes Mountains",
+          "lon": -69.8,
+          "lat": -26.0,
+          "color": "orange",
+          "size": 46,
+          "at": 2.8
+        }
+      ],
+      "vo": "To the east, the Andes mountains form its border with Argentina and Bolivia, creating a massive natural wall.",
+      "caption": "To the east, the Andes mountains form its border with Argentina and Bolivia, creating a massive natural wall."
+    },
+    {
+      "id": "s6",
+      "duration": 6.4,
+      "camera": {
+        "lon": -69.5,
+        "lat": -24.0,
+        "width_km": 1200,
+        "move": 1.6
+      },
+      "title": "The *Atacama* Desert",
+      "hide": [
+        "arg",
+        "bol",
+        "lbl_arg",
+        "lbl_bol",
+        "lbl_andes"
+      ],
+      "show": [
+        {
+          "id": "badge_desert",
+          "type": "badge",
+          "text": "ATACAMA",
+          "sub": "Driest desert on Earth",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        },
+        {
+          "id": "pin_atacama",
+          "type": "marker",
+          "lon": -69.5,
+          "lat": -24.0,
+          "text": "Atacama Desert",
+          "side": "bottom",
+          "color": "orange",
+          "size": 48,
+          "at": 1.6
+        }
+      ],
+      "vo": "In the north is the Atacama, known as one of the driest deserts on Earth.",
+      "caption": "In the north is the Atacama, known as one of the driest deserts on Earth."
+    },
+    {
+      "id": "s7",
+      "duration": 7.9,
+      "camera": {
+        "lon": -70.0,
+        "lat": -33.0,
+        "width_km": 4400,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_desert",
+        "pin_atacama"
+      ],
+      "show": [
+        {
+          "id": "badge_final",
+          "type": "badge",
+          "text": "CHILE",
+          "sub": "Between ocean and Andes",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ],
+      "vo": "Trapped between the Pacific Ocean and the Andes mountains, Chile formed this unique shape. Follow for more map secrets!",
+      "caption": "Trapped between the Pacific Ocean and the Andes mountains, Chile formed this unique shape. Follow for more map secrets!"
+    }
+  ]
+}
