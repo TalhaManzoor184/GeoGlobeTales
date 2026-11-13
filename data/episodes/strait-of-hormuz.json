@@ -1,0 +1,299 @@
+{
+  "slug": "strait-of-hormuz",
+  "title": "Strait of Hormuz: a quarter of sea oil passes here",
+  "brand": "",
+  "thumbnail_at": 10.8,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "A quarter of the world's sea oil passes through this gap 🛢️🗺️ Strait of Hormuz",
+    "description": "The Strait of Hormuz connects the Persian Gulf to the Gulf of Oman. Iran is on the north side, and Oman's Musandam exclave is on the south side.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#oil",
+      "#hormuz",
+      "#middleeast",
+      "#shipping",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 45,
+          "lat": 15,
+          "radius": 400
+        },
+        "lon": 56.4,
+        "lat": 26.6,
+        "radius": 1900,
+        "move": 4.1
+      },
+      "globe_highlight": {
+        "OMN": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "A quarter of the world's *sea oil* passes here",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 56.4,
+          "lat": 26.6,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "A quarter of the world's sea oil passes through this gap.",
+      "caption": "A quarter of the world's sea oil passes through this gap."
+    },
+    {
+      "id": "s2",
+      "duration": 6.8,
+      "camera": {
+        "lon": 53.0,
+        "lat": 26.0,
+        "width_km": 1800,
+        "move": 2.0
+      },
+      "title": "The *Strait of Hormuz*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "irn",
+          "type": "country",
+          "iso": "IRN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_irn",
+          "type": "label",
+          "text": "Iran",
+          "lon": 54.0,
+          "lat": 29.5,
+          "at": 0.6
+        },
+        {
+          "id": "omn",
+          "type": "country",
+          "iso": "OMN",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 1.2
+        },
+        {
+          "id": "lbl_omn",
+          "type": "label",
+          "text": "Oman",
+          "lon": 57.5,
+          "lat": 23.5,
+          "at": 1.4
+        }
+      ],
+      "vo": "It is the Strait of Hormuz. It connects the Persian Gulf to the Gulf of Oman.",
+      "caption": "It is the Strait of Hormuz. It connects the Persian Gulf to the Gulf of Oman."
+    },
+    {
+      "id": "s3",
+      "duration": 4.8,
+      "camera": {
+        "lon": 56.4,
+        "lat": 26.6,
+        "width_km": 400,
+        "move": 1.8
+      },
+      "hide": [
+        "lbl_irn",
+        "lbl_omn"
+      ],
+      "show": [
+        {
+          "id": "ruler",
+          "type": "measure",
+          "between": [
+            "IRN",
+            "OMN"
+          ],
+          "within": [
+            55.5,
+            26.0,
+            57.5,
+            27.0
+          ],
+          "text": "~54 KM",
+          "label_offset": [
+            0,
+            -40
+          ],
+          "at": 1.0,
+          "color": "white"
+        }
+      ],
+      "vo": "At its narrowest point, the strait is about fifty-four kilometers wide.",
+      "caption": "At its narrowest point, the strait is about fifty-four kilometers wide."
+    },
+    {
+      "id": "s4",
+      "duration": 7.1,
+      "camera": {
+        "lon": 53.5,
+        "lat": 25.0,
+        "width_km": 1400,
+        "move": 2.0
+      },
+      "title": "Massive *oil* volume",
+      "hide": [
+        "ruler"
+      ],
+      "show": [
+        {
+          "id": "are",
+          "type": "country",
+          "iso": "ARE",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "sau",
+          "type": "country",
+          "iso": "SAU",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 0.8
+        },
+        {
+          "id": "badge_oil",
+          "type": "badge",
+          "text": "20M",
+          "sub": "barrels a day in 2025",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.5
+        }
+      ],
+      "vo": "In twenty twenty-five, an average of about twenty million barrels of oil a day passed through it.",
+      "caption": "In twenty twenty-five, an average of about twenty million barrels of oil a day passed through it."
+    },
+    {
+      "id": "s5",
+      "duration": 5.2,
+      "camera": {
+        "lon": 56.4,
+        "lat": 26.6,
+        "width_km": 400,
+        "move": 1.8
+      },
+      "title": "A quarter of *traded* oil",
+      "hide": [
+        "are",
+        "sau",
+        "badge_oil"
+      ],
+      "show": [
+        {
+          "id": "badge_quarter",
+          "type": "badge",
+          "text": "25%",
+          "sub": "of all oil traded by sea",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "That is about a quarter of all oil traded by sea globally.",
+      "caption": "That is about a quarter of all oil traded by sea globally."
+    },
+    {
+      "id": "s6",
+      "duration": 10.6,
+      "camera": {
+        "lon": 56.2,
+        "lat": 26.0,
+        "width_km": 350,
+        "move": 2.0
+      },
+      "title": "Oman's *Musandam* Exclave",
+      "hide": [
+        "badge_quarter"
+      ],
+      "show": [
+        {
+          "id": "musandam",
+          "type": "region",
+          "of": "OMN",
+          "clip": [
+            55.9,
+            25.6,
+            56.6,
+            26.5
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_musandam",
+          "type": "label",
+          "text": "Musandam",
+          "lon": 56.25,
+          "lat": 26.18,
+          "color": "yellow",
+          "size": 48,
+          "at": 1.5
+        }
+      ],
+      "vo": "Iran is on the north side. On the south side is Musandam, a part of Oman cut off from the rest of Oman by the UAE.",
+      "caption": "Iran is on the north side. On the south side is Musandam, a part of Oman cut off from the rest of Oman by the UAE."
+    },
+    {
+      "id": "s7",
+      "duration": 5.6,
+      "camera": {
+        "lon": 56.4,
+        "lat": 26.6,
+        "width_km": 900,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "musandam",
+        "lbl_musandam",
+        "irn",
+        "omn"
+      ],
+      "show": [
+        {
+          "id": "pin_end",
+          "type": "marker",
+          "lon": 56.4,
+          "lat": 26.6,
+          "color": "yellow",
+          "at": 0.6
+        }
+      ],
+      "vo": "A narrow channel holding up the global economy. Follow for more map secrets!",
+      "caption": "A narrow channel holding up the global economy. Follow for more map secrets!"
+    }
+  ]
+}
