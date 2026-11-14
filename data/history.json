@@ -168,5 +168,15 @@
     "publishAt": "2026-11-14T16:00:00Z",
     "facebookVideoId": "2969934703367829",
     "facebookState": "scheduled for 2026-11-14T16:00:00Z"
+  },
+  {
+    "date": "2026-11-14",
+    "topic": "nakhchivan",
+    "title": "This part of Azerbaijan doesn't touch Azerbaijan 🇦🇿🗺️ Nakhchivan",
+    "episode": "data/episodes/nakhchivan.json",
+    "videoId": "H9w3GMT9VSU",
+    "publishAt": "2026-11-15T16:00:00Z",
+    "facebookVideoId": "1465190758413637",
+    "facebookState": "scheduled for 2026-11-15T16:00:00Z"
   }
 ]

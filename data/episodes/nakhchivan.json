@@ -1,0 +1,296 @@
+{
+  "slug": "nakhchivan",
+  "title": "Nakhchivan: why is this part of Azerbaijan cut off?",
+  "brand": "",
+  "thumbnail_at": 10.8,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "This part of Azerbaijan doesn't touch Azerbaijan 🇦🇿🗺️ Nakhchivan",
+    "description": "Nakhchivan is an exclave of Azerbaijan, separated by Armenia. It also shares borders with Iran and Turkey.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#azerbaijan",
+      "#armenia",
+      "#turkey",
+      "#iran",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.1,
+      "camera": {
+        "from": {
+          "lon": 30,
+          "lat": 25,
+          "radius": 400
+        },
+        "lon": 46.5,
+        "lat": 39.6,
+        "radius": 1900,
+        "move": 4.2
+      },
+      "globe_highlight": {
+        "AZE": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Cut off from *Azerbaijan*",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 45.41,
+          "lat": 39.21,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "This part of Azerbaijan doesn't touch Azerbaijan at all.",
+      "caption": "This part of Azerbaijan doesn't touch Azerbaijan at all."
+    },
+    {
+      "id": "s2",
+      "duration": 7.5,
+      "camera": {
+        "lon": 46.5,
+        "lat": 39.6,
+        "width_km": 700,
+        "move": 1.8
+      },
+      "title": "The exclave of *Nakhchivan*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "aze",
+          "type": "country",
+          "iso": "AZE",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "nakhchivan",
+          "type": "region",
+          "of": "AZE",
+          "clip": [
+            44.7,
+            38.8,
+            46.7,
+            39.85
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.5
+        },
+        {
+          "id": "lbl_nakh",
+          "type": "label",
+          "text": "Nakhchivan",
+          "lon": 45.41,
+          "lat": 38.5,
+          "color": "yellow",
+          "size": 48,
+          "at": 2.0
+        }
+      ],
+      "vo": "It is called Nakhchivan. An exclave completely separated from the rest of the country by hundreds of kilometers.",
+      "caption": "It is called Nakhchivan. An exclave completely separated from the rest of the country by hundreds of kilometers."
+    },
+    {
+      "id": "s3",
+      "duration": 4.8,
+      "camera": {
+        "lon": 46.0,
+        "lat": 40.0,
+        "width_km": 900,
+        "move": 2.0
+      },
+      "title": "Lying between *Baku* and the exclave",
+      "hide": [
+        "lbl_nakh"
+      ],
+      "show": [
+        {
+          "id": "arm",
+          "type": "country",
+          "iso": "ARM",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.5
+        },
+        {
+          "id": "lbl_arm",
+          "type": "label",
+          "text": "Armenia",
+          "lon": 45.0,
+          "lat": 40.2,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_baku",
+          "type": "label",
+          "text": "Baku",
+          "lon": 49.87,
+          "lat": 41.2,
+          "color": "orange",
+          "size": 44,
+          "at": 2.5
+        },
+        {
+          "id": "arr_aze",
+          "type": "arrow",
+          "from": [
+            48.5,
+            40.4
+          ],
+          "to": [
+            46.0,
+            39.5
+          ],
+          "color": "orange",
+          "at": 3.5
+        }
+      ],
+      "vo": "Armenia lies directly between Nakhchivan and the capital city of Baku.",
+      "caption": "Armenia lies directly between Nakhchivan and the capital city of Baku."
+    },
+    {
+      "id": "s4",
+      "duration": 7.1,
+      "camera": {
+        "lon": 45.2,
+        "lat": 39.3,
+        "width_km": 450,
+        "move": 2.0
+      },
+      "title": "Borders with *Iran* and *Turkey*",
+      "hide": [
+        "lbl_arm",
+        "lbl_baku",
+        "arr_aze",
+        "arm"
+      ],
+      "show": [
+        {
+          "id": "irn",
+          "type": "country",
+          "iso": "IRN",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 0.5
+        },
+        {
+          "id": "lbl_irn",
+          "type": "label",
+          "text": "Iran",
+          "lon": 45.5,
+          "lat": 38.3,
+          "at": 0.8
+        },
+        {
+          "id": "tur",
+          "type": "country",
+          "iso": "TUR",
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 2.0
+        },
+        {
+          "id": "lbl_tur",
+          "type": "label",
+          "text": "Turkey",
+          "lon": 44.5,
+          "lat": 39.8,
+          "at": 2.3
+        }
+      ],
+      "vo": "Instead of connecting to the rest of Azerbaijan, Nakhchivan shares its borders with Armenia, Iran, and Turkey.",
+      "caption": "Instead of connecting to the rest of Azerbaijan, Nakhchivan shares its borders with Armenia, Iran, and Turkey."
+    },
+    {
+      "id": "s5",
+      "duration": 6.4,
+      "camera": {
+        "lon": 44.8,
+        "lat": 39.6,
+        "width_km": 180,
+        "move": 2.2
+      },
+      "title": "A very *short* border",
+      "hide": [
+        "lbl_irn",
+        "lbl_tur",
+        "irn",
+        "tur"
+      ],
+      "show": [
+        {
+          "id": "badge_turkey",
+          "type": "badge",
+          "text": "TURKEY",
+          "sub": "Very short border",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        },
+        {
+          "id": "marker_tur",
+          "type": "marker",
+          "lon": 44.8,
+          "lat": 39.7,
+          "color": "purple",
+          "at": 1.5
+        }
+      ],
+      "vo": "Its border with Turkey is particularly short, creating a tiny international connection in the west.",
+      "caption": "Its border with Turkey is particularly short, creating a tiny international connection in the west."
+    },
+    {
+      "id": "s6",
+      "duration": 6.0,
+      "camera": {
+        "lon": 46.5,
+        "lat": 39.6,
+        "width_km": 700,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_turkey",
+        "marker_tur",
+        "aze",
+        "nakhchivan"
+      ],
+      "show": [
+        {
+          "id": "badge_exclave",
+          "type": "badge",
+          "text": "EXCLAVE",
+          "sub": "Isolated territory",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ],
+      "vo": "An isolated territory cut off by history and geography. Follow for more map secrets!",
+      "caption": "An isolated territory cut off by history and geography. Follow for more map secrets!"
+    }
+  ]
+}
