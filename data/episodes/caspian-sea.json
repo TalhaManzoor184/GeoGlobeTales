@@ -1,0 +1,332 @@
+{
+  "slug": "caspian-sea",
+  "title": "Caspian Sea: The Lake Called a Sea",
+  "brand": "",
+  "thumbnail_at": 12.3,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Is the Caspian Sea a lake or a sea? 🌊🗺️",
+    "description": "The Caspian Sea is the largest lake on Earth by area at about 371,000 square km. Five countries surround this unique body of water that sits below sea level.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#caspiansea",
+      "#lake",
+      "#earthfacts",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 25.0,
+          "lat": 30.0,
+          "radius": 400
+        },
+        "lon": 51.0,
+        "lat": 41.5,
+        "radius": 1900,
+        "move": 3.6
+      },
+      "globe_highlight": {
+        "AZE": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "A lake called a *sea*?",
+      "show": [
+        {
+          "id": "pin_caspian",
+          "type": "marker",
+          "lon": 51.0,
+          "lat": 41.5,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Did you know the world's biggest lake is called a sea?",
+      "caption": "Did you know the world's biggest lake is called a sea?"
+    },
+    {
+      "id": "s2",
+      "duration": 8.3,
+      "camera": {
+        "lon": 51.0,
+        "lat": 41.5,
+        "width_km": 1700,
+        "move": 1.8
+      },
+      "title": "The *largest* lake on Earth",
+      "hide": [
+        "pin_caspian"
+      ],
+      "show": [
+        {
+          "id": "badge_area",
+          "type": "badge",
+          "text": "371,000 KM²",
+          "sub": "Largest lake on Earth",
+          "size": 100,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "Meet the Caspian Sea. Covering about 371,000 square kilometers, it easily ranks as the largest lake on Earth by area.",
+      "caption": "Meet the Caspian Sea. Covering about 371,000 square kilometers, it easily ranks as the largest lake on Earth by area."
+    },
+    {
+      "id": "s3",
+      "duration": 11.0,
+      "camera": {
+        "lon": 51.0,
+        "lat": 41.0,
+        "width_km": 2400,
+        "move": 2.0
+      },
+      "title": "Bordered by *five* nations",
+      "hide": [
+        "badge_area"
+      ],
+      "show": [
+        {
+          "id": "rus",
+          "type": "country",
+          "iso": "RUS",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russia",
+          "lon": 46.5,
+          "lat": 48.0,
+          "size": 48,
+          "at": 0.6
+        },
+        {
+          "id": "aze",
+          "type": "country",
+          "iso": "AZE",
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 1.4
+        },
+        {
+          "id": "lbl_aze",
+          "type": "label",
+          "text": "Azerbaijan",
+          "lon": 47.0,
+          "lat": 40.5,
+          "size": 42,
+          "at": 1.6
+        },
+        {
+          "id": "irn",
+          "type": "country",
+          "iso": "IRN",
+          "fill": "red",
+          "alpha": 0.55,
+          "at": 2.6
+        },
+        {
+          "id": "lbl_irn",
+          "type": "label",
+          "text": "Iran",
+          "lon": 51.5,
+          "lat": 38.0,
+          "size": 48,
+          "at": 2.8
+        },
+        {
+          "id": "kaz",
+          "type": "country",
+          "iso": "KAZ",
+          "fill": "yellow",
+          "alpha": 0.55,
+          "at": 3.8
+        },
+        {
+          "id": "lbl_kaz",
+          "type": "label",
+          "text": "Kazakhstan",
+          "lon": 55.5,
+          "lat": 46.0,
+          "size": 48,
+          "at": 4.0
+        },
+        {
+          "id": "tkm",
+          "type": "country",
+          "iso": "TKM",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 4.8
+        },
+        {
+          "id": "lbl_tkm",
+          "type": "label",
+          "text": "Turkmenistan",
+          "lon": 56.5,
+          "lat": 39.5,
+          "size": 44,
+          "at": 5.0
+        }
+      ],
+      "vo": "Five separate countries share its coastline. To the north and west lie Russia and Azerbaijan. To the south sits Iran, with Kazakhstan and Turkmenistan along the east.",
+      "caption": "Five separate countries share its coastline. To the north and west lie Russia and Azerbaijan. To the south sits Iran, with Kazakhstan and Turkmenistan along the east."
+    },
+    {
+      "id": "s4",
+      "duration": 7.9,
+      "camera": {
+        "lon": 50.5,
+        "lat": 42.0,
+        "width_km": 1200,
+        "move": 1.8
+      },
+      "title": "Major *coastal* ports",
+      "hide": [
+        "lbl_rus",
+        "lbl_aze",
+        "lbl_irn",
+        "lbl_kaz",
+        "lbl_tkm"
+      ],
+      "show": [
+        {
+          "id": "pt_astrakhan",
+          "type": "marker",
+          "lon": 48.04,
+          "lat": 46.35,
+          "text": "Astrakhan",
+          "side": "bottom",
+          "size": 38,
+          "at": 0.6
+        },
+        {
+          "id": "pt_aktau",
+          "type": "marker",
+          "lon": 51.17,
+          "lat": 43.65,
+          "text": "Aktau",
+          "side": "right",
+          "size": 38,
+          "at": 1.6
+        },
+        {
+          "id": "pt_baku",
+          "type": "marker",
+          "lon": 49.87,
+          "lat": 40.41,
+          "text": "Baku",
+          "side": "left",
+          "size": 38,
+          "at": 2.6
+        }
+      ],
+      "vo": "Important coastal cities thrive right on its waters, including Baku in Azerbaijan, Aktau in Kazakhstan, and Astrakhan in Russia.",
+      "caption": "Important coastal cities thrive right on its waters, including Baku in Azerbaijan, Aktau in Kazakhstan, and Astrakhan in Russia."
+    },
+    {
+      "id": "s5",
+      "duration": 7.9,
+      "camera": {
+        "lon": 51.0,
+        "lat": 40.5,
+        "width_km": 1400,
+        "move": 1.8
+      },
+      "title": "Below *sea level*",
+      "hide": [
+        "pt_astrakhan",
+        "pt_aktau",
+        "pt_baku",
+        "rus",
+        "aze",
+        "irn",
+        "kaz",
+        "tkm"
+      ],
+      "show": [
+        {
+          "id": "badge_depth",
+          "type": "badge",
+          "text": "-28 METRES",
+          "sub": "Below sea level",
+          "size": 102,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Even stranger, you are stepping deep down when you visit. Its surface rests about 28 metres below sea level.",
+      "caption": "Even stranger, you are stepping deep down when you visit. Its surface rests about 28 metres below sea level."
+    },
+    {
+      "id": "s6",
+      "duration": 9.8,
+      "camera": {
+        "lon": 52.0,
+        "lat": 41.5,
+        "width_km": 2500,
+        "move": 2.0
+      },
+      "title": "No *ocean* outlet",
+      "hide": [
+        "badge_depth"
+      ],
+      "show": [
+        {
+          "id": "badge_salt",
+          "type": "badge",
+          "text": "SALTY WATER",
+          "sub": "Less salty than the ocean",
+          "size": 94,
+          "y": 0.34,
+          "at": 1.4
+        }
+      ],
+      "vo": "Unlike true seas, it has no natural connection to the open ocean. Still, its water is distinctly salty, although less salty than the ocean.",
+      "caption": "Unlike true seas, it has no natural connection to the open ocean. Still, its water is distinctly salty, although less salty than the ocean."
+    },
+    {
+      "id": "s7",
+      "duration": 7.9,
+      "camera": {
+        "lon": 51.0,
+        "lat": 41.5,
+        "width_km": 1600,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_salt"
+      ],
+      "show": [
+        {
+          "id": "pin_end",
+          "type": "marker",
+          "lon": 51.0,
+          "lat": 41.5,
+          "color": "yellow",
+          "at": 0.6
+        }
+      ],
+      "vo": "Neither fully a sea nor an ordinary lake, it remains a unique geographic wonder. Follow for more map secrets!",
+      "caption": "Neither fully a sea nor an ordinary lake, it remains a unique geographic wonder. Follow for more map secrets!"
+    }
+  ]
+}
