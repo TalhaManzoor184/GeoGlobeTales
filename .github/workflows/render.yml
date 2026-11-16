@@ -66,27 +66,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: reels
+          # Kept for 1 day only; reels are no longer committed to a "renders" branch (GitHub storage).
+          retention-days: 1
           path: |
             out/*/*.mp4
             out/*/thumbnail.png
             out/*/script.md
             out/*/captions.srt
-
-      - name: Publish finished reels to the renders branch
-        run: |
-          set -e
-          ls out/*/*.mp4 >/dev/null
-          mkdir -p /tmp/pub && for d in out/*/; do
-            n=$(basename "$d"); mkdir -p "/tmp/pub/$n"
-            cp "$d"/*.mp4 "$d"/thumbnail.png "$d"/script.md "$d"/captions.srt "/tmp/pub/$n/" 2>/dev/null || true
-          done
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin renders || true
-          if git rev-parse --verify -q origin/renders; then git checkout -B renders origin/renders; else git checkout --orphan renders && git rm -rqf .; fi
-          rm -rf episodes reels .github README.md requirements.txt
-          printf "cache/\nout/\n__pycache__/\n" > .gitignore
-          cp -r /tmp/pub/* .
-          git add -A
-          git commit -m "Render ${GITHUB_SHA::7}" || echo "nothing new"
-          git push origin renders

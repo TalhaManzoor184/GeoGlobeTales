@@ -78,7 +78,7 @@ jobs:
             out/*/*.mp4
             out/*/script.md
             out/*/thumbnail.png
-          retention-days: 14
+          retention-days: 1
           if-no-files-found: ignore
 
       - name: Save history and generated episodes
