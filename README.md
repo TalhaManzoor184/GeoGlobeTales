@@ -61,7 +61,7 @@ Har layer `at` second par fade in hoti hai aur `hide` hone tak rehti hai. Colour
 blue red orange purple teal white grey` ya koi bhi hex. ISO codes Natural Earth ke `ADM0_A3` hain.
 
 **Language:** har scene mein `"vo"` (voice ka text) aur `"caption"` (screen par text) likhein.
-English example: `episodes/wakhan-corridor-en.json`. Finished reels `renders` branch par push hoti hain.
+English example: `episodes/wakhan-corridor-en.json`. Finished reels run ke artifact mein 1 din ke liye milti hain.
 
 ## Daily YouTube upload
 

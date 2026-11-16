@@ -1,0 +1,26 @@
+name: Cleanup old media
+
+# Keeps GitHub storage small: every video, thumbnail and photo a run uploads is deleted
+# once it is a day old. Uploads also expire on their own (retention-days: 1); this job
+# catches anything left over. Posted videos stay on YouTube/Facebook, untouched.
+on:
+  schedule:
+    - cron: "23 22 * * *" # 3:23 AM Pakistan time, after the evening posts
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Delete run artifacts older than 1 day
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cutoff=$(date -u -d '1 day ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/${{ github.repository }}/actions/artifacts?per_page=100" --paginate \
+            --jq ".artifacts[] | select(.created_at < \"$cutoff\") | .id" |
+          while read -r id; do gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" && echo "deleted artifact $id"; done || true
