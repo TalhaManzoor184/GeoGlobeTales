@@ -62,6 +62,10 @@ class MapView:
         reg = countries[countries.intersects(clip)].copy()
         reg["geometry"] = reg.geometry.intersection(clip)
         self.g = reg.to_crs(self.crs)
+        # wide maps can turn far-away coastlines into self-crossing shapes after projection;
+        # repair them, otherwise union/intersection raise a GEOS TopologyException
+        self.g["geometry"] = self.g.geometry.make_valid().buffer(0)
+        self.g = self.g[~self.g.geometry.is_empty]
         self.geo_ll = reg  # lon/lat version (for clipping regions)
         self.by_iso = {iso: grp.geometry.union_all() for iso, grp in self.g.groupby("ADM0_A3")}
 

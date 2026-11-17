@@ -234,19 +234,20 @@ def _main():
     if len(queue) <= 5:
         print(f"::warning::Only {len(queue)} topics left in topics/queue.json", flush=True)
 
-    # try up to 3 topics in case Gemini cannot produce a valid episode for one
+    # try up to 3 topics in case Gemini cannot write, or the renderer cannot draw, one of them;
+    # a broken topic must not block the channel day after day (a voice outage still stops the run)
     last_err = None
     for topic in queue[:3]:
         try:
             ep_path = make_episode(topic, history)
+            ep, video = produce(ep_path)
             break
         except Exception as e:  # noqa: BLE001
             last_err = e
-            print(f"::warning::topic {topic['id']} failed: {str(e)[:300]}", flush=True)
+            print(f"::warning::topic {topic['id']} failed, trying the next one: {str(e)[:300]}", flush=True)
     else:
-        raise SystemExit(f"no episode could be generated: {last_err}")
+        raise SystemExit(f"no episode could be made: {last_err}")
 
-    ep, video = produce(ep_path)
     entry = {"date": dt.date.today().isoformat(), "topic": topic["id"],
              "title": ep.get("upload", {}).get("title") or ep["title"],
              "episode": str(ep_path.relative_to(ROOT))}

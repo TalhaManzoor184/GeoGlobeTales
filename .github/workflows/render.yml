@@ -63,7 +63,8 @@ jobs:
             echo "::endgroup::"
           done
 
-      - uses: actions/upload-artifact@v4
+      - continue-on-error: true # a full artifact quota must not fail the run
+        uses: actions/upload-artifact@v4
         with:
           name: reels
           # Kept for 1 day only; reels are no longer committed to a "renders" branch (GitHub storage).
