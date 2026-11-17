@@ -178,5 +178,15 @@
     "publishAt": "2026-11-15T16:00:00Z",
     "facebookVideoId": "1465190758413637",
     "facebookState": "scheduled for 2026-11-15T16:00:00Z"
+  },
+  {
+    "date": "2026-11-17",
+    "topic": "caspian-sea",
+    "title": "Is the Caspian Sea a lake or a sea? 🌊🗺️",
+    "episode": "data/episodes/caspian-sea.json",
+    "videoId": "YWxqkzCxf4A",
+    "publishAt": "2026-11-17T16:00:00Z",
+    "facebookVideoId": "1204041168955262",
+    "facebookState": "scheduled for 2026-11-17T16:00:00Z"
   }
 ]
