@@ -1,0 +1,339 @@
+{
+  "slug": "bir-tawil",
+  "title": "Bir Tawil: The Land Nobody Wants",
+  "brand": "",
+  "thumbnail_at": 11.1,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "The 2,060 km² of Land That No Country Wants 🗺️🏜️",
+    "description": "Bir Tawil sits between Egypt and Sudan, yet neither nation claims it. Conflicting border treaties mean claiming it would forfeit valuable coastline on the Red Sea.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#egypt",
+      "#sudan",
+      "#birtawil",
+      "#borders"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.4,
+      "camera": {
+        "from": {
+          "lon": 15.0,
+          "lat": 15.0,
+          "radius": 400
+        },
+        "lon": 34.5,
+        "lat": 22.0,
+        "radius": 1900,
+        "move": 3.7
+      },
+      "globe_highlight": {
+        "EGY": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "The Land That *Nobody* Wants",
+      "show": [
+        {
+          "id": "pin_bir",
+          "type": "marker",
+          "lon": 33.748,
+          "lat": 21.869,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "No country on Earth wants this land. Here is why.",
+      "caption": "No country on Earth wants this land. Here is why."
+    },
+    {
+      "id": "s2",
+      "duration": 7.5,
+      "camera": {
+        "lon": 32.5,
+        "lat": 22.0,
+        "width_km": 1800,
+        "move": 1.8
+      },
+      "title": "Bir Tawil: *Unclaimed* Desert",
+      "hide": [
+        "pin_bir"
+      ],
+      "show": [
+        {
+          "id": "egy",
+          "type": "country",
+          "iso": "EGY",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.3
+        },
+        {
+          "id": "lbl_egy",
+          "type": "label",
+          "text": "Egypt",
+          "lon": 30.5,
+          "lat": 26.0,
+          "color": "orange",
+          "size": 52,
+          "at": 0.5
+        },
+        {
+          "id": "sdn",
+          "type": "country",
+          "iso": "SDN",
+          "fill": "green",
+          "alpha": 0.55,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_sdn",
+          "type": "label",
+          "text": "Sudan",
+          "lon": 30.5,
+          "lat": 18.0,
+          "color": "green",
+          "size": 52,
+          "at": 1.0
+        },
+        {
+          "id": "brt",
+          "type": "country",
+          "iso": "BRT",
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 2.0
+        },
+        {
+          "id": "badge_size",
+          "type": "badge",
+          "text": "2,060 KM²",
+          "sub": "unclaimed desert",
+          "size": 100,
+          "y": 0.35,
+          "at": 2.5
+        }
+      ],
+      "vo": "Between Egypt and Sudan lies Bir Tawil, about 2,060 square kilometers of desert that belongs to no one.",
+      "caption": "Between Egypt and Sudan lies Bir Tawil, about 2,060 square kilometers of desert that belongs to no one."
+    },
+    {
+      "id": "s3",
+      "duration": 9.1,
+      "camera": {
+        "lon": 34.8,
+        "lat": 22.0,
+        "width_km": 850,
+        "move": 1.8
+      },
+      "title": "Two *Conflicting* Borders",
+      "hide": [
+        "badge_size",
+        "lbl_egy",
+        "lbl_sdn"
+      ],
+      "show": [
+        {
+          "id": "lbl_bir_tawil",
+          "type": "label",
+          "text": "Bir Tawil",
+          "lon": 33.748,
+          "lat": 21.6,
+          "color": "yellow",
+          "size": 42,
+          "at": 0.5
+        },
+        {
+          "id": "marker_halaib",
+          "type": "marker",
+          "lon": 36.33,
+          "lat": 22.22,
+          "text": "Halaib",
+          "side": "top",
+          "size": 40,
+          "color": "teal",
+          "at": 1.0
+        },
+        {
+          "id": "badge_years",
+          "type": "badge",
+          "text": "1899 / 1902",
+          "sub": "22nd parallel dispute",
+          "size": 100,
+          "y": 0.35,
+          "at": 2.2
+        }
+      ],
+      "vo": "In 1899, a border was drawn as a straight line along the 22nd parallel. But in 1902, another border was drawn differently.",
+      "caption": "In 1899, a border was drawn as a straight line along the 22nd parallel. But in 1902, another border was drawn differently."
+    },
+    {
+      "id": "s4",
+      "duration": 7.9,
+      "camera": {
+        "lon": 35.0,
+        "lat": 22.0,
+        "width_km": 700,
+        "move": 1.6
+      },
+      "title": "Egypt Claims the *1899* Line",
+      "hide": [
+        "badge_years"
+      ],
+      "show": [
+        {
+          "id": "lbl_egy_line",
+          "type": "label",
+          "text": "Egypt uses 1899 line",
+          "lon": 34.8,
+          "lat": 22.9,
+          "color": "orange",
+          "size": 42,
+          "at": 0.8
+        },
+        {
+          "id": "arrow_to_halaib",
+          "type": "arrow",
+          "from": [
+            33.5,
+            23.2
+          ],
+          "to": [
+            35.8,
+            22.5
+          ],
+          "color": "orange",
+          "at": 2.4
+        }
+      ],
+      "vo": "Egypt uses the 1899 line. That puts Bir Tawil in Sudan, and gives the bigger Halaib Triangle to Egypt.",
+      "caption": "Egypt uses the 1899 line. That puts Bir Tawil in Sudan, and gives the bigger Halaib Triangle to Egypt."
+    },
+    {
+      "id": "s5",
+      "duration": 6.8,
+      "camera": {
+        "lon": 35.0,
+        "lat": 22.0,
+        "width_km": 700,
+        "move": 1.6
+      },
+      "title": "Sudan Claims the *1902* Line",
+      "hide": [
+        "lbl_egy_line",
+        "arrow_to_halaib"
+      ],
+      "show": [
+        {
+          "id": "lbl_sdn_line",
+          "type": "label",
+          "text": "Sudan uses 1902 line",
+          "lon": 34.8,
+          "lat": 21.1,
+          "color": "green",
+          "size": 42,
+          "at": 0.8
+        },
+        {
+          "id": "arrow_sdn_halaib",
+          "type": "arrow",
+          "from": [
+            34.0,
+            20.8
+          ],
+          "to": [
+            36.0,
+            21.9
+          ],
+          "color": "green",
+          "at": 2.2
+        }
+      ],
+      "vo": "Sudan uses the 1902 line instead. That gives Halaib to Sudan and Bir Tawil to Egypt.",
+      "caption": "Sudan uses the 1902 line instead. That gives Halaib to Sudan and Bir Tawil to Egypt."
+    },
+    {
+      "id": "s6",
+      "duration": 7.5,
+      "camera": {
+        "lon": 35.5,
+        "lat": 22.0,
+        "width_km": 650,
+        "move": 1.6
+      },
+      "title": "The Prize: *Red Sea* Coast",
+      "hide": [
+        "lbl_sdn_line",
+        "arrow_sdn_halaib"
+      ],
+      "show": [
+        {
+          "id": "lbl_red_sea",
+          "type": "label",
+          "text": "Red Sea Coast",
+          "lon": 37.0,
+          "lat": 21.5,
+          "color": "blue",
+          "size": 46,
+          "at": 0.8
+        },
+        {
+          "id": "badge_prize",
+          "type": "badge",
+          "text": "RED SEA",
+          "sub": "Both want Halaib",
+          "size": 100,
+          "y": 0.35,
+          "at": 2.0
+        }
+      ],
+      "vo": "Both countries want Halaib because it has a coast on the Red Sea, while Bir Tawil has none.",
+      "caption": "Both countries want Halaib because it has a coast on the Red Sea, while Bir Tawil has none."
+    },
+    {
+      "id": "s7",
+      "duration": 6.8,
+      "camera": {
+        "lon": 34.5,
+        "lat": 22.0,
+        "width_km": 1000,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_prize",
+        "lbl_red_sea",
+        "marker_halaib"
+      ],
+      "show": [
+        {
+          "id": "badge_unclaimed",
+          "type": "badge",
+          "text": "UNCLAIMED",
+          "sub": "Claimed by nobody",
+          "size": 96,
+          "y": 0.35,
+          "at": 0.6
+        }
+      ],
+      "vo": "To claim Bir Tawil, either nation would have to forfeit Halaib. Follow for more map secrets!",
+      "caption": "To claim Bir Tawil, either nation would have to forfeit Halaib. Follow for more map secrets!"
+    }
+  ]
+}

@@ -188,5 +188,13 @@
     "publishAt": "2026-11-17T16:00:00Z",
     "facebookVideoId": "1204041168955262",
     "facebookState": "scheduled for 2026-11-17T16:00:00Z"
+  },
+  {
+    "date": "2026-11-19",
+    "topic": "bir-tawil",
+    "title": "The 2,060 km² of Land That No Country Wants 🗺️🏜️",
+    "episode": "data/episodes/bir-tawil.json",
+    "videoId": "MyWJ_6XJS2g",
+    "publishAt": "2026-11-19T16:00:00Z"
   }
 ]
