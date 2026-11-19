@@ -196,5 +196,15 @@
     "episode": "data/episodes/bir-tawil.json",
     "videoId": "MyWJ_6XJS2g",
     "publishAt": "2026-11-19T16:00:00Z"
+  },
+  {
+    "date": "2026-11-19",
+    "topic": "lake-baikal",
+    "title": "This single lake holds a fifth of Earth's fresh surface water 🇷🇺💧 Lake Baikal",
+    "episode": "data/episodes/lake-baikal.json",
+    "videoId": "VGE-kdZnRdQ",
+    "publishAt": "2026-11-20T16:00:00Z",
+    "facebookVideoId": "997528506185543",
+    "facebookState": "scheduled for 2026-11-20T16:00:00Z"
   }
 ]
