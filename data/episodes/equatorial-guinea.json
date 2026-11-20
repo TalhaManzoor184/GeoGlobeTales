@@ -1,0 +1,333 @@
+{
+  "slug": "equatorial-guinea",
+  "title": "Equatorial Guinea: capital on an island closer to Cameroon",
+  "brand": "",
+  "thumbnail_at": 9.2,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "This country's capital is closer to another country! 🇬🇶🗺️ Equatorial Guinea",
+    "description": "Equatorial Guinea's capital Malabo sits on Bioko island, which is much closer to Cameroon than to its own mainland. It was a Spanish colony until 1968 and is the only Spanish-speaking country in Africa.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#equatorialguinea",
+      "#cameroon",
+      "#africa",
+      "#history",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 5,
+          "lat": 12,
+          "radius": 400
+        },
+        "lon": 9.4,
+        "lat": 2.6,
+        "radius": 1900,
+        "move": 4.0
+      },
+      "globe_highlight": {
+        "GNQ": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "A capital on a *different* island?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": 8.78,
+          "lat": 3.75,
+          "color": "yellow",
+          "at": 2.0
+        }
+      ],
+      "vo": "This country's capital is on an island closer to another country.",
+      "caption": "This country's capital is on an island closer to another country."
+    },
+    {
+      "id": "s2",
+      "duration": 5.2,
+      "camera": {
+        "lon": 8.8,
+        "lat": 3.5,
+        "width_km": 500,
+        "move": 1.8
+      },
+      "title": "Equatorial Guinea's *capital*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "gnq",
+          "type": "country",
+          "iso": "GNQ",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "bioko",
+          "type": "region",
+          "of": "GNQ",
+          "clip": [
+            8.3,
+            3.1,
+            9.1,
+            3.9
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.5
+        },
+        {
+          "id": "lbl_malabo",
+          "type": "label",
+          "text": "Malabo",
+          "lon": 8.78,
+          "lat": 3.95,
+          "color": "yellow",
+          "size": 50,
+          "at": 2.2
+        },
+        {
+          "id": "mkr_malabo",
+          "type": "marker",
+          "lon": 8.78,
+          "lat": 3.75,
+          "color": "yellow",
+          "at": 2.2
+        }
+      ],
+      "vo": "Equatorial Guinea's capital, Malabo, is on Bioko island, not on the mainland.",
+      "caption": "Equatorial Guinea's capital, Malabo, is on Bioko island, not on the mainland."
+    },
+    {
+      "id": "s3",
+      "duration": 6.0,
+      "camera": {
+        "lon": 9.3,
+        "lat": 3.3,
+        "width_km": 600,
+        "move": 2.0
+      },
+      "title": "Closer to *Cameroon*",
+      "hide": [
+        "lbl_malabo"
+      ],
+      "show": [
+        {
+          "id": "cmr",
+          "type": "country",
+          "iso": "CMR",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_cmr",
+          "type": "label",
+          "text": "Cameroon",
+          "lon": 10.5,
+          "lat": 4.5,
+          "at": 1.0
+        },
+        {
+          "id": "mkr_douala",
+          "type": "marker",
+          "lon": 9.7,
+          "lat": 4.05,
+          "color": "blue",
+          "at": 1.8
+        },
+        {
+          "id": "lbl_douala",
+          "type": "label",
+          "text": "Douala",
+          "lon": 10.2,
+          "lat": 4.05,
+          "size": 40,
+          "at": 2.2
+        }
+      ],
+      "vo": "Bioko is much closer to Cameroon than to the country's own mainland, Río Muni.",
+      "caption": "Bioko is much closer to Cameroon than to the country's own mainland, Río Muni."
+    },
+    {
+      "id": "s4",
+      "duration": 6.4,
+      "camera": {
+        "lon": 9.8,
+        "lat": 1.8,
+        "width_km": 700,
+        "move": 1.8
+      },
+      "title": "The *Mainland* Region",
+      "hide": [
+        "lbl_cmr",
+        "mkr_douala",
+        "lbl_douala",
+        "cmr"
+      ],
+      "show": [
+        {
+          "id": "mkr_bata",
+          "type": "marker",
+          "lon": 9.77,
+          "lat": 1.86,
+          "color": "orange",
+          "at": 1.0
+        },
+        {
+          "id": "lbl_bata",
+          "type": "label",
+          "text": "Bata",
+          "lon": 10.3,
+          "lat": 1.86,
+          "color": "orange",
+          "size": 48,
+          "at": 1.4
+        },
+        {
+          "id": "gab",
+          "type": "country",
+          "iso": "GAB",
+          "fill": "green",
+          "alpha": 0.6,
+          "at": 2.5
+        },
+        {
+          "id": "lbl_gab",
+          "type": "label",
+          "text": "Gabon",
+          "lon": 10.5,
+          "lat": 0.5,
+          "at": 2.8
+        }
+      ],
+      "vo": "While the capital is up north, the largest mainland city is Bata, bordered by Gabon.",
+      "caption": "While the capital is up north, the largest mainland city is Bata, bordered by Gabon."
+    },
+    {
+      "id": "s5",
+      "duration": 6.0,
+      "camera": {
+        "lon": 12.0,
+        "lat": 1.0,
+        "width_km": 3500,
+        "move": 2.2
+      },
+      "title": "Only *Spanish* in Africa",
+      "hide": [
+        "mkr_bata",
+        "lbl_bata",
+        "gab",
+        "lbl_gab",
+        "bioko",
+        "gnq"
+      ],
+      "show": [
+        {
+          "id": "gnq_wide",
+          "type": "country",
+          "iso": "GNQ",
+          "fill": "yellow",
+          "alpha": 0.6,
+          "at": 0.8
+        },
+        {
+          "id": "badge_lang",
+          "type": "badge",
+          "text": "SPANISH",
+          "sub": "Official language",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.5
+        }
+      ],
+      "vo": "Equatorial Guinea is the only country in Africa with Spanish as an official language.",
+      "caption": "Equatorial Guinea is the only country in Africa with Spanish as an official language."
+    },
+    {
+      "id": "s6",
+      "duration": 5.6,
+      "camera": {
+        "lon": 9.4,
+        "lat": 2.6,
+        "width_km": 1200,
+        "move": 2.0
+      },
+      "title": "Spanish *Colony* until 1968",
+      "hide": [
+        "gnq_wide",
+        "badge_lang"
+      ],
+      "show": [
+        {
+          "id": "gnq_final",
+          "type": "country",
+          "iso": "GNQ",
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 0.6
+        },
+        {
+          "id": "badge_year",
+          "type": "badge",
+          "text": "1968",
+          "sub": "Independence year",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.2
+        }
+      ],
+      "vo": "It was a Spanish colony until nineteen sixty-eight, creating this unique linguistic map.",
+      "caption": "It was a Spanish colony until 1968, creating this unique linguistic map."
+    },
+    {
+      "id": "s7",
+      "duration": 6.4,
+      "camera": {
+        "lon": 9.4,
+        "lat": 2.6,
+        "width_km": 1800,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "gnq_final",
+        "badge_year"
+      ],
+      "show": [
+        {
+          "id": "gnq_end",
+          "type": "country",
+          "iso": "GNQ",
+          "fill": "yellow",
+          "alpha": 0.6,
+          "at": 0.4
+        }
+      ],
+      "vo": "An island capital and a Spanish history in central Africa. Follow for more map secrets!",
+      "caption": "An island capital and a Spanish history in central Africa. Follow for more map secrets!"
+    }
+  ]
+}

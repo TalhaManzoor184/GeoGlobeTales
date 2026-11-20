@@ -206,5 +206,15 @@
     "publishAt": "2026-11-20T16:00:00Z",
     "facebookVideoId": "997528506185543",
     "facebookState": "scheduled for 2026-11-20T16:00:00Z"
+  },
+  {
+    "date": "2026-11-20",
+    "topic": "equatorial-guinea",
+    "title": "This country's capital is closer to another country! 🇬🇶🗺️ Equatorial Guinea",
+    "episode": "data/episodes/equatorial-guinea.json",
+    "videoId": "X-wBJ8fQcfk",
+    "publishAt": "2026-11-21T16:00:00Z",
+    "facebookVideoId": "1113744994873455",
+    "facebookState": "scheduled for 2026-11-21T16:00:00Z"
   }
 ]
