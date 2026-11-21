@@ -1,0 +1,307 @@
+{
+  "slug": "russia-time-zones",
+  "title": "Why Russia Spans 11 Time Zones",
+  "brand": "",
+  "thumbnail_at": 8.4,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "How Russia Spans 11 Time Zones At Once 🇷🇺⏰",
+    "description": "Russia is the largest country in the world, spanning eleven different time zones from the Baltic Sea to the Pacific Ocean. When it is 9 a.m. in Kaliningrad, it is already 7 p.m. in Kamchatka.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#russia",
+      "#timezones",
+      "#worldfacts",
+      "#map"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.4,
+      "camera": {
+        "from": {
+          "lon": 40.0,
+          "lat": 20.0,
+          "radius": 400
+        },
+        "lon": 95.0,
+        "lat": 60.0,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "RUS": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "One country, *11* time zones?",
+      "vo": "Did you know one country spans eleven full time zones?",
+      "caption": "Did you know one country spans eleven full time zones?"
+    },
+    {
+      "id": "s2",
+      "duration": 4.8,
+      "camera": {
+        "lon": 95.0,
+        "lat": 60.0,
+        "width_km": 7500,
+        "move": 1.8
+      },
+      "title": "The *largest* country on Earth",
+      "show": [
+        {
+          "id": "rus",
+          "type": "country",
+          "iso": "RUS",
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russia",
+          "lon": 95.0,
+          "lat": 62.0,
+          "color": "white",
+          "size": 64,
+          "at": 0.8
+        },
+        {
+          "id": "badge_largest",
+          "type": "badge",
+          "text": "#1 LARGEST",
+          "sub": "Country in the world",
+          "size": 100,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "This is Russia, officially the largest country in the entire world.",
+      "caption": "This is Russia, officially the largest country in the entire world."
+    },
+    {
+      "id": "s3",
+      "duration": 6.8,
+      "camera": {
+        "lon": 95.0,
+        "lat": 58.0,
+        "width_km": 8800,
+        "move": 1.8
+      },
+      "title": "Baltic Sea to *Pacific Ocean*",
+      "hide": [
+        "badge_largest"
+      ],
+      "show": [
+        {
+          "id": "lbl_baltic",
+          "type": "label",
+          "text": "Baltic\nSea",
+          "lon": 25.0,
+          "lat": 57.0,
+          "color": "teal",
+          "size": 44,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_pacific",
+          "type": "label",
+          "text": "Pacific\nOcean",
+          "lon": 150.0,
+          "lat": 50.0,
+          "color": "blue",
+          "size": 44,
+          "at": 1.8
+        }
+      ],
+      "vo": "Russia is so incredibly wide that it borders both the Baltic Sea and the Pacific Ocean.",
+      "caption": "Russia is so incredibly wide that it borders both the Baltic Sea and the Pacific Ocean."
+    },
+    {
+      "id": "s4",
+      "duration": 9.1,
+      "camera": {
+        "lon": 95.0,
+        "lat": 56.0,
+        "width_km": 8800,
+        "move": 1.8
+      },
+      "title": "11 *time zones* across",
+      "hide": [
+        "lbl_baltic",
+        "lbl_pacific"
+      ],
+      "show": [
+        {
+          "id": "badge_11",
+          "type": "badge",
+          "text": "11 ZONES",
+          "sub": "Kaliningrad to Kamchatka",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        },
+        {
+          "id": "pt_kaliningrad",
+          "type": "marker",
+          "lon": 30.51,
+          "lat": 54.71,
+          "text": "Kaliningrad",
+          "color": "yellow",
+          "side": "top",
+          "at": 1.8
+        },
+        {
+          "id": "pt_kamchatka",
+          "type": "marker",
+          "lon": 145.65,
+          "lat": 53.02,
+          "text": "Kamchatka",
+          "color": "yellow",
+          "side": "top",
+          "at": 2.8
+        }
+      ],
+      "vo": "Across this vast expanse, its eleven time zones stretch from Kaliningrad in the west all the way to Kamchatka in the east.",
+      "caption": "Across this vast expanse, its eleven time zones stretch from Kaliningrad in the west all the way to Kamchatka in the east."
+    },
+    {
+      "id": "s5",
+      "duration": 6.8,
+      "camera": {
+        "lon": 20.51,
+        "lat": 54.71,
+        "width_km": 950,
+        "move": 1.8
+      },
+      "title": "Morning in *Kaliningrad*",
+      "hide": [
+        "badge_11",
+        "lbl_rus",
+        "pt_kamchatka"
+      ],
+      "show": [
+        {
+          "id": "badge_morning",
+          "type": "badge",
+          "text": "9:00 AM",
+          "sub": "Kaliningrad time",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        }
+      ],
+      "vo": "The difference in time is huge. When it is nine a.m. in the morning in Kaliningrad...",
+      "caption": "The difference in time is huge. When it is nine a.m. in the morning in Kaliningrad..."
+    },
+    {
+      "id": "s6",
+      "duration": 6.8,
+      "camera": {
+        "lon": 158.65,
+        "lat": 53.02,
+        "width_km": 950,
+        "move": 1.8
+      },
+      "title": "Evening in *Kamchatka*",
+      "hide": [
+        "badge_morning",
+        "pt_kaliningrad"
+      ],
+      "show": [
+        {
+          "id": "pt_petropavlovsk",
+          "type": "marker",
+          "lon": 158.65,
+          "lat": 53.02,
+          "text": "Petropavlovsk-\nKamchatsky",
+          "color": "yellow",
+          "side": "bottom",
+          "at": 0.8
+        },
+        {
+          "id": "badge_evening",
+          "type": "badge",
+          "text": "7:00 PM",
+          "sub": "Kamchatka time",
+          "size": 104,
+          "y": 0.32,
+          "at": 1.2
+        }
+      ],
+      "vo": "...all the way east in Petropavlovsk-Kamchatsky in Kamchatka, it is already seven p.m. in the evening.",
+      "caption": "...all the way east in Petropavlovsk-Kamchatsky in Kamchatka, it is already seven p.m. in the evening."
+    },
+    {
+      "id": "s7",
+      "duration": 9.8,
+      "camera": {
+        "lon": 95.0,
+        "lat": 58.0,
+        "width_km": 8800,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_evening",
+        "pt_petropavlovsk"
+      ],
+      "show": [
+        {
+          "id": "pt_moscow",
+          "type": "marker",
+          "lon": 37.62,
+          "lat": 55.75,
+          "text": "Moscow",
+          "color": "white",
+          "size": 36,
+          "at": 0.8
+        },
+        {
+          "id": "pt_novosibirsk",
+          "type": "marker",
+          "lon": 82.93,
+          "lat": 55.03,
+          "text": "Novosibirsk",
+          "color": "white",
+          "size": 36,
+          "at": 1.4
+        },
+        {
+          "id": "pt_kalin_final",
+          "type": "marker",
+          "lon": 25.51,
+          "lat": 54.71,
+          "text": "Kaliningrad",
+          "color": "yellow",
+          "size": 36,
+          "at": 1.8
+        },
+        {
+          "id": "pt_kamch_final",
+          "type": "marker",
+          "lon": 135.0,
+          "lat": 53.02,
+          "text": "Kamchatka",
+          "color": "yellow",
+          "size": 36,
+          "at": 2.2
+        }
+      ],
+      "vo": "From Moscow to Novosibirsk and across eleven time zones, Russia spans from the Baltic Sea to the Pacific Ocean. Follow for more map secrets!",
+      "caption": "From Moscow to Novosibirsk and across eleven time zones, Russia spans from the Baltic Sea to the Pacific Ocean. Follow for more map secrets!"
+    }
+  ]
+}
