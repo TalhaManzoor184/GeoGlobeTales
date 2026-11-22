@@ -1,0 +1,234 @@
+{
+  "slug": "brazil-neighbours",
+  "title": "Brazil touches almost *every* country in South America",
+  "brand": "",
+  "thumbnail_at": 11.6,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Brazil touches almost every country in South America 🇧🇷🗺️",
+    "description": "Brazil borders 10 countries across South America. In fact, only Chile and Ecuador do not share a border with Brazil.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#brazil",
+      "#southamerica",
+      "#travel",
+      "#borders",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 5.6,
+      "camera": {
+        "from": {
+          "lon": -30,
+          "lat": -10,
+          "radius": 400
+        },
+        "lon": -55.0,
+        "lat": -15.0,
+        "radius": 1900,
+        "move": 4.2
+      },
+      "globe_highlight": {
+        "BRA": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Brazil touches almost *every* country",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -47.88,
+          "lat": -15.79,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Brazil touches almost every single country in the entire continent of South America.",
+      "caption": "Brazil touches almost every single country in the entire continent of South America.",
+      "hide": []
+    },
+    {
+      "id": "s2",
+      "duration": 6.8,
+      "camera": {
+        "lon": -58.0,
+        "lat": -15.0,
+        "width_km": 6000,
+        "move": 1.8
+      },
+      "title": "Ten *neighbours*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "bra",
+          "type": "country",
+          "iso": "BRA",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_bra",
+          "type": "label",
+          "text": "Brazil",
+          "lon": -53.0,
+          "lat": -10.0,
+          "color": "orange",
+          "size": 52,
+          "at": 0.8
+        },
+        {
+          "id": "badge_10",
+          "type": "badge",
+          "text": "10",
+          "sub": "Borders",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.0
+        }
+      ],
+      "vo": "When you look closely at the map, you can see that Brazil borders ten different countries.",
+      "caption": "When you look closely at the map, you can see that Brazil borders ten different countries."
+    },
+    {
+      "id": "s3",
+      "duration": 7.9,
+      "camera": {
+        "lon": -72.0,
+        "lat": -15.0,
+        "width_km": 4000,
+        "move": 1.8
+      },
+      "title": "The *exceptions*",
+      "hide": [
+        "badge_10"
+      ],
+      "show": [
+        {
+          "id": "chl",
+          "type": "country",
+          "iso": "CHL",
+          "fill": "blue",
+          "alpha": 0.6,
+          "at": 0.6
+        },
+        {
+          "id": "lbl_chl",
+          "type": "label",
+          "text": "Chile",
+          "lon": -71.0,
+          "lat": -22.9599,
+          "color": "blue",
+          "size": 44,
+          "at": 0.9
+        },
+        {
+          "id": "ecu",
+          "type": "country",
+          "iso": "ECU",
+          "fill": "purple",
+          "alpha": 0.6,
+          "at": 2.0
+        },
+        {
+          "id": "lbl_ecu",
+          "type": "label",
+          "text": "Ecuador",
+          "lon": -78.0,
+          "lat": -3.5,
+          "color": "purple",
+          "size": 44,
+          "at": 2.3
+        }
+      ],
+      "vo": "In fact, out of all the nations down here, only Chile and Ecuador do not border Brazil at all.",
+      "caption": "In fact, out of all the nations down here, only Chile and Ecuador do not border Brazil at all."
+    },
+    {
+      "id": "s4",
+      "duration": 6.8,
+      "camera": {
+        "lon": -53.0,
+        "lat": 4.0,
+        "width_km": 1500,
+        "move": 2.0
+      },
+      "title": "A surprising *neighbour*",
+      "hide": [
+        "chl",
+        "lbl_chl",
+        "ecu",
+        "lbl_ecu"
+      ],
+      "show": [
+        {
+          "id": "lbl_guf",
+          "type": "label",
+          "text": "French Guiana",
+          "lon": -53.1,
+          "lat": 4.0,
+          "color": "red",
+          "size": 46,
+          "at": 1.0
+        },
+        {
+          "id": "badge_france",
+          "type": "badge",
+          "text": "France",
+          "sub": "Via French Guiana",
+          "size": 104,
+          "y": 0.34,
+          "at": 2.2
+        }
+      ],
+      "vo": "That even includes a European power, because one of its neighbours is France through French Guiana.",
+      "caption": "That even includes a European power, because one of its neighbours is France through French Guiana."
+    },
+    {
+      "id": "s5",
+      "duration": 7.1,
+      "camera": {
+        "lon": -58.0,
+        "lat": -15.0,
+        "width_km": 5000,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "lbl_guf",
+        "badge_france",
+        "bra",
+        "lbl_bra"
+      ],
+      "show": [
+        {
+          "id": "badge_half",
+          "type": "badge",
+          "text": "Almost Half",
+          "sub": "Of South America",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "Ultimately, Brazil covers almost half of the entire landmass of South America. Follow for more map secrets!",
+      "caption": "Ultimately, Brazil covers almost half of the entire landmass of South America. Follow for more map secrets!"
+    }
+  ]
+}
