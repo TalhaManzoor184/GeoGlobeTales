@@ -1,0 +1,276 @@
+{
+  "slug": "northwest-angle",
+  "title": "Northwest Angle: why does the USA have a bump?",
+  "brand": "",
+  "thumbnail_at": 13.4,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Why does the USA have this weird northern bump? 🇺🇸🗺️ Northwest Angle",
+    "description": "The Northwest Angle in Minnesota is the only part of the contiguous United States north of the 49th parallel. It exists because the 1783 Treaty of Paris used an inaccurate map.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#usa",
+      "#canada",
+      "#minnesota",
+      "#history",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": -90,
+          "lat": 35,
+          "radius": 400
+        },
+        "lon": -95.0,
+        "lat": 49.2,
+        "radius": 1900,
+        "move": 3.7
+      },
+      "globe_highlight": {
+        "USA": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Why does the USA have a *bump*?",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -95.07,
+          "lat": 49.35,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Why does the USA have a bump on its straight border?",
+      "caption": "Why does the USA have a bump on its straight border?"
+    },
+    {
+      "id": "s2",
+      "duration": 9.4,
+      "camera": {
+        "lon": -95.1,
+        "lat": 49.2,
+        "width_km": 160,
+        "move": 2.0
+      },
+      "title": "The *Northwest Angle*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "usa",
+          "type": "country",
+          "iso": "USA",
+          "fill": "orange",
+          "alpha": 0.55
+        },
+        {
+          "id": "can",
+          "type": "country",
+          "iso": "CAN",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 1.0
+        },
+        {
+          "id": "lbl_can",
+          "type": "label",
+          "text": "Canada",
+          "lon": -95.1,
+          "lat": 49.6,
+          "at": 1.4
+        },
+        {
+          "id": "angle",
+          "type": "region",
+          "of": "USA",
+          "clip": [
+            -95.4,
+            49.0,
+            -94.9,
+            49.4
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 2.2
+        },
+        {
+          "id": "lbl_angle",
+          "type": "label",
+          "text": "Northwest\nAngle",
+          "lon": -95.15,
+          "lat": 49.25,
+          "color": "yellow",
+          "size": 48,
+          "at": 2.6
+        }
+      ],
+      "vo": "It is called the Northwest Angle in Minnesota. It is the only part of the contiguous United States north of the forty-ninth parallel.",
+      "caption": "It is called the Northwest Angle in Minnesota. It is the only part of the contiguous United States north of the 49th parallel."
+    },
+    {
+      "id": "s3",
+      "duration": 6.0,
+      "camera": {
+        "lon": -94.8,
+        "lat": 49.25,
+        "width_km": 280,
+        "move": 1.8
+      },
+      "title": "Sitting on *Lake of the Woods*",
+      "hide": [
+        "lbl_can",
+        "lbl_angle"
+      ],
+      "show": [
+        {
+          "id": "lbl_lake",
+          "type": "label",
+          "text": "Lake of the Woods",
+          "lon": -94.7,
+          "lat": 49.1,
+          "size": 42,
+          "at": 1.0
+        },
+        {
+          "id": "marker_inlet",
+          "type": "marker",
+          "lon": -95.07,
+          "lat": 49.35,
+          "text": "Angle Inlet",
+          "side": "top",
+          "size": 36,
+          "at": 2.5
+        }
+      ],
+      "vo": "It sits on Lake of the Woods, featuring the small community of Angle Inlet.",
+      "caption": "It sits on Lake of the Woods, featuring the small community of Angle Inlet."
+    },
+    {
+      "id": "s4",
+      "duration": 4.8,
+      "camera": {
+        "lon": -96.0,
+        "lat": 49.5,
+        "width_km": 900,
+        "move": 2.0
+      },
+      "title": "Reachable through *Canada*",
+      "hide": [
+        "lbl_lake",
+        "marker_inlet",
+        "usa",
+        "can"
+      ],
+      "show": [
+        {
+          "id": "winnipeg",
+          "type": "marker",
+          "lon": -97.14,
+          "lat": 49.9,
+          "text": "Winnipeg",
+          "side": "top",
+          "size": 36,
+          "at": 1.0
+        },
+        {
+          "id": "arr_road",
+          "type": "arrow",
+          "from": [
+            -96.5,
+            49.0
+          ],
+          "to": [
+            -95.2,
+            49.3
+          ],
+          "color": "yellow",
+          "at": 2.5
+        }
+      ],
+      "vo": "By land, it can only be reached by driving through Canada.",
+      "caption": "By land, it can only be reached by driving through Canada."
+    },
+    {
+      "id": "s5",
+      "duration": 7.9,
+      "camera": {
+        "lon": -95.0,
+        "lat": 49.2,
+        "width_km": 3000,
+        "move": 2.2
+      },
+      "title": "The *1783* Treaty of Paris",
+      "hide": [
+        "winnipeg",
+        "arr_road"
+      ],
+      "show": [
+        {
+          "id": "badge_treaty",
+          "type": "badge",
+          "text": "1783",
+          "sub": "Treaty of Paris",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.0
+        }
+      ],
+      "vo": "It exists because the seventeen eighty-three Treaty of Paris used an inaccurate map of the area's lakes and rivers.",
+      "caption": "It exists because the 1783 Treaty of Paris used an inaccurate map of the area's lakes and rivers."
+    },
+    {
+      "id": "s6",
+      "duration": 5.6,
+      "camera": {
+        "lon": -95.0,
+        "lat": 49.2,
+        "width_km": 180,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_treaty",
+        "angle"
+      ],
+      "show": [
+        {
+          "id": "angle_final",
+          "type": "region",
+          "of": "USA",
+          "clip": [
+            -95.4,
+            49.0,
+            -94.9,
+            49.4
+          ],
+          "fill": "yellow",
+          "alpha": 0.8,
+          "at": 0.5
+        }
+      ],
+      "vo": "A historic mapping mistake frozen on the map. Follow for more map secrets!",
+      "caption": "A historic mapping mistake frozen on the map. Follow for more map secrets!"
+    }
+  ]
+}
