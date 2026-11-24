@@ -1,0 +1,271 @@
+{
+  "slug": "indonesia-wide",
+  "title": "Indonesia is wider than the United States.",
+  "brand": "",
+  "thumbnail_at": 10.7,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Indonesia is actually wider than the United States 🇮🇩🗺️",
+    "description": "Indonesia is made of more than 17,000 islands and stretches more than 5,000 km from west to east. That is wider than the mainland United States from coast to coast.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#map",
+      "#indonesia",
+      "#islands",
+      "#facts",
+      "#travel",
+      "#asia"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.4,
+      "camera": {
+        "from": {
+          "lon": 100,
+          "lat": 20,
+          "radius": 400
+        },
+        "lon": 118.0,
+        "lat": -2.5,
+        "radius": 2200,
+        "move": 4.0
+      },
+      "globe_highlight": {
+        "IDN": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "Indonesia is *wider* than the US",
+      "show": [
+        {
+          "id": "pin_jkt",
+          "type": "marker",
+          "lon": 106.85,
+          "lat": -6.2,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Indonesia is actually wider than the entire mainland United States.",
+      "caption": "Indonesia is actually wider than the entire mainland United States.",
+      "hide": []
+    },
+    {
+      "id": "s2",
+      "duration": 7.1,
+      "camera": {
+        "lon": 118.0,
+        "lat": -2.5,
+        "width_km": 5500,
+        "move": 2.0
+      },
+      "title": "Over 17,000 *islands*",
+      "hide": [
+        "pin_jkt"
+      ],
+      "show": [
+        {
+          "id": "idn",
+          "type": "country",
+          "iso": "IDN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_idn",
+          "type": "label",
+          "text": "Indonesia",
+          "lon": 118.0,
+          "lat": 3.5,
+          "at": 0.8
+        },
+        {
+          "id": "badge_islands",
+          "type": "badge",
+          "text": "17,000+",
+          "sub": "islands",
+          "size": 104,
+          "y": 0.32,
+          "at": 2.0
+        }
+      ],
+      "vo": "This massive nation is made of more than seventeen thousand separate islands scattered across the tropical waters.",
+      "caption": "This massive nation is made of more than seventeen thousand separate islands scattered across the tropical waters."
+    },
+    {
+      "id": "s3",
+      "duration": 9.1,
+      "camera": {
+        "lon": 118.0,
+        "lat": -2.5,
+        "width_km": 6000,
+        "move": 2.2
+      },
+      "title": "Over 5,000 *km* wide",
+      "hide": [
+        "badge_islands"
+      ],
+      "show": [
+        {
+          "id": "marker_west",
+          "type": "marker",
+          "lon": 95.32,
+          "lat": 5.55,
+          "color": "yellow",
+          "at": 1.0
+        },
+        {
+          "id": "arrow_span",
+          "type": "arrow",
+          "from": [
+            95.32,
+            5.55
+          ],
+          "to": [
+            140.72,
+            -2.53
+          ],
+          "color": "yellow",
+          "at": 2.2
+        },
+        {
+          "id": "badge_km",
+          "type": "badge",
+          "text": "5,000 KM",
+          "sub": "West to east span",
+          "size": 104,
+          "y": 0.32,
+          "at": 3.0
+        }
+      ],
+      "vo": "From its western tip in Banda Aceh all the way to Jayapura in the east, it stretches more than five thousand kilometers.",
+      "caption": "From its western tip in Banda Aceh all the way to Jayapura in the east, it stretches more than five thousand kilometers."
+    },
+    {
+      "id": "s4",
+      "duration": 6.8,
+      "camera": {
+        "lon": 118.0,
+        "lat": -2.5,
+        "width_km": 5500,
+        "move": 2.0
+      },
+      "title": "Spanning the *tropics*",
+      "hide": [
+        "idn",
+        "lbl_idn",
+        "marker_west",
+        "arrow_span",
+        "badge_km"
+      ],
+      "show": [
+        {
+          "id": "idn_s4",
+          "type": "country",
+          "iso": "IDN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "badge_comp",
+          "type": "badge",
+          "text": "> US Coast",
+          "sub": "Coast to coast",
+          "size": 104,
+          "y": 0.32,
+          "at": 1.5
+        }
+      ],
+      "vo": "That unbelievable distance makes the country wider than the mainland United States from coast to coast.",
+      "caption": "That unbelievable distance makes the country wider than the mainland United States from coast to coast."
+    },
+    {
+      "id": "s5",
+      "duration": 7.5,
+      "camera": {
+        "lon": 106.85,
+        "lat": -6.2,
+        "width_km": 1200,
+        "move": 2.2
+      },
+      "title": "The capital: *Jakarta*",
+      "hide": [
+        "idn_s4",
+        "badge_comp"
+      ],
+      "show": [
+        {
+          "id": "idn_zoom",
+          "type": "country",
+          "iso": "IDN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.5
+        },
+        {
+          "id": "pin_jakarta",
+          "type": "marker",
+          "lon": 106.85,
+          "lat": -6.2,
+          "text": "Jakarta",
+          "color": "yellow",
+          "size": 44,
+          "at": 1.2
+        },
+        {
+          "id": "badge_java",
+          "type": "badge",
+          "text": "Java Island",
+          "sub": "Capital location",
+          "size": 104,
+          "y": 0.32,
+          "at": 2.4
+        }
+      ],
+      "vo": "Its bustling capital Jakarta is located on the island of Java, right in the heart of the archipelago.",
+      "caption": "Its bustling capital Jakarta is located on the island of Java, right in the heart of the archipelago."
+    },
+    {
+      "id": "s6",
+      "duration": 6.8,
+      "camera": {
+        "lon": 110.0,
+        "lat": -7.5,
+        "width_km": 700,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "pin_jakarta",
+        "badge_java",
+        "idn_zoom"
+      ],
+      "show": [
+        {
+          "id": "badge_crowded",
+          "type": "badge",
+          "text": "Very Crowded",
+          "sub": "On Earth",
+          "size": 104,
+          "y": 0.32,
+          "at": 1.0
+        }
+      ],
+      "vo": "Java is also one of the most crowded islands on Earth. Follow for more map secrets!",
+      "caption": "Java is also one of the most crowded islands on Earth. Follow for more map secrets!"
+    }
+  ]
+}
