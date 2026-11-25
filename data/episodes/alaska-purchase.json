@@ -1,0 +1,314 @@
+{
+  "slug": "alaska-purchase",
+  "title": "When the USA Bought Alaska for 2 Cents an Acre",
+  "brand": "",
+  "thumbnail_at": 9.2,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "America Bought Alaska for 2 Cents an Acre 🇺🇸💰",
+    "description": "In 1867, the United States bought Alaska from Russia for 7.2 million dollars. Critics called it Seward's Folly until gold and oil were discovered.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#alaska",
+      "#usa",
+      "#history",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": -100.0,
+          "lat": 40.0,
+          "radius": 400
+        },
+        "lon": -152.0,
+        "lat": 62.0,
+        "radius": 1900,
+        "move": 3.9
+      },
+      "globe_highlight": {
+        "USA": "orange"
+      },
+      "highlight_at": 1.4,
+      "title": "Bought for *2 cents* an acre?",
+      "show": [
+        {
+          "id": "pin_alaska",
+          "type": "marker",
+          "lon": -152.0,
+          "lat": 62.0,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Did the USA really buy Alaska for two cents an acre?",
+      "caption": "Did the USA really buy Alaska for two cents an acre?"
+    },
+    {
+      "id": "s2",
+      "duration": 5.2,
+      "camera": {
+        "lon": -152.0,
+        "lat": 62.0,
+        "width_km": 3200,
+        "move": 1.8
+      },
+      "title": "Purchased in *1867*",
+      "hide": [
+        "pin_alaska"
+      ],
+      "show": [
+        {
+          "id": "c_rus",
+          "type": "country",
+          "iso": "RUS",
+          "fill": "purple",
+          "alpha": 0.55,
+          "at": 0.4
+        },
+        {
+          "id": "lbl_rus",
+          "type": "label",
+          "text": "Russia",
+          "lon": -174.0,
+          "lat": 65.5,
+          "color": "purple",
+          "at": 0.6
+        },
+        {
+          "id": "c_can",
+          "type": "country",
+          "iso": "CAN",
+          "fill": "blue",
+          "alpha": 0.5,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_can",
+          "type": "label",
+          "text": "Canada",
+          "lon": -128.0,
+          "lat": 60.5,
+          "color": "blue",
+          "at": 1.0
+        },
+        {
+          "id": "c_alaska",
+          "type": "region",
+          "of": "USA",
+          "clip": [
+            -170,
+            51,
+            -129,
+            72
+          ],
+          "fill": "yellow",
+          "alpha": 0.95,
+          "glow": true,
+          "pulse": true,
+          "z": 1,
+          "at": 1.4
+        },
+        {
+          "id": "lbl_alaska",
+          "type": "label",
+          "text": "Alaska",
+          "lon": -152.0,
+          "lat": 64.5,
+          "color": "yellow",
+          "size": 52,
+          "at": 1.6
+        }
+      ],
+      "vo": "It really happened. In 1867, the United States bought Alaska from Russia.",
+      "caption": "It really happened. In 1867, the United States bought Alaska from Russia."
+    },
+    {
+      "id": "s3",
+      "duration": 7.1,
+      "camera": {
+        "lon": -150.0,
+        "lat": 61.5,
+        "width_km": 2400,
+        "move": 1.8
+      },
+      "title": "The Price: *7.2 Million* Dollars",
+      "show": [
+        {
+          "id": "badge_price",
+          "type": "badge",
+          "text": "$7.2M",
+          "sub": "about 2 cents an acre",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ],
+      "vo": "The total price was 7.2 million dollars. That worked out to only about two cents an acre.",
+      "caption": "The total price was 7.2 million dollars. That worked out to only about two cents an acre."
+    },
+    {
+      "id": "s4",
+      "duration": 6.8,
+      "camera": {
+        "lon": -144.0,
+        "lat": 60.0,
+        "width_km": 2000,
+        "move": 1.8
+      },
+      "title": "*Seward's* Folly",
+      "hide": [
+        "badge_price"
+      ],
+      "show": [
+        {
+          "id": "badge_folly",
+          "type": "badge",
+          "text": "1867",
+          "sub": "Seward's Folly",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        },
+        {
+          "id": "pt_juneau",
+          "type": "marker",
+          "lon": -134.42,
+          "lat": 58.3,
+          "text": "Juneau",
+          "side": "right",
+          "size": 34,
+          "at": 1.8
+        }
+      ],
+      "vo": "Critics quickly called it Seward's Folly, named directly after the Secretary of State who arranged it.",
+      "caption": "Critics quickly called it Seward's Folly, named directly after the Secretary of State who arranged it."
+    },
+    {
+      "id": "s5",
+      "duration": 6.8,
+      "camera": {
+        "lon": -150.0,
+        "lat": 62.0,
+        "width_km": 1700,
+        "move": 1.8
+      },
+      "title": "*Gold* and Oil",
+      "hide": [
+        "badge_folly",
+        "pt_juneau"
+      ],
+      "show": [
+        {
+          "id": "pt_anchorage",
+          "type": "marker",
+          "lon": -149.9,
+          "lat": 61.22,
+          "text": "Anchorage",
+          "side": "bottom",
+          "size": 34,
+          "at": 0.8
+        },
+        {
+          "id": "badge_resources",
+          "type": "badge",
+          "text": "GOLD + OIL",
+          "sub": "Discovered in Alaska",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.4
+        }
+      ],
+      "vo": "Those critics were proven wrong when gold and later oil were found right here in Alaska.",
+      "caption": "Those critics were proven wrong when gold and later oil were found right here in Alaska."
+    },
+    {
+      "id": "s6",
+      "duration": 8.3,
+      "camera": {
+        "lon": -168.9,
+        "lat": 65.8,
+        "width_km": 500,
+        "move": 2.0
+      },
+      "title": "The *Bering* Strait",
+      "hide": [
+        "badge_resources",
+        "pt_anchorage",
+        "lbl_can",
+        "c_can"
+      ],
+      "show": [
+        {
+          "id": "pt_strait",
+          "type": "marker",
+          "lon": -168.9,
+          "lat": 65.8,
+          "text": "Bering Strait",
+          "side": "top",
+          "size": 38,
+          "color": "yellow",
+          "at": 0.8
+        },
+        {
+          "id": "badge_strait",
+          "type": "badge",
+          "text": "82 KM",
+          "sub": "between Alaska and Russia",
+          "size": 104,
+          "y": 0.34,
+          "at": 1.6
+        }
+      ],
+      "vo": "And look how close it is to Russia today. Across the Bering Strait, Alaska is only about 82 kilometers away.",
+      "caption": "And look how close it is to Russia today. Across the Bering Strait, Alaska is only about 82 kilometers away."
+    },
+    {
+      "id": "s7",
+      "duration": 10.6,
+      "camera": {
+        "lon": -152.0,
+        "lat": 62.0,
+        "width_km": 3200,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_strait",
+        "pt_strait"
+      ],
+      "show": [
+        {
+          "id": "c_can",
+          "at": 0.4
+        },
+        {
+          "id": "badge_final",
+          "type": "badge",
+          "text": "2¢ / ACRE",
+          "sub": "7.2 million dollars total",
+          "size": 104,
+          "y": 0.34,
+          "at": 0.8
+        }
+      ],
+      "vo": "In 1867, 7.2 million dollars bought Alaska for two cents an acre, later revealing gold and oil right next to Russia. Follow for more map secrets!",
+      "caption": "In 1867, 7.2 million dollars bought Alaska for two cents an acre, later revealing gold and oil right next to Russia. Follow for more map secrets!"
+    }
+  ]
+}
