@@ -1,0 +1,271 @@
+{
+  "slug": "australia-moon",
+  "title": "Australia is wider than the Moon",
+  "brand": "",
+  "thumbnail_at": 11.5,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "Could Australia Actually Be Wider Than the Moon? 🇦🇺🌕",
+    "description": "Australia stretches about 4,000 kilometers from west to east, easily beating the Moon's width of 3,474 kilometers. Even with that immense scale, most Australians live clustered near the coast.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#australia",
+      "#moon",
+      "#facts",
+      "#space"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": 110,
+          "lat": -10,
+          "radius": 400
+        },
+        "lon": 134.0,
+        "lat": -26.0,
+        "radius": 1900,
+        "move": 3.8
+      },
+      "globe_highlight": {
+        "AUS": "orange"
+      },
+      "highlight_at": 1.0,
+      "title": "Is Australia *wider* than the Moon?",
+      "vo": "Did you know that Australia is actually wider than the Moon?",
+      "caption": "Did you know that Australia is actually wider than the Moon?",
+      "hide": []
+    },
+    {
+      "id": "s2",
+      "duration": 7.5,
+      "camera": {
+        "lon": 134.0,
+        "lat": -26.0,
+        "width_km": 4800,
+        "move": 1.8
+      },
+      "title": "About *4,000 km* wide",
+      "show": [
+        {
+          "id": "aus",
+          "type": "country",
+          "iso": "AUS",
+          "fill": "orange",
+          "alpha": 0.6,
+          "at": 0.3
+        },
+        {
+          "id": "lbl_aus",
+          "type": "label",
+          "text": "Australia",
+          "lon": 134.0,
+          "lat": -25.0,
+          "size": 52,
+          "at": 0.6
+        },
+        {
+          "id": "badge_width",
+          "type": "badge",
+          "text": "4,000 KM",
+          "sub": "West to east",
+          "size": 104,
+          "y": 0.32,
+          "at": 1.5
+        }
+      ],
+      "vo": "It sounds unbelievable, but look at the scale. Australia is about 4,000 kilometers wide from west to east.",
+      "caption": "It sounds unbelievable, but look at the scale. Australia is about 4,000 kilometers wide from west to east.",
+      "hide": []
+    },
+    {
+      "id": "s3",
+      "duration": 6.0,
+      "camera": {
+        "lon": 134.0,
+        "lat": -26.0,
+        "width_km": 5400,
+        "move": 1.8
+      },
+      "title": "The *Moon* across",
+      "hide": [
+        "badge_width"
+      ],
+      "show": [
+        {
+          "id": "badge_moon",
+          "type": "badge",
+          "text": "3,474 KM",
+          "sub": "The Moon across",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        },
+        {
+          "id": "idn",
+          "type": "country",
+          "iso": "IDN",
+          "fill": "teal",
+          "alpha": 0.5,
+          "at": 1.2
+        },
+        {
+          "id": "png",
+          "type": "country",
+          "iso": "PNG",
+          "fill": "green",
+          "alpha": 0.5,
+          "at": 1.6
+        },
+        {
+          "id": "nzl",
+          "type": "country",
+          "iso": "NZL",
+          "fill": "blue",
+          "alpha": 0.5,
+          "at": 2.0
+        }
+      ],
+      "vo": "Now compare that to our celestial neighbor. The Moon is about 3,474 kilometers across.",
+      "caption": "Now compare that to our celestial neighbor. The Moon is about 3,474 kilometers across."
+    },
+    {
+      "id": "s4",
+      "duration": 8.7,
+      "camera": {
+        "lon": 134.0,
+        "lat": -26.0,
+        "width_km": 4600,
+        "move": 1.8
+      },
+      "title": "*Wider* than the Moon",
+      "hide": [
+        "badge_moon",
+        "idn",
+        "png",
+        "nzl"
+      ],
+      "show": [
+        {
+          "id": "badge_compare",
+          "type": "badge",
+          "text": "4000 > 3474",
+          "sub": "Australia is wider",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        }
+      ],
+      "vo": "So Australia is wider than the Moon. From west to east, this one continent stretches further than the Moon is across.",
+      "caption": "So Australia is wider than the Moon. From west to east, this one continent stretches further than the Moon is across."
+    },
+    {
+      "id": "s5",
+      "duration": 4.8,
+      "camera": {
+        "lon": 135.0,
+        "lat": -28.0,
+        "width_km": 3800,
+        "move": 2.0
+      },
+      "title": "Living near the *coast*",
+      "hide": [
+        "badge_compare"
+      ],
+      "show": [],
+      "vo": "Yet across this enormous span, most Australians live near the coast.",
+      "caption": "Yet across this enormous span, most Australians live near the coast."
+    },
+    {
+      "id": "s6",
+      "duration": 8.3,
+      "camera": {
+        "lon": 147.0,
+        "lat": -32.0,
+        "width_km": 2000,
+        "move": 2.0
+      },
+      "title": "Clustered in the *south-east*",
+      "show": [
+        {
+          "id": "marker_brisbane",
+          "type": "marker",
+          "lon": 153.03,
+          "lat": -27.47,
+          "text": "Brisbane",
+          "side": "top",
+          "color": "yellow",
+          "size": 36,
+          "at": 0.8
+        },
+        {
+          "id": "marker_sydney",
+          "type": "marker",
+          "lon": 151.21,
+          "lat": -33.87,
+          "text": "Sydney",
+          "side": "bottom",
+          "color": "yellow",
+          "size": 36,
+          "at": 1.4
+        },
+        {
+          "id": "badge_coast",
+          "type": "badge",
+          "text": "SOUTH-EAST",
+          "sub": "Most Australians live here",
+          "size": 96,
+          "y": 0.32,
+          "at": 2.2
+        }
+      ],
+      "vo": "From Perth on the west coast to Brisbane and Sydney, most Australians live near the coast, especially in the south-east.",
+      "caption": "From Perth on the west coast to Brisbane and Sydney, most Australians live near the coast, especially in the south-east.",
+      "hide": []
+    },
+    {
+      "id": "s7",
+      "duration": 7.9,
+      "camera": {
+        "lon": 134.0,
+        "lat": -26.0,
+        "width_km": 4800,
+        "move": 2.0
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_coast",
+        "marker_brisbane",
+        "marker_sydney",
+        "lbl_aus"
+      ],
+      "show": [
+        {
+          "id": "badge_final",
+          "type": "badge",
+          "text": "4,000 KM",
+          "sub": "Wider than the Moon",
+          "size": 104,
+          "y": 0.32,
+          "at": 0.8
+        }
+      ],
+      "vo": "So Australia is wider than the Moon, with most people living near the coast. Follow for more map secrets!",
+      "caption": "So Australia is wider than the Moon, with most people living near the coast. Follow for more map secrets!"
+    }
+  ]
+}
