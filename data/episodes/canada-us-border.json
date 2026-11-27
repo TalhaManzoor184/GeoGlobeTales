@@ -1,0 +1,321 @@
+{
+  "slug": "canada-us-border",
+  "title": "Canada-US Border: The Longest Border on Earth",
+  "brand": "",
+  "thumbnail_at": 13.8,
+  "voice": {
+    "name": "en-US-GuyNeural",
+    "rate": "+8%",
+    "pitch": "+0Hz"
+  },
+  "map": {
+    "pov": "PAK",
+    "rivers": true
+  },
+  "upload": {
+    "title": "The 8,891 km Border Between Two Friendly Giants 🇨🇦🇺🇸",
+    "description": "Stretching about 8,891 kilometers, the border between Canada and the United States is the longest international border in the world. It includes Alaska, a straight line along the 49th parallel, and is often called the world's longest undefended border.",
+    "hashtags": [
+      "#shorts",
+      "#geography",
+      "#maps",
+      "#canada",
+      "#usa",
+      "#border",
+      "#facts"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "mode": "globe",
+      "duration": 4.8,
+      "camera": {
+        "from": {
+          "lon": -40.0,
+          "lat": 25.0,
+          "radius": 400
+        },
+        "lon": -100.0,
+        "lat": 50.0,
+        "radius": 1900,
+        "move": 3.9
+      },
+      "globe_highlight": {
+        "CAN": "orange"
+      },
+      "highlight_at": 1.2,
+      "title": "The World's *Longest* Border",
+      "show": [
+        {
+          "id": "pin",
+          "type": "marker",
+          "lon": -100.0,
+          "lat": 49.0,
+          "color": "yellow",
+          "at": 1.8
+        }
+      ],
+      "vo": "Did you know the world's longest border is between two friends?",
+      "caption": "Did you know the world's longest border is between two friends?"
+    },
+    {
+      "id": "s2",
+      "duration": 9.8,
+      "camera": {
+        "lon": -100.0,
+        "lat": 48.0,
+        "width_km": 6200,
+        "move": 1.8
+      },
+      "title": "Canada and the *USA*",
+      "hide": [
+        "pin"
+      ],
+      "show": [
+        {
+          "id": "can",
+          "type": "country",
+          "iso": "CAN",
+          "fill": "orange",
+          "alpha": 0.55,
+          "at": 0.2
+        },
+        {
+          "id": "lbl_can",
+          "type": "label",
+          "text": "Canada",
+          "lon": -105.0,
+          "lat": 56.0,
+          "color": "orange",
+          "size": 56,
+          "at": 0.6
+        },
+        {
+          "id": "usa",
+          "type": "country",
+          "iso": "USA",
+          "fill": "blue",
+          "alpha": 0.55,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_usa",
+          "type": "label",
+          "text": "United States",
+          "lon": -100.0,
+          "lat": 38.0,
+          "color": "blue",
+          "size": 56,
+          "at": 1.1
+        },
+        {
+          "id": "badge_8891",
+          "type": "badge",
+          "text": "8,891 KM",
+          "sub": "World's longest border",
+          "size": 104,
+          "y": 0.35,
+          "at": 2.0
+        }
+      ],
+      "vo": "The border between Canada and the United States stretches for about 8,891 kilometers. That makes it officially the longest international border in the world.",
+      "caption": "The border between Canada and the United States stretches for about 8,891 kilometers. That makes it officially the longest international border in the world."
+    },
+    {
+      "id": "s3",
+      "duration": 8.3,
+      "camera": {
+        "lon": -76.5,
+        "lat": 41.5,
+        "width_km": 1800,
+        "move": 1.8
+      },
+      "title": "The *Undefended* Border",
+      "hide": [
+        "badge_8891",
+        "lbl_can",
+        "lbl_usa"
+      ],
+      "show": [
+        {
+          "id": "m_ott",
+          "type": "marker",
+          "lon": -75.7,
+          "lat": 45.42,
+          "text": "Ottawa",
+          "side": "top",
+          "color": "orange",
+          "size": 42,
+          "at": 0.8
+        },
+        {
+          "id": "m_dc",
+          "type": "marker",
+          "lon": -77.04,
+          "lat": 38.9,
+          "text": "Washington, D.C.",
+          "side": "bottom",
+          "color": "blue",
+          "size": 42,
+          "at": 1.2
+        },
+        {
+          "id": "badge_undefended",
+          "type": "badge",
+          "text": "UNDEFENDED",
+          "sub": "World's longest",
+          "size": 96,
+          "y": 0.35,
+          "at": 2.2
+        }
+      ],
+      "vo": "Between Canada and the United States, near Ottawa and Washington, D.C., it is often called the world's longest undefended border.",
+      "caption": "Between Canada and the United States, near Ottawa and Washington, D.C., it is often called the world's longest undefended border."
+    },
+    {
+      "id": "s4",
+      "duration": 7.9,
+      "camera": {
+        "lon": -120.0,
+        "lat": 49.0,
+        "width_km": 1600,
+        "move": 2.0
+      },
+      "title": "The *49th* Parallel",
+      "hide": [
+        "m_ott",
+        "m_dc",
+        "badge_undefended"
+      ],
+      "show": [
+        {
+          "id": "m_van",
+          "type": "marker",
+          "lon": -123.12,
+          "lat": 49.28,
+          "text": "Vancouver",
+          "side": "top",
+          "color": "yellow",
+          "size": 42,
+          "at": 0.8
+        },
+        {
+          "id": "badge_49th",
+          "type": "badge",
+          "text": "49° N",
+          "sub": "Straight line section",
+          "size": 104,
+          "y": 0.35,
+          "at": 1.8
+        }
+      ],
+      "vo": "In the west near Vancouver, a long section of this border follows the 49th parallel in a straight line.",
+      "caption": "In the west near Vancouver, a long section of this border follows the 49th parallel in a straight line."
+    },
+    {
+      "id": "s5",
+      "duration": 6.0,
+      "camera": {
+        "lon": -138.0,
+        "lat": 62.0,
+        "width_km": 2600,
+        "move": 2.0
+      },
+      "title": "The Border with *Alaska*",
+      "hide": [
+        "m_van",
+        "badge_49th"
+      ],
+      "show": [
+        {
+          "id": "lbl_ak",
+          "type": "label",
+          "text": "Alaska\n(USA)",
+          "lon": -148.0,
+          "lat": 64.0,
+          "color": "blue",
+          "size": 48,
+          "at": 0.8
+        },
+        {
+          "id": "lbl_can_ak",
+          "type": "label",
+          "text": "Canada",
+          "lon": -130.0,
+          "lat": 62.0,
+          "color": "orange",
+          "size": 48,
+          "at": 1.0
+        },
+        {
+          "id": "badge_alaska",
+          "type": "badge",
+          "text": "ALASKA",
+          "sub": "Included in total",
+          "size": 104,
+          "y": 0.35,
+          "at": 1.8
+        }
+      ],
+      "vo": "That total length of 8,891 kilometers also includes the border between Alaska and Canada.",
+      "caption": "That total length of 8,891 kilometers also includes the border between Alaska and Canada."
+    },
+    {
+      "id": "s6",
+      "duration": 6.0,
+      "camera": {
+        "lon": -105.0,
+        "lat": 52.0,
+        "width_km": 5500,
+        "move": 2.0
+      },
+      "title": "*Longest* on Earth",
+      "hide": [
+        "lbl_ak",
+        "lbl_can_ak",
+        "badge_alaska"
+      ],
+      "show": [
+        {
+          "id": "badge_record",
+          "type": "badge",
+          "text": "NO. 1",
+          "sub": "Longest in the world",
+          "size": 104,
+          "y": 0.35,
+          "at": 1.0
+        }
+      ],
+      "vo": "Together, Canada and the United States share the longest international border in the world.",
+      "caption": "Together, Canada and the United States share the longest international border in the world."
+    },
+    {
+      "id": "s7",
+      "duration": 6.8,
+      "camera": {
+        "lon": -100.0,
+        "lat": 49.0,
+        "width_km": 4000,
+        "move": 1.8
+      },
+      "title": "*Follow* for more map secrets",
+      "hide": [
+        "badge_record"
+      ],
+      "show": [
+        {
+          "id": "badge_final",
+          "type": "badge",
+          "text": "8,891 KM",
+          "sub": "Undefended border",
+          "size": 104,
+          "y": 0.35,
+          "at": 0.8
+        }
+      ],
+      "vo": "It remains the world's longest undefended border, spanning about 8,891 kilometers. Follow for more map secrets!",
+      "caption": "It remains the world's longest undefended border, spanning about 8,891 kilometers. Follow for more map secrets!"
+    }
+  ]
+}
